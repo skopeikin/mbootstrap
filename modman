@@ -1,12 +1,18 @@
 # Modules
 #
-app/code/local/EcomDev/Cms                  app/code/local/EcomDev/Cms
+app/code/local/EcomDev/Cms                   app/code/local/EcomDev/Cms
 app/code/local/EcomDev/Mbootstrap            app/code/local/EcomDev/Mbootstrap
 
 # Config
 #
-app/etc/modules/EcomDev_Cms.xml             app/etc/modules/EcomDev_Cms.xml
+app/etc/modules/EcomDev_Cms.xml              app/etc/modules/EcomDev_Cms.xml
 app/etc/modules/EcomDev_MBootstrap.xml       app/etc/modules/EcomDev_MBootstrap.xml
+
+# Gulp
+#
+gulp/                                       gulp/
+Gulpfile.js                                 Gulpfile.js
+package.json                                package.json
 
 # Theme
 #
