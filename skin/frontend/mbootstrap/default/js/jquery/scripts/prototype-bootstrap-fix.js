@@ -1,27 +1,10 @@
-// url: https://groups.google.com/forum/#!topic/twitter-bootstrap-stackoverflow/hih1OWdawEM
-(function () {
-    var isBootstrapEvent = false;
-    if (window.jQuery) {
-        var all = jQuery('*');
-        jQuery.each(['hide.bs.
-            dropdown',
-            'hide.bs.collapse',
-            'hide.bs.modal',
-            'hide.bs.tooltip',
-            'hide.bs.popover'], function (index, eventName) {
-            all.on(eventName, function (event) {
-                isBootstrapEvent = true;
-            });
-        });
-    }
-    var originalHide = Element.hide;
-    Element.addMethods({
-        hide: function (element) {
-            if (isBootstrapEvent) {
-                isBootstrapEvent = false;
-                return element;
-            }
-            return originalHide(element);
-        }
-    });
-})();
+//
+// http://stackoverflow.com/a/24236506
+jQuery(window).load(function() {
+    // Defer this code until after the window 'load' event finishes firing
+    setTimeout(function() {
+        window.HTMLElement &&
+            window.HTMLElement.prototype.hide &&
+        delete window.HTMLElement.prototype.hide;
+    }, 0);
+});

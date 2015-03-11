@@ -39,14 +39,15 @@ gulp.task('build-theme-base-scripts', require('./gulp/theme/base/tasks/scripts')
 config.theme.mbootstrap = require('./skin/frontend/mbootstrap/default/gulp/mbootstrap.js')(config);
 gulp.task('build-theme-mbootstrap-scripts', require('./skin/frontend/mbootstrap/default/gulp/tasks/scripts')(gulp, plugins, config));
 gulp.task('build-theme-mbootstrap-styles', require('./skin/frontend/mbootstrap/default/gulp/tasks/sass')(gulp, plugins, config));
+gulp.task('build-theme-mbootstrap-images', require('./skin/frontend/mbootstrap/default/gulp/tasks/imagemin')(gulp, plugins, config));
 
 
 // Tasks
 // --------------------------------------------------
 gulp.task('build-theme-mbootstrap', [
     'build-theme-base-scripts',
-    'build-theme-mbootstrap-scripts',
-    'build-theme-mbootstrap-styles'
+    'build-theme-mbootstrap-scripts', 'build-theme-mbootstrap-styles',
+    'build-theme-mbootstrap-images'
 ]);
 
 //

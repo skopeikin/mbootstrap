@@ -41,11 +41,9 @@
 
                 <!-- jQuery, frameworks and scripts -->
                 <action method="addJs"><script>build/mbootstrap/default/jquery.min.js</script></action>
-                <action method="addJs"><script>build/mbootstrap/default/bootstrap.min.js</script></action>
+                <action method="addJs"><script>build/base/default/magento.min.js</script></action>
                 <action method="addJs"><script>build/mbootstrap/default/jquery.scripts.min.js</script></action>
-
-                <!-- Magento scripts -->
-                <!--<action method="addJs"><script>build/base/default/magento.min.js</script></action>-->
+                <action method="addJs"><script>build/mbootstrap/default/bootstrap.min.js</script></action>
 
 
                 <!-- Google Web Fonts -->

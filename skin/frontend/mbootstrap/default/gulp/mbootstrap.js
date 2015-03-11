@@ -11,6 +11,11 @@ module.exports = function(config) {
 
     return {
         source: {
+            images: {
+                files: [
+                    config.path.skin.dir + themeOptions.package + '/' + themeOptions.theme + '/' + 'images/**/*.*'
+                ]
+            },
             scss: {
                 concat: 'mbootstrap.css',
                 min:    'mbootstrap.min.css',
@@ -60,6 +65,9 @@ module.exports = function(config) {
         },
 
         build: {
+            images: {
+                dir: config.path.skin.dir + themeOptions.package + '/' + themeOptions.theme + '/' + 'images/'
+            },
             css: {
                 dir: config.path.skin.dir + themeOptions.package + '/' + themeOptions.theme + '/' + 'build/css/'
             },
