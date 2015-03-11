@@ -45,7 +45,8 @@ gulp.task('build-theme-mbootstrap-styles', require('./skin/frontend/mbootstrap/d
 // --------------------------------------------------
 gulp.task('build-theme-mbootstrap', [
     'build-theme-base-scripts',
-    'build-theme-mbootstrap-scripts', 'build-theme-mbootstrap-styles'
+    'build-theme-mbootstrap-scripts',
+    'build-theme-mbootstrap-styles'
 ]);
 
 //
