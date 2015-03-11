@@ -1,0 +1,41 @@
+//
+// Pages
+// --------------------------------------------------
+
+
+// Index page
+// -------------------------
+.cms-index-index {
+	.col-main {
+		.std {
+			@include make-row();	// default magento sample Index page layout fix
+		}
+	}
+
+	.col-left {
+        @include make-xs-column(12);
+        @include make-md-column(4);
+    }
+
+    .home-spot {
+        @include make-xs-column(12);
+        @include make-md-column(8);
+
+        img {
+        	@extend .img-responsive;;
+        }
+    }
+	
+}
+
+// Page Sitemap
+// -------------------------
+.page-sitemap {
+    .page-title {
+        .links {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+}

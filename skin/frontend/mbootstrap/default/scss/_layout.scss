@@ -1,0 +1,253 @@
+//
+// Layout
+// --------------------------------------------------
+.wrapper {}
+
+
+// Header Container
+// -------------------------
+.header-container {
+
+    padding: ($padding-large-vertical * 2) 0;
+
+    border-bottom: 2px solid $gray-lighter;
+
+    .header {
+        > .header__i {
+            @include make-row();
+        }
+    }
+
+    .i-logo {
+        text-align: center;
+
+        @include make-xs-column(12);
+        @include make-sm-column(3);
+        @include make-md-column(4);
+
+        .logo {
+            display: block;
+
+            line-height: 0;
+
+            strong {
+                display: block;
+                overflow: hidden;
+
+                text-indent: -999%;
+            }
+
+            img {
+                display: block;
+                margin: 0 auto;
+
+                @media (min-width: $screen-sm){
+                    margin: 0;
+                }
+            }
+        }
+
+        :link.logo {}
+        h1.logo {}
+    }
+
+    .quick-access {
+        text-align: center;
+
+        @media (min-width: $screen-sm){
+            text-align: right;
+        }
+
+        @include make-xs-column(12);
+        @include make-sm-column(9);
+        @include make-md-column(8);
+
+        .i-top-bar {
+            display: inline-block;
+
+            .top-bar {
+                @include clearfix();
+            }
+        }
+
+        .welcome-msg {
+            float: left;
+
+            padding: ($padding-base-vertical + 1) 0 $padding-base-vertical;
+
+            text-align: right;
+        }
+
+        .form-language {
+            float: right;
+            margin: 0 0 $padding-large-vertical;
+
+            text-align: left;
+        }
+
+        .links {
+            float: right;
+
+            > li {
+                > a {}
+            }
+
+            > .first {}
+
+            > .last {}
+        }
+    }
+}
+
+
+// Breadcrumbs
+// -------------------------
+.i-breadcrumb {
+    @include make-xs-column(12);
+}
+
+
+// Main Container
+// -------------------------
+.main-container {
+    .main {
+        @include make-row();
+    }
+
+    .col-main {
+        @include make-xs-column(12);
+    }
+
+    .col-left {}
+    .col-right {}
+
+    @media (max-width: $screen-xs-max) {
+        .col-main,
+        .col-left,
+        .col-right {
+            margin: $line-height-computed 0;
+        }
+    }
+
+
+    &.col2-left-layout {
+        .col-left {
+            @include make-xs-column(12);
+            @include make-sm-column(4);
+            @include make-md-column(3);
+            float: left !important;
+        }
+
+        .col-main {
+            @include make-xs-column(12);
+            @include make-sm-column(8);
+            @include make-md-column(9);
+            float: right !important;
+        }
+    }
+
+    &.col2-right-layout {
+        .col-right {
+            @include make-xs-column(12);
+            @include make-sm-column(4);
+            @include make-md-column(3);
+        }
+
+        .col-main {
+            @include make-xs-column(12);
+            @include make-sm-column(8);
+            @include make-md-column(9);
+        }
+    }
+
+    &.col3-layout {
+        .col-left {
+            @include make-xs-column(12);
+            @include make-sm-column(3);
+        }
+
+        .col-right {
+            @include make-xs-column(12);
+            @include make-sm-column(3);
+        }
+
+        .col-main {
+            @include make-xs-column(12);
+            @include make-sm-column(6);
+        }
+    }
+}
+
+
+// Footer Container
+// -------------------------
+.footer-container {
+    margin: $line-height-computed 0;
+    padding: $line-height-computed 0 0;
+
+    border-top: 2px solid $gray-lighter;
+    color: $gray;
+
+    .footer {}
+
+        .footer__links,
+        .footer__organization > .organization {
+            @include make-row();
+        }
+
+        .footer__links {
+            > .links-left {
+                @include make-xs-column(4);
+            }
+
+            > .links-right {
+                @include make-xs-column(8);
+            }
+        }
+
+        .footer__organization {
+            .organization {
+                margin-top: $line-height-computed;
+                margin-bottom: $line-height-computed;
+
+                > .name {
+                    @include make-xs-column(12);
+                    @include make-sm-column(3);
+                    @include make-md-column(2);
+                }
+
+                > .address {
+                    @include make-xs-column(12);
+                    @include make-sm-column(3);
+                    @include make-md-column(2);
+                }
+
+                > .contacts {
+                    @include make-xs-column(12);
+                    @include make-sm-column(3);
+                    @include make-md-column(2);
+                }
+            }
+        }
+
+        .footer__copy {
+            > .copyright {}
+        }
+}
+
+
+//
+// Inner page layout set`s
+// --------------------------------------------------
+
+// 2 columns layout
+// -------------------------
+.col2-set {
+    @include make-row();
+
+    .col-1,
+    .col-2 {
+        @include make-xs-column(12);
+        @include make-sm-column(6);
+    }
+}

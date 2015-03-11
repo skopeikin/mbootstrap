@@ -1,0 +1,15 @@
+//
+// Pager
+// --------------------------------------------------
+.pager-wrapper {
+    > .amount {}
+    > .pagination {}
+    > .limiter {
+        
+        display: inline-block;
+
+        > label {
+            display: inline-block;
+        }
+    }
+}

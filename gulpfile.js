@@ -10,9 +10,6 @@
 
 // Include gulp and plugins
 // --------------------------------------------------
-// $ sudo npm install -g gulp
-// $ npm install gulp --save-dev
-// $ npm install gulp-sass gulp-autoprefixer gulp-minify-css gulp-jshint gulp-concat gulp-uglify gulp-imagemin gulp-notify gulp-cache --save-dev
 var gulp = require('gulp');
 var plugins = require("gulp-load-plugins")({
     pattern: ['gulp-*', 'gulp.*'],
@@ -41,18 +38,18 @@ gulp.task('build-theme-base-scripts', require('./gulp/theme/base/tasks/scripts')
 // -------------------------
 config.theme.mbootstrap = require('./skin/frontend/mbootstrap/default/gulp/mbootstrap.js')(config);
 gulp.task('build-theme-mbootstrap-scripts', require('./skin/frontend/mbootstrap/default/gulp/tasks/scripts')(gulp, plugins, config));
+gulp.task('build-theme-mbootstrap-styles', require('./skin/frontend/mbootstrap/default/gulp/tasks/sass')(gulp, plugins, config));
 
 
 // Tasks
 // --------------------------------------------------
-// -------------------------
-
-
-gulp.task('dist', function(){
-//    console.log(cfg.theme.base);
-});
-gulp.task('build', ['dist']);
+gulp.task('build-theme-mbootstrap', [
+    'build-theme-base-scripts',
+    'build-theme-mbootstrap-scripts', 'build-theme-mbootstrap-styles'
+]);
 
 //
 // Default Task
+// -------------------------
+gulp.task('build', ['build-theme-mbootstrap']);
 gulp.task('default', ['build']);

@@ -22,17 +22,13 @@
                 <action method="removeItem"><type>js</type><name>lib/ds-sleight.js</name><params/></action>
 
 
-                <!-- Bootstrap framework styles -->
-                <action method="addItem"><type>skin_css</type><name>bootstrap/dist/css/bootstrap.min.css</name><params/></action>
-
-
                 <!-- General styles -->
-                <action method="addItem"><type>skin_css</type><name>css/mbootstrap.min.css</name><params/></action>
+                <action method="addItem"><type>skin_css</type><name>build/css/mbootstrap.min.css</name><params/></action>
 
 
                 <!-- IE styles -->
-                <action method="addItem"><type>skin_css</type><name>css/mbootstrap-ie8.min.css</name><params/><if>lt IE 9</if></action>
-                <action method="addItem"><type>skin_css</type><name>css/mbootstrap-ie9.min.css</name><params/><if>IE 9</if></action>
+                <!--<action method="addItem"><type>skin_css</type><name>css/mbootstrap-ie8.min.css</name><params/><if>lt IE 9</if></action>-->
+                <!--<action method="addItem"><type>skin_css</type><name>css/mbootstrap-ie9.min.css</name><params/><if>IE 9</if></action>-->
 
 
                 <!-- jQuery & UI -->
@@ -43,7 +39,7 @@
 
 
                 <!-- Bootstrap framework scripts -->
-                <action method="addItem"><type>skin_js</type><script>bootstrap/dist/js/bootstrap.min.js</script></action>
+                <action method="addItem"><type>skin_js</type><script>bootstrap/assets/javascripts/bootstrap.min.js</script></action>
 
 
                 <!-- jQuery scripts -->
