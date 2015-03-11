@@ -1,12 +1,33 @@
 module.exports = function (gulp, plugins, config) {
     return function () {
 
-        gulp.src( config.theme.mbootstrap.source.js.bootstrap.dir + "*.js" )
-            .pipe(plugins.debug())
-            .pipe(plugins.concat( config.theme.mbootstrap.source.js.bootstrap.concat ))
-            .pipe(gulp.dest( config.theme.mbootstrap.build.js.dir ))
-            .pipe(plugins.rename( config.theme.mbootstrap.source.js.bootstrap.min ))
+        var theme = config.theme.mbootstrap;
+
+        // jquery
+        gulp.src( theme.source.js.jquery.files )
+//            .pipe(plugins.debug())
+            .pipe(plugins.concat( theme.source.js.jquery.concat ))
+            .pipe(gulp.dest( theme.build.js.dir ))
+            .pipe(plugins.rename( theme.source.js.jquery.min ))
             .pipe(plugins.uglify())
-            .pipe(gulp.dest( config.theme.mbootstrap.build.js.dir ));
+            .pipe(gulp.dest( theme.build.js.dir ));
+
+        // bootstrap
+        gulp.src( theme.source.js.bootstrap.files )
+//            .pipe(plugins.debug())
+            .pipe(plugins.concat( theme.source.js.bootstrap.concat ))
+            .pipe(gulp.dest( theme.build.js.dir ))
+            .pipe(plugins.rename( theme.source.js.bootstrap.min ))
+            .pipe(plugins.uglify())
+            .pipe(gulp.dest( theme.build.js.dir ));
+
+        // scripts
+        gulp.src( theme.source.js.jquery.scripts.files )
+//            .pipe(plugins.debug())
+            .pipe(plugins.concat( theme.source.js.jquery.scripts.concat ))
+            .pipe(gulp.dest( theme.build.js.dir ))
+            .pipe(plugins.rename( theme.source.js.jquery.scripts.min ))
+            .pipe(plugins.uglify())
+            .pipe(gulp.dest( theme.build.js.dir ));
     };
 };

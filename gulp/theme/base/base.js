@@ -59,7 +59,7 @@ module.exports = function(config) {
                     },
                     bundle:         {
                         files: [
-                            config.path.skin.dir + 'frontend/base/default/js/bundle.js'
+                            config.path.skin.dir + 'base/default/js/bundle.js'
                         ]
                     },
                     gift: {
