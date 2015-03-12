@@ -63,33 +63,33 @@
 
 // .form-group fix for elements witch problem to access
 .form-group {
-        input:not([type^="checkbox"][type^="radio"][type^="file"][class^="form-control"][class*=" form-control"]) {
-                @include form-control();
-        }
+    input:not([type^="checkbox"][type^="radio"][type^="file"][class^="form-control"][class*=" form-control"]) {
+            @include form-control();
+    }
 
-        select,
-        textarea {
-                &:not([class^="form-control"]),
-                &:not([class*=" form-control"]) {
-                        @include form-control();
-                }
-        }
-        textarea {
-                &:not([class^="form-control"]),
-                &:not([class*=" form-control"]) {
-            // Reset height for `textarea`s
-            height: auto;
-                }
-        }
+    select,
+    textarea {
+            &:not([class^="form-control"]),
+            &:not([class*=" form-control"]) {
+                    @include form-control();
+            }
+    }
+    textarea {
+            &:not([class^="form-control"]),
+            &:not([class*=" form-control"]) {
+        // Reset height for `textarea`s
+        height: auto;
+            }
+    }
 }
 
 // Checkboxes and radios
 //
 // Indent the labels to position radios/checkboxes as hanging controls.
 
-.radio,
-.checkbox {
-    &label {
+label {
+    &.radio,
+    .checkbox {
         padding-left: 20px;
     }
 }

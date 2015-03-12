@@ -37,6 +37,7 @@ gulp.task('build-theme-base-scripts', require('./gulp/theme/base/tasks/scripts')
 // Magento-Bootstrap Theme
 // -------------------------
 config.theme.mbootstrap = require('./skin/frontend/mbootstrap/default/gulp/mbootstrap.js')(config);
+gulp.task('watch-theme-mbootstrap', require('./skin/frontend/mbootstrap/default/gulp/tasks/watch')(gulp, plugins, config));
 gulp.task('build-theme-mbootstrap-scripts', require('./skin/frontend/mbootstrap/default/gulp/tasks/scripts')(gulp, plugins, config));
 gulp.task('build-theme-mbootstrap-styles', require('./skin/frontend/mbootstrap/default/gulp/tasks/sass')(gulp, plugins, config));
 gulp.task('build-theme-mbootstrap-images', require('./skin/frontend/mbootstrap/default/gulp/tasks/imagemin')(gulp, plugins, config));

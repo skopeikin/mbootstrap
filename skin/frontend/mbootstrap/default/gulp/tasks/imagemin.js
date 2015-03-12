@@ -5,7 +5,7 @@ module.exports = function (gulp, plugins, config) {
 
         gulp.src( theme.source.images.files )
             .pipe(plugins.cache( plugins.imagemin() ))
-            .pipe(plugins.debug())
+//            .pipe(plugins.debug())
             .pipe(gulp.dest( theme.build.images.dir ));
     };
 };
