@@ -50,22 +50,9 @@
         }
 
         > table {
-            min-width: 100%;
+            @extend .table;
 
             border: $block-content-border;
-
-            tr {
-                + tr {
-                    > td {
-                        border-top: $block-content-border;
-                    }
-                }
-            }
-
-                td {
-                    width: 50%;
-                    padding: 0 ($grid-gutter-width / 2);
-                }
         }
     }
 
