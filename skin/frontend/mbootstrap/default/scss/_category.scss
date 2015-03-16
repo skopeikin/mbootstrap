@@ -32,7 +32,9 @@
         @include make-sm-column(6);
         @include make-md-column(4);
 
-        > .thumbnail {}
+        > .thumbnail {
+            margin: 0;
+        }
 
             .product-name,
             .ratings,
@@ -72,6 +74,8 @@
         margin: 0 0 $line-height-computed;
 
         > .thumbnail {
+            margin-bottom: 0;
+
             > .thumbnail__i {
                 @include make-row();
             }
