@@ -2,87 +2,112 @@
 //
 // Magento-Bootstrap theme resources, dependies and tasks
 // --------------------------------------------------
-var themeOptions = {
-    "package":  "mbootstrap",
-    "theme":    "default"
-};
 
 module.exports = function(config) {
 
-    return {
-        source: {
-            images: {
+    var theme = {
+        options:    {
+            "package":  "mbootstrap",
+            "theme":    "default"
+        },
+        path:       {},
+        source:     {},
+        build:      {},
+        plugins:    {}
+    }
+
+    // Path
+    theme.path.skin = {
+        dir: config.path.skin.dir + theme.options.package + '/' + theme.options.theme + '/'
+    }
+
+    theme.path.bootstrap = {
+        dir: theme.path.skin.dir + 'bootstrap/',
+
+        css: {
+            dir: theme.path.skin.dir + 'bootstrap/assets/stylesheets/bootstrap/'
+        },
+        js: {
+            dir: theme.path.skin.dir + 'bootstrap/assets/javascripts/bootstrap/'
+        }
+    }
+
+    // Source
+    theme.source = {
+        images: {
+            files: [
+                theme.path.skin.dir + 'images/**/*.*'
+            ]
+        },
+        scss: {
+            concat: 'mbootstrap.css',
+            min:    'mbootstrap.min.css',
+            files:  theme.path.skin.dir + 'scss/mbootstrap.scss'
+        },
+        js: {
+            bootstrap: {
+                concat: 'bootstrap.js',
+                min:    'bootstrap.min.js',
                 files: [
-                    config.path.skin.dir + themeOptions.package + '/' + themeOptions.theme + '/' + 'images/**/*.*'
+                    theme.path.bootstrap.js.dir + 'affix.js'
+                    ,theme.path.bootstrap.js.dir + 'alert.js'
+                    ,theme.path.bootstrap.js.dir + 'button.js'
+                    ,theme.path.bootstrap.js.dir + 'carousel.js'
+                    ,theme.path.bootstrap.js.dir + 'collapse.js'
+                    ,theme.path.bootstrap.js.dir + 'dropdown.js'
+                    ,theme.path.bootstrap.js.dir + 'tab.js'
+                    ,theme.path.bootstrap.js.dir + 'transition.js'
+                    ,theme.path.bootstrap.js.dir + 'scrollspy.js'
+                    ,theme.path.bootstrap.js.dir + 'modal.js'
+                    ,theme.path.bootstrap.js.dir + 'tooltip.js'
+                    ,theme.path.bootstrap.js.dir + 'popover.js'
                 ]
             },
-            scss: {
-                concat: 'mbootstrap.css',
-                min:    'mbootstrap.min.css',
-                files:  config.path.skin.dir + themeOptions.package + '/' + themeOptions.theme + '/' + 'scss/mbootstrap.scss'
-            },
-            js: {
-                bootstrap: {
-                    concat: 'bootstrap.js',
-                    min:    'bootstrap.min.js',
-                    dir:    config.path.skin.dir + themeOptions.package + '/' + themeOptions.theme + '/bootstrap/assets/javascripts/bootstrap/',
-                    files: [
-                        config.path.skin.dir + themeOptions.package + '/' + themeOptions.theme + '/bootstrap/assets/javascripts/bootstrap/' + 'affix.js'
-                        ,config.path.skin.dir + themeOptions.package + '/' + themeOptions.theme + '/bootstrap/assets/javascripts/bootstrap/' + 'alert.js'
-                        ,config.path.skin.dir + themeOptions.package + '/' + themeOptions.theme + '/bootstrap/assets/javascripts/bootstrap/' + 'button.js'
-                        ,config.path.skin.dir + themeOptions.package + '/' + themeOptions.theme + '/bootstrap/assets/javascripts/bootstrap/' + 'carousel.js'
-                        ,config.path.skin.dir + themeOptions.package + '/' + themeOptions.theme + '/bootstrap/assets/javascripts/bootstrap/' + 'collapse.js'
-                        ,config.path.skin.dir + themeOptions.package + '/' + themeOptions.theme + '/bootstrap/assets/javascripts/bootstrap/' + 'dropdown.js'
-                        ,config.path.skin.dir + themeOptions.package + '/' + themeOptions.theme + '/bootstrap/assets/javascripts/bootstrap/' + 'tab.js'
-                        ,config.path.skin.dir + themeOptions.package + '/' + themeOptions.theme + '/bootstrap/assets/javascripts/bootstrap/' + 'transition.js'
-                        ,config.path.skin.dir + themeOptions.package + '/' + themeOptions.theme + '/bootstrap/assets/javascripts/bootstrap/' + 'scrollspy.js'
-                        ,config.path.skin.dir + themeOptions.package + '/' + themeOptions.theme + '/bootstrap/assets/javascripts/bootstrap/' + 'modal.js'
-                        ,config.path.skin.dir + themeOptions.package + '/' + themeOptions.theme + '/bootstrap/assets/javascripts/bootstrap/' + 'tooltip.js'
-                        ,config.path.skin.dir + themeOptions.package + '/' + themeOptions.theme + '/bootstrap/assets/javascripts/bootstrap/' + 'popover.js'
-                    ]
+            jquery: {
+                concat: 'jquery.js',
+                min:    'jquery.min.js',
+                files:  [
+                    theme.path.skin.dir + 'js/jquery/jquery.js',
+                    theme.path.skin.dir + 'js/jquery/jquery.noConflict.js'
+                ],
+
+                plugins: {
+                    files: []
                 },
-                jquery: {
-                    concat: 'jquery.js',
-                    min:    'jquery.min.js',
-                    files:  [
-                        config.path.skin.dir + themeOptions.package + '/' + themeOptions.theme + '/js/jquery/jquery.js',
-                        config.path.skin.dir + themeOptions.package + '/' + themeOptions.theme + '/js/jquery/jquery.noConflict.js',
-                    ],
-
-                    plugins: {
-                        files: []
-                    },
-                    scripts: {
-                        concat: 'jquery.scripts.js',
-                        min:    'jquery.scripts.min.js',
-                        files: [
-                            config.path.skin.dir + themeOptions.package + '/' + themeOptions.theme + '/js/jquery/scripts/magento-to-bootstrap-navigation.js',
-                            config.path.skin.dir + themeOptions.package + '/' + themeOptions.theme + '/js/jquery/scripts/prototype-bootstrap-fix.js',
-                        ]
-                    }
+                scripts: {
+                    concat: 'jquery.scripts.js',
+                    min:    'jquery.scripts.min.js',
+                    files: [
+                        theme.path.skin.dir + 'js/jquery/scripts/magento-to-bootstrap-navigation.js',
+                        theme.path.skin.dir + 'js/jquery/scripts/prototype-bootstrap-fix.js'
+                    ]
                 }
-            }
-        },
-
-        build: {
-            images: {
-                dir: config.path.skin.dir + themeOptions.package + '/' + themeOptions.theme + '/' + 'images/'
-            },
-            css: {
-                dir: config.path.skin.dir + themeOptions.package + '/' + themeOptions.theme + '/' + 'build/css/'
-            },
-            js: {
-                dir: config.path.build.js.dir + themeOptions.package + '/' + themeOptions.theme + '/'
-            }
-        },
-
-        plugins: {
-            autoprefixer: {
-                cascade: false
-            },
-            sass: {
-                errLogToConsole: true
             }
         }
     }
+
+    // Build
+    theme.build = {
+        images: {
+            dir: theme.path.skin.dir + '/' + 'images/'
+        },
+        css: {
+            dir: theme.path.skin.dir + '/' + 'build/css/'
+        },
+        js: {
+            dir: config.path.build.js.dir + theme.options.package + '/' + theme.options.theme + '/'
+        }
+    }
+
+    // Plugins
+    theme.plugins = {
+        autoprefixer: {
+            cascade: false
+        },
+        sass: {
+            errLogToConsole: true
+        }
+    }
+
+    return theme;
 };

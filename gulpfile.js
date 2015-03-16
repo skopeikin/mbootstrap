@@ -32,27 +32,27 @@ var config = cfg = {
 // Base Theme
 // -------------------------
 config.theme.base = require('./gulp/theme/base/base.js')(config);
-gulp.task('build-theme-base-scripts', require('./gulp/theme/base/tasks/scripts')(gulp, plugins, config));
+gulp.task('build-base-scripts', require('./gulp/theme/base/tasks/scripts')(gulp, plugins, config));
 
 // Magento-Bootstrap Theme
 // -------------------------
 config.theme.mbootstrap = require('./skin/frontend/mbootstrap/default/gulp/mbootstrap.js')(config);
-gulp.task('watch-theme-mbootstrap', require('./skin/frontend/mbootstrap/default/gulp/tasks/watch')(gulp, plugins, config));
-gulp.task('build-theme-mbootstrap-scripts', require('./skin/frontend/mbootstrap/default/gulp/tasks/scripts')(gulp, plugins, config));
-gulp.task('build-theme-mbootstrap-styles', require('./skin/frontend/mbootstrap/default/gulp/tasks/sass')(gulp, plugins, config));
-gulp.task('build-theme-mbootstrap-images', require('./skin/frontend/mbootstrap/default/gulp/tasks/imagemin')(gulp, plugins, config));
+gulp.task('watch-mbootstrap', require('./skin/frontend/mbootstrap/default/gulp/tasks/watch')(gulp, plugins, config));
+gulp.task('build-mbootstrap-scripts', require('./skin/frontend/mbootstrap/default/gulp/tasks/scripts')(gulp, plugins, config));
+gulp.task('build-mbootstrap-styles', require('./skin/frontend/mbootstrap/default/gulp/tasks/sass')(gulp, plugins, config));
+gulp.task('build-mbootstrap-images', require('./skin/frontend/mbootstrap/default/gulp/tasks/imagemin')(gulp, plugins, config));
 
 
 // Tasks
 // --------------------------------------------------
-gulp.task('build-theme-mbootstrap', [
-    'build-theme-base-scripts',
-    'build-theme-mbootstrap-scripts', 'build-theme-mbootstrap-styles',
-    'build-theme-mbootstrap-images'
+gulp.task('build-mbootstrap', [
+    'build-base-scripts',
+    'build-mbootstrap-scripts', 'build-mbootstrap-styles',
+    'build-mbootstrap-images'
 ]);
 
 //
 // Default Task
 // -------------------------
-gulp.task('build', ['build-theme-mbootstrap']);
+gulp.task('build', ['build-mbootstrap']);
 gulp.task('default', ['build']);
