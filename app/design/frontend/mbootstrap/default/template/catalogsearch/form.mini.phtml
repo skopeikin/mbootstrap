@@ -32,7 +32,10 @@ $catalogSearchHelper =  $this->helper('catalogsearch');
     <div class="form-group">
         <input class="form-control" id="search" type="text" name="<?php echo $catalogSearchHelper->getQueryParamName() ?>" value="<?php echo $catalogSearchHelper->getEscapedQueryText() ?>" maxlength="<?php echo $catalogSearchHelper->getMaxQueryLength();?>" placeholder="<?php echo $this->__('Search entire store here...') ?>" />
     </div>
-    <button type="submit" title="<?php echo $this->__('Search') ?>" class="btn btn-default"><?php echo $this->__('Search') ?></button>
+    <button type="submit" title="<?php echo $this->__('Search') ?>" class="btn btn-link btn-search">
+<!--        --><?php //echo $this->__('Search') ?>
+        <span class="glyphicon glyphicon-search"></span>
+    </button>
 
     <div id="search_autocomplete" class="search-autocomplete" style="display: none;"></div>
     <script type="text/javascript">

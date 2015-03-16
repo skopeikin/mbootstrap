@@ -18,6 +18,10 @@
             min-width: $search-mini-input-min-width;
         }
     }
+
+    .btn-search {
+        color: $search-mini-btn-color;
+    }
 }
 
     .search-autocomplete {
