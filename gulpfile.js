@@ -24,7 +24,7 @@ var config = cfg = {
     path:       {},
     theme:      {}
 };
-    config.path = require('./gulp/config.js')(config.root);
+config.path = require('./gulp/config.js')(config.root);
 
 
 // Import themes settings and task list
