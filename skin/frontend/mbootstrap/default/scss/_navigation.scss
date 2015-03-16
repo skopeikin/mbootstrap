@@ -2,8 +2,10 @@
 // Navigation
 // --------------------------------------------------
 .navbar-container {
-    .i-navbar {
+	position: relative;
+	z-index: 2;
+}
+	.i-navbar {
         margin-top: ($line-height-computed / 2);
         margin-bottom: ($line-height-computed / 2);
     }
-}
