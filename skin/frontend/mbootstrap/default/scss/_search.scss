@@ -7,6 +7,17 @@
 // -------------------------
 .search-mini {
     position: relative;
+
+    .form-control {
+        background: $search-mini-input-bg;
+        border-color: $search-mini-input-border-color;
+        box-shadow: $search-mini-input-box-shadow;
+        color: $search-mini-input-color;
+
+        @media (min-width: $screen-sm-min) {
+            min-width: $search-mini-input-min-width;
+        }
+    }
 }
 
     .search-autocomplete {

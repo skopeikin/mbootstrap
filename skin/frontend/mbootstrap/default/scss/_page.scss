@@ -38,6 +38,37 @@
     }
 }
 
+    // Best selling
+    .box.best-selling {
+        > h3 {
+            @extend .block-title;
+
+            font-size: $font-size-large;
+            font-weight: normal;
+
+            color: $block-title-color;
+        }
+
+        > table {
+            min-width: 100%;
+
+            border: $block-content-border;
+
+            tr {
+                + tr {
+                    > td {
+                        border-top: $block-content-border;
+                    }
+                }
+            }
+
+                td {
+                    width: 50%;
+                    padding: 0 ($grid-gutter-width / 2);
+                }
+        }
+    }
+
 // Page Sitemap
 // -------------------------
 .page-sitemap {

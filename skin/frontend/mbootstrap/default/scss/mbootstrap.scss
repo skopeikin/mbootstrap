@@ -1,3 +1,31 @@
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+// @media (min-width: $screen-sm-min) { ... }
+
+/* Medium devices (desktops, 992px and up) */
+// @media (min-width: $screen-md-min) { ... }
+
+/* Large devices (large desktops, 1200px and up) */
+// @media (min-width: $screen-lg-min) { ... }
+
+//
+//
+// @media (max-width: $screen-xs-max) { ... }
+// @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { ... }
+// @media (min-width: $screen-md-min) and (max-width: $screen-md-max) { ... }
+// @media (min-width: $screen-lg-min) { ... }
+//
+//
+// Retina images support
+// @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {}
+
+// Grid
+// @include make-row();
+// @include make-xs-column();
+// @include make-xs-column-offset();
+
 //
 // Magento-Bootstrap theme by MavenEcommerce
 // --------------------------------------------------
