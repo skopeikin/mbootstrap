@@ -409,6 +409,22 @@ $icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../../bootstrap
 // $navbar-inverse-toggle-icon-bar-bg:         #fff !default;
 // $navbar-inverse-toggle-border-color:        #333 !default;
 
+// Alternate navbars
+$navbar-main-bg:								#707070 !default;
+$navbar-main-color:								#fff !default;
+
+$navbar-main-link-color:						$navbar-main-color !default;
+$navbar-main-link-hover-bg:						rgba(0, 0, 0, 0.20) !default;
+$navbar-main-link-hover-color:					$navbar-main-link-color !default;
+$navbar-main-link-active-color:					$navbar-main-link-color !default;
+$navbar-main-link-active-bg:					$navbar-main-link-hover-bg !default;
+$navbar-main-link-disabled-color:				#aaa !default;
+$navbar-main-link-disabled-bg:					none !default;
+
+$navbar-main-brand-color:						$navbar-main-color !default;
+$navbar-main-brand-hover-bg:					none !default;
+$navbar-main-brand-hover-color:					$navbar-main-color !default;
+
 
 // //== Navs
 // //
@@ -741,7 +757,7 @@ $icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../../bootstrap
 // //** Thumbnail background color
 // $thumbnail-bg:                $body-bg !default;
 // //** Thumbnail border color
-// $thumbnail-border:            #ddd !default;
+$thumbnail-border:            $gray-lighter;
 // //** Thumbnail border radius
 // $thumbnail-border-radius:     $border-radius-base !default;
 

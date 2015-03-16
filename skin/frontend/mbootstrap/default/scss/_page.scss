@@ -3,7 +3,7 @@
 // --------------------------------------------------
 
 
-// Index page
+// Index/Home page
 // -------------------------
 .cms-index-index {
 	.col-main {
@@ -20,12 +20,22 @@
     .home-spot {
         @include make-xs-column(12);
         @include make-md-column(8);
+    }
 
-        img {
-        	@extend .img-responsive;;
+    .home-callout {
+        margin-bottom: $line-height-computed;
+
+        > a {
+            display: block;
         }
     }
-	
+
+    .home-callout,
+    .home-spot {
+        img {
+            @extend .img-responsive;
+        }
+    }
 }
 
 // Page Sitemap

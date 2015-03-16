@@ -2,6 +2,11 @@
 // Category products
 // --------------------------------------------------
 .category-products {}
+    .category-image {
+        img {
+            @extend .img-responsive;
+        }
+    }
 
 
 // Products grid
@@ -42,12 +47,11 @@
 
             .product-name {
                 font-size: $font-size-base;
-
-                min-height: ($line-height-computed * 2);
             }
+
             .ratings {}
             .price-box {
-                min-height: ($line-height-computed * 2);
+                // min-height: ($line-height-computed * 2);
             }
             .availability {}
             .actions {}
@@ -88,7 +92,7 @@
                 @include make-sm-column(6);
                 @include make-md-column(4);
             }
-            
+
             .caption {
                 @include make-xs-column(12);
                 @include make-sm-column(6);
@@ -106,23 +110,5 @@
             .desc {}
             .availability {}
             .actions {}
-    }
-}
-
-
-// Product elements
-// -------------------------
-.product-name {
-    font-size: $font-size-base;
-
-    margin-top: 0;
-
-    line-height: $line-height-base;
-}
-
-.product-image {
-    > img {
-        margin-left: auto;
-        margin-right: auto;
     }
 }

@@ -49,11 +49,9 @@
 
 <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
 
-<div class="hidden-xs hidden-sm">
-    <?php if($_imgUrl): ?>
-        <?php echo $_imgHtml ?>
-    <?php endif; ?>
-</div>
+<?php if($_imgUrl): ?>
+    <?php echo $_imgHtml ?>
+<?php endif; ?>
 
 <?php if($_description=$this->getCurrentCategory()->getDescription()): ?>
     <div class="category-description std">

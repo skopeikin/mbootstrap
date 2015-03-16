@@ -11,7 +11,7 @@ app/etc/modules/EcomDev_MBootstrap.xml       app/etc/modules/EcomDev_MBootstrap.
 # Gulp
 #
 gulp/                                       gulp/
-Gulpfile.js                                 Gulpfile.js
+gulpfile.js                                 gulpfile.js
 package.json                                package.json
 
 # Theme

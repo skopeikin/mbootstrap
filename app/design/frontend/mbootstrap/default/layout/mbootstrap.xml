@@ -5,8 +5,6 @@
     <default translate="label">
 
         <!-- Remove Magento blocks -->
-        <remove name="left.permanent.callout" /> <!--the dog-->
-        <remove name="right.permanent.callout" /> <!--back to school-->
         <remove name="top.links"/>
 
         <reference name="root">

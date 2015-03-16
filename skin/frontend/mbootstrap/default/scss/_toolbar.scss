@@ -3,6 +3,10 @@
 // --------------------------------------------------
 .toolbar {
     margin-bottom: $line-height-computed;
+    padding: $toolbar-padidng;
+
+    border: $toolbar-border;
+    border-radius: $toolbar-border-radius;
 
     > .pager-wrapper {
         @include make-row();

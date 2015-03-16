@@ -3,7 +3,7 @@
 // --------------------------------------------------
 .navbar-container {
     .i-navbar {
-        margin-top: $line-height-computed;
-        margin-bottom: $line-height-computed;
+        margin-top: ($line-height-computed / 2);
+        margin-bottom: ($line-height-computed / 2);
     }
 }

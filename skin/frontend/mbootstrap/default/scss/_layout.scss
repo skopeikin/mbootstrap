@@ -1,16 +1,16 @@
 //
 // Layout
 // --------------------------------------------------
-.wrapper {}
+.wrapper {
+    border-top: 4px solid #dc4c97;
+}
 
 
 // Header Container
 // -------------------------
 .header-container {
 
-    padding: ($padding-large-vertical * 2) 0;
-
-    border-bottom: 2px solid $gray-lighter;
+    padding: ($line-height-computed / 2) 0;
 
     .header {
         > .header__i {
@@ -27,6 +27,7 @@
 
         .logo {
             display: block;
+            margin: 0;
 
             line-height: 0;
 
@@ -50,7 +51,10 @@
         :link.logo {}
         h1.logo {}
     }
+}
 
+    //
+    // quick access
     .quick-access {
         text-align: center;
 
@@ -62,42 +66,44 @@
         @include make-sm-column(9);
         @include make-md-column(8);
 
-        .i-top-bar {
+        .quick-access__i {
             display: inline-block;
+        }
 
-            .top-bar {
+            .welcome-bar {
+                margin-top: ($line-height-computed / 2);
+                padding: 0 $padding-small-horizontal;
+
                 @include clearfix();
             }
-        }
 
-        .welcome-msg {
-            float: left;
+                .welcome-msg {
+                    font-size: $font-size-small;
 
-            padding: ($padding-base-vertical + 1) 0 $padding-base-vertical;
+                    float: left;
+                    padding: ($padding-small-vertical + 1) 0 $padding-small-vertical;
 
-            text-align: right;
-        }
+                    text-align: right;
+                }
 
-        .form-language {
-            float: right;
-            margin: 0 0 $padding-large-vertical;
+            .form-language {
+                float: right;
 
-            text-align: left;
-        }
-
-        .links {
-            float: right;
-
-            > li {
-                > a {}
+                text-align: left;
             }
 
-            > .first {}
+            .links {
+                // float: right;
 
-            > .last {}
-        }
+                > li {
+                    > a {}
+                }
+
+                > .first {}
+
+                > .last {}
+            }
     }
-}
 
 
 // Breadcrumbs

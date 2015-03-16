@@ -5,3 +5,17 @@
 // -------------------------
 $green:     #0f0;
 $black:     #000;
+
+// Block
+$block-radius-base: 					$border-radius-base !default;
+$block-title-bg:						$gray-light !default;
+$block-content-border:					1px solid $gray-lighter !default;
+
+
+// Product
+$product-name-rows:						2 !default;
+
+// Toolbar
+$toolbar-border:						$block-content-border !default;
+$toolbar-border-radius:					$border-radius-base !default;
+$toolbar-padidng:						$padding-small-vertical $padding-small-horizontal;

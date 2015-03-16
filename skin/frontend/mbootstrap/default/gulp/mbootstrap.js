@@ -40,6 +40,7 @@ module.exports = function(config) {
             ]
         },
         scss: {
+            dir:    theme.path.skin.dir,
             concat: 'mbootstrap.css',
             min:    'mbootstrap.min.css',
             files:  theme.path.skin.dir + 'scss/mbootstrap.scss'
