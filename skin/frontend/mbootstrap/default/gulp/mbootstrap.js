@@ -80,7 +80,7 @@ module.exports = function(config) {
                     min:    'jquery.scripts.min.js',
                     files: [
                         theme.path.skin.dir + 'js/jquery/scripts/magento-to-bootstrap-navigation.js'
-//                        ,theme.path.skin.dir + 'js/jquery/scripts/prototype-bootstrap-fix.js'
+                        ,theme.path.skin.dir + 'js/jquery/scripts/prototype-bootstrap-fix.js'
                     ]
                 }
             }
