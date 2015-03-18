@@ -7,6 +7,15 @@
     @extend .btn-default;
 }
 
+p.back-link {
+    display: inline-block;
+}
+    a.back-link {
+        // set bootstrap form-control styles for Magento button element
+        @extend .btn;
+        @extend .btn-link;
+    }
+
 .btn {
     &.btn-cart {}
     &.btn-compare {}
@@ -22,7 +31,6 @@
 .btn-remove {
     color: #f00;
 }
-
 
 // Buttons set
 // -------------------------
