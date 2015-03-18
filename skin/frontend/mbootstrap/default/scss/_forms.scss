@@ -141,6 +141,7 @@ label.required {
 		&.control {
 			position: relative;
 
+			> input.checkbox,
 			.input-box {
 				position: absolute;
 				margin-top: 4px \9;
