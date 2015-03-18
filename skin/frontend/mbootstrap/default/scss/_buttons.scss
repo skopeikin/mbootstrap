@@ -1,5 +1,5 @@
 //
-// Buttons
+// Buttons & links
 // --------------------------------------------------
 .button {
     // set bootstrap form-control styles for Magento button element
@@ -16,20 +16,40 @@ p.back-link {
         @extend .btn-link;
     }
 
-.btn {
-    &.btn-cart {}
-    &.btn-compare {}
-    &.btn-wishlist {}
-    &.btn-proceed-checkout {}
-    &.btn-checkout {}
-    &.btn-remove {}
-    &.btn-update {}
-    &.btn-empty {}
-    &.btn-continue {}
+.btn {}
+.btn-cart {
+    @extend .btn-primary;
 }
+.btn-compare {}
+.btn-wishlist {}
+.btn-proceed-checkout {}
+.btn-checkout {}
+.btn-remove {}
+.btn-remove2 {
+    @extend .btn;
+    @extend .btn-default;
+
+    @extend .glyphicon;
+    @extend .glyphicon-remove;
+
+    font-size: 0;
+
+    &:before {
+        font-size: $font-size-base;
+    }
+}
+.btn-update {}
+.btn-empty {}
+.btn-continue {}
 
 .btn-remove {
     color: #f00;
+}
+
+// Links
+.link-edit {
+    @extend .btn;
+    @extend .btn-default;
 }
 
 // Buttons set

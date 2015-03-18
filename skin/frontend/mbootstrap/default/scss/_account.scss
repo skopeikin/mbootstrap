@@ -268,18 +268,26 @@
 
     .product-name {}
     .description {}
+        .inner {
+            @extend p;
+        }
 
-    .cell_cart {
+    textarea {
+        @extend .form-control;
+        @extend textarea.form-control;
     }
+
+    .cell_cart {}
         .price-box {
             margin-bottom: 5px;
 
             white-space: nowrap;
         }
 
-        .add-to-cart-alt {
-            .btn {
-                margin: ($line-height-computed / 2) 0;
-            }
+        .add-to-cart-alt {}
+        .btn-cart,
+        .link-edit {
+            margin-top: ($line-height-computed / 2);
+            @extend .btn-block;
         }
 }

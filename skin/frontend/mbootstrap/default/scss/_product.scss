@@ -8,15 +8,21 @@
     font-size: $font-size-base;
 
     margin-top: 0;
-    min-height: ($line-height-computed * $product-name-rows);
 
     line-height: $line-height-base;
+
+    .products-list,
+    .products-grid {
+        min-height: ($line-height-computed * $product-name-rows);
+    }
 }
 
 .product-image {
     > img {
         margin-left: auto;
         margin-right: auto;
+
+        @extend .img-responsive;
     }
 }
 
