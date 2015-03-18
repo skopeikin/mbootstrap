@@ -163,6 +163,30 @@ label.required {
 	}
 }
 
+// Customer - Date of Birth
+// -------------------------
+.customer-dob {
+	@include make-row();
+
+	label {
+		font-weight: normal;
+
+		position: absolute;
+		right: ($grid-gutter-width / 2) + 5px;
+		top: 7px;
+
+		color: $gray-light;
+	}
+}
+	.dob-month,
+	.dob-day,
+	.dob-year {
+		position: relative;
+
+		@include make-sm-column(4);
+	}
+	.dob-full {}
+
 		/* additional row */
 		.form-list li.additional-row { }
 		.form-list li.additional-row .btn-remove { }
