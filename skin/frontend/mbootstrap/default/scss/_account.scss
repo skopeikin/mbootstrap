@@ -20,7 +20,14 @@
 
 // Register form
 // -------------------------
-.account-create {}
+.account-create {
+    @media (min-width: $screen-sm-min) {
+        form {
+            max-width: 50%;
+            margin: auto;
+        }
+    }
+}
 
 
 // Forgot password form
