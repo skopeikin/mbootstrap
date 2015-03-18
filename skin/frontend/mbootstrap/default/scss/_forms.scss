@@ -62,8 +62,7 @@ form {
 // Required info
 // -------------------------
 p.required {
-	line-height: $line-height-base;
-	color: #f00;
+	color: $form-required-color;
 
 	> em {
 		font-style: normal;
@@ -74,10 +73,11 @@ label.required {
 	> em {
 		font-style: normal;
 
-		margin-left: 0.25em;
-		margin-left: 0.25rem;
+		color: $form-required-color;
 
-		color: #f00;
+		&:after {
+			content: ' ';
+		}
 	}
 }
 
@@ -85,7 +85,7 @@ label.required {
 // Validation notification
 // -------------------------
 .validation-advice {
-	color: #f00;
+	color: $form-required-color;
 }
 
 
@@ -128,8 +128,6 @@ label.required {
 			&.address {
 				.field {
 					+ .field {
-						//margin-top: ($line-height-computed * 1.25); // label height + label margin-bottom
-
 						+ .field {
 							margin-top: 0;
 						}
