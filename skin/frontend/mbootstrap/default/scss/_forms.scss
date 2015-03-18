@@ -27,6 +27,15 @@ form {
 // Input box
 // -------------------------
 .input-box {
+
+	// set bootstrap .form-group(-control) styles for Magento form elements
+	@extend .form-group;
+
+	input {
+		@extend .form-control;
+		@extend textarea.form-control;
+	}
+
 	/*
 	> input[type="text"],
 	> input[type="password"],

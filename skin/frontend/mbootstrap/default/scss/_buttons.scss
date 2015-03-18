@@ -1,6 +1,12 @@
 //
 // Buttons
 // --------------------------------------------------
+.button {
+    // set bootstrap form-control styles for Magento button element
+    @extend .btn;
+    @extend .btn-default;
+}
+
 .btn {
     &.btn-cart {}
     &.btn-compare {}
