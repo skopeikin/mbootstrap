@@ -7,6 +7,11 @@
 // -------------------------
 form {
 	.fieldset {}
+	.fieldset + .fieldset {
+		margin-top: $line-height-computed;
+
+		border-top: 1px solid $gray-lighter;
+	}
 
 	.legend {
 		font-size: $font-size-large;
