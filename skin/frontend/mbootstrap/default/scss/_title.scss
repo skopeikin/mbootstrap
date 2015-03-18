@@ -2,14 +2,11 @@
 // Page title
 // --------------------------------------------------
 .page-title {
-    > h1,
-    > h2 {
-        margin-top: 0;
-    }
+    @extend .page-header;
 
     &.title-buttons {
         position: relative;
-        
+
         > .btn {
             position: absolute;
             top: 0;
