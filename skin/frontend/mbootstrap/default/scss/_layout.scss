@@ -21,7 +21,7 @@
     .i-logo {
         text-align: center;
 
-        @include make-xs-column(12);
+        // @include make-xs-column(12);
         @include make-sm-column(3);
         @include make-md-column(4);
 
@@ -62,7 +62,7 @@
             text-align: right;
         }
 
-        @include make-xs-column(12);
+        // @include make-xs-column(12);
         @include make-sm-column(9);
         @include make-md-column(8);
 
@@ -109,7 +109,7 @@
 // Breadcrumbs
 // -------------------------
 .i-breadcrumb {
-    @include make-xs-column(12);
+    // @include make-xs-column(12);
 }
 
 
@@ -138,14 +138,14 @@
 
     &.col2-left-layout {
         .col-left {
-            @include make-xs-column(12);
+            // @include make-xs-column(12);
             @include make-sm-column(4);
             @include make-md-column(3);
             float: left !important;
         }
 
         .col-main {
-            @include make-xs-column(12);
+            // @include make-xs-column(12);
             @include make-sm-column(8);
             @include make-md-column(9);
             float: right !important;
@@ -154,13 +154,13 @@
 
     &.col2-right-layout {
         .col-right {
-            @include make-xs-column(12);
+            // @include make-xs-column(12);
             @include make-sm-column(4);
             @include make-md-column(3);
         }
 
         .col-main {
-            @include make-xs-column(12);
+            // @include make-xs-column(12);
             @include make-sm-column(8);
             @include make-md-column(9);
         }
@@ -168,17 +168,17 @@
 
     &.col3-layout {
         .col-left {
-            @include make-xs-column(12);
+            // @include make-xs-column(12);
             @include make-sm-column(3);
         }
 
         .col-right {
-            @include make-xs-column(12);
+            // @include make-xs-column(12);
             @include make-sm-column(3);
         }
 
         .col-main {
-            @include make-xs-column(12);
+            // @include make-xs-column(12);
             @include make-sm-column(6);
         }
     }
@@ -217,19 +217,19 @@
                 margin-bottom: $line-height-computed;
 
                 > .name {
-                    @include make-xs-column(12);
+                    // @include make-xs-column(12);
                     @include make-sm-column(3);
                     @include make-md-column(2);
                 }
 
                 > .address {
-                    @include make-xs-column(12);
+                    // @include make-xs-column(12);
                     @include make-sm-column(3);
                     @include make-md-column(2);
                 }
 
                 > .contacts {
-                    @include make-xs-column(12);
+                    // @include make-xs-column(12);
                     @include make-sm-column(3);
                     @include make-md-column(2);
                 }
@@ -253,7 +253,7 @@
 
     .col-1,
     .col-2 {
-        @include make-xs-column(12);
+        // @include make-xs-column(12);
         @include make-sm-column(6);
     }
 }

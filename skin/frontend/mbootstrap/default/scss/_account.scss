@@ -6,17 +6,9 @@
 // Login form
 // -------------------------
 .account-login {
-    .registered-users {
-        margin-bottom: ($line-height-computed * 2);
+    .registered-users {}
 
-        @include make-xs-column(12);
-        @include make-sm-column(4);
-    }
-
-    .new-users {
-        @include make-xs-column(12);
-        @include make-sm-column(8);
-    }
+    .new-users {}
 
     .content {
         h2 + p {
@@ -38,7 +30,7 @@
         @include make-row();
     }
         .control-group {
-            @include make-xs-column(12);
+            // @include make-xs-column(12);
             @include make-sm-column(6);
         }
 }
@@ -137,7 +129,7 @@
 // -------------------------
 .edit-account-info {
     .buttons-set {
-        @include make-xs-column(12);
+        // @include make-xs-column(12);
     }
 }
 
@@ -146,7 +138,7 @@
 // -------------------------
 .edit-address-info {
     .buttons-set {
-        @include make-xs-column(12);
+        // @include make-xs-column(12);
     }
 }
 
@@ -232,7 +224,7 @@
         @include make-row();
 
         .box {
-            @include make-xs-column(12);
+            // @include make-xs-column(12);
             @include make-sm-column(4);
         }
     }

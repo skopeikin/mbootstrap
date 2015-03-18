@@ -13,12 +13,12 @@
 	}
 
 	.col-left {
-        @include make-xs-column(12);
+        // @include make-xs-column(12);
         @include make-md-column(4);
     }
 
     .home-spot {
-        @include make-xs-column(12);
+        // @include make-xs-column(12);
         @include make-md-column(8);
     }
 

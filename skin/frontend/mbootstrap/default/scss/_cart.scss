@@ -92,7 +92,7 @@
             > .left,
             > .center,
             > .right {
-                @include make-xs-column(12);
+                // @include make-xs-column(12);
                 @include make-sm-column(4);
 
                 margin-bottom: $line-height-computed;

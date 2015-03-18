@@ -115,7 +115,7 @@
 				@include make-row();
 
 		        > .ccsave__i {
-		        	@include make-xs-column(12);
+		        	// @include make-xs-column(12);
 			        @include make-sm-column(6);
 		        }
 			}

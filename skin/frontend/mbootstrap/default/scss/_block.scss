@@ -255,7 +255,7 @@
             }
 
             .product-image {
-                @include make-xs-column(12);
+                // @include make-xs-column(12);
                 @include make-sm-column(4);
             }
 
@@ -266,7 +266,7 @@
 
                 line-height: $line-height-small;
 
-                @include make-xs-column(12);
+                // @include make-xs-column(12);
                 @include make-sm-column(8);
 
                 .product-name {

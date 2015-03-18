@@ -21,19 +21,19 @@
         }
 
         .amount {
-            @include make-xs-column(12);
+            // @include make-xs-column(12);
             @include make-sm-column(4);
         }
 
         .limiter {
-            @include make-xs-column(12);
+            // @include make-xs-column(12);
             @include make-sm-column(4);
         }
 
         .sort-by {
             white-space: nowrap;
 
-            @include make-xs-column(12);
+            // @include make-xs-column(12);
             @include make-sm-column(4);
         }
 
@@ -43,12 +43,12 @@
         @include make-row();
     }
         .view-mode {
-            @include make-xs-column(12);
+            // @include make-xs-column(12);
             @include make-sm-column(4);
         }
 
         .pager-list {
-            @include make-xs-column(12);
+            // @include make-xs-column(12);
             @include make-sm-column(8);
 
             .pagination {
