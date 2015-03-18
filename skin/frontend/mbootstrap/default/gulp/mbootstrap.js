@@ -68,8 +68,8 @@ module.exports = function(config) {
                 concat: 'jquery.js',
                 min:    'jquery.min.js',
                 files:  [
-                    theme.path.skin.dir + 'js/jquery/jquery.js',
-                    theme.path.skin.dir + 'js/jquery/jquery.noConflict.js'
+                    theme.path.skin.dir + 'js/jquery/jquery.js'
+                    ,theme.path.skin.dir + 'js/jquery/jquery.noConflict.js'
                 ],
 
                 plugins: {
@@ -79,8 +79,8 @@ module.exports = function(config) {
                     concat: 'jquery.scripts.js',
                     min:    'jquery.scripts.min.js',
                     files: [
-                        theme.path.skin.dir + 'js/jquery/scripts/magento-to-bootstrap-navigation.js',
-                        theme.path.skin.dir + 'js/jquery/scripts/prototype-bootstrap-fix.js'
+                        theme.path.skin.dir + 'js/jquery/scripts/magento-to-bootstrap-navigation.js'
+//                        ,theme.path.skin.dir + 'js/jquery/scripts/prototype-bootstrap-fix.js'
                     ]
                 }
             }
