@@ -24,7 +24,7 @@ p.back-link {
 .btn-wishlist {}
 .btn-proceed-checkout {}
 .btn-checkout {}
-.btn-remove {}
+.btn-remove,
 .btn-remove2 {
     @extend .btn;
     @extend .btn-default;
@@ -47,7 +47,8 @@ p.back-link {
 }
 
 // Links
-.link-edit {
+.link-edit,
+.link-cart {
     @extend .btn;
     @extend .btn-default;
 }

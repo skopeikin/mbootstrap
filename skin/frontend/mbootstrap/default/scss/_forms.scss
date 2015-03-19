@@ -156,6 +156,12 @@ label.required {
 				padding-left: 20px;
 			}
 		}
+		.controls {
+			label.checkbox,
+			label.radio {
+				padding-left: 20px;
+			}
+		}
 
 		&.wide {}
 
