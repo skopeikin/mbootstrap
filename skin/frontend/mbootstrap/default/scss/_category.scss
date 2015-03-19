@@ -17,7 +17,9 @@
 
     list-style: none;
 
-    @include make-row();
+    &:not(table) {
+        @include make-row();
+    }
 
     > .item {
         font-size: $font-size-base;

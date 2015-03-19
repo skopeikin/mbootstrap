@@ -48,7 +48,9 @@ p.back-link {
 
 // Links
 .link-edit,
-.link-cart {
+.link-cart,
+.link-wishlist,
+.link-compare {
     @extend .btn;
     @extend .btn-default;
 }

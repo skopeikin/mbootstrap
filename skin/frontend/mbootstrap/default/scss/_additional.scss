@@ -36,3 +36,9 @@
 .data-table {
 	@extend .table;
 }
+
+//
+//
+.clearer {
+	@include clearfix();
+}

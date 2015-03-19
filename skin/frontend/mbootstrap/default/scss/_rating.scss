@@ -5,8 +5,10 @@
     > .amount {
         display: inline-block;
     }
-
-    > .rating-links {}
+    .rating-box,
+    .rating-links {
+        display: inline-block;
+    }
 }
 
 .rating-box {
