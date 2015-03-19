@@ -225,7 +225,11 @@
 
 // Block - Cart sidebar
 // -------------------------
-.block-cart {}
+.block-cart {
+    .actions {
+        margin-bottom: $line-height-computed;
+    }
+}
 
 
 // Block - Related
