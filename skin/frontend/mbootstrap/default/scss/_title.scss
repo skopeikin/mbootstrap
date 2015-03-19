@@ -4,6 +4,11 @@
 .page-title {
     @extend .page-header;
 
+    &,
+    > h1 {
+        margin-top: 0;
+    }
+
     &.title-buttons {
         position: relative;
 
