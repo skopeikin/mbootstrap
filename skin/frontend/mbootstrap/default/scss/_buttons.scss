@@ -22,7 +22,9 @@ p.back-link {
 }
 .btn-compare {}
 .btn-wishlist {}
-.btn-proceed-checkout {}
+.btn-proceed-checkout {
+    @extend .btn-primary;
+}
 .btn-checkout {}
 .btn-remove,
 .btn-remove2 {
@@ -40,7 +42,9 @@ p.back-link {
 }
 .btn-update {}
 .btn-empty {}
-.btn-continue {}
+.btn-continue {
+    @extend .btn-link;
+}
 
 .btn-remove {
     color: #f00;

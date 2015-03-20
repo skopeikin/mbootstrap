@@ -27,7 +27,7 @@
     .price-label {}
     .price {}
 }
-        
+
 
 // Special price
 // -------------------------
@@ -35,11 +35,13 @@
     .price-label {}
     .price {}
 }
-        
+
 
 // From-To price
 // -------------------------
 .price-box {
+    font-size: $font-size-large;
+
     .price-from {}
     .price-from,
     .price-to {
@@ -56,14 +58,14 @@
 
 .minimal-price-link {
     white-space: nowrap;
-    
+
     .label {
         display: none;
     }
-    
+
     .price {}
 }
-        
+
 
 // Excluding tax
 // -------------------------
@@ -79,7 +81,7 @@
     .label {}
     .price {}
 }
- 
+
 
 // Configured price
 // -------------------------
