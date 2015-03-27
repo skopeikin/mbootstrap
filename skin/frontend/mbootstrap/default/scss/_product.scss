@@ -26,11 +26,24 @@
     }
 }
 
+.input-text.qty {
+    @media (min-width: $screen-sm-min) {
+        display: inline-block;
+        width: 80px;
+    }
+}
+
 
 //
 // Product view
 // --------------------------------------------------
-.product-view {}
+.product-view {
+    &.simple {}
+    &.configurable {}
+    &.bundle {}
+    &.grouped {}
+    &.virtual {}
+}
 
     //
     // Essential
@@ -71,9 +84,6 @@
 
                     label {}
                     .input-text {
-                        width: 80px;
-                        display: inline-block;
-
                         vertical-align: middle;
                     }
                     .btn-cart {}
@@ -117,8 +127,29 @@
                         margin-bottom: 0;
                     }
                 }
-                    dt {}
+                    dt {
+                        &:not(:first-child) {
+                            margin-top: $line-height-computed;
+                            padding-top: $line-height-computed;
+
+                            border-top: 1px solid $gray-lighter;
+                        }
+                    }
                     dd {}
+
+                        // bundle product options
+                        .qty-holder {}
+
+                        // options list
+                        .options-list {
+                            @include list-unstyled;
+                        }
+                            .label {
+                                font-size: $font-size-base;
+                                font-weight: normal;
+
+                                color: $text-color;
+                            }
             }
 
             //
@@ -142,15 +173,13 @@
                     padding-left: ($grid-gutter-width / 2);
                     padding-right: ($grid-gutter-width / 2);
 
-                    text-align: center;
+                    text-align: right;
                 }
 
                 .add-to-cart {
-                    .input-text {
-                        @media (min-width: $screen-sm-min) {
-                            width: 80px;
-                        }
-                    }
+                    margin-right: 5px;
+
+                    text-align: left;
                 }
 
                 .add-to-links {

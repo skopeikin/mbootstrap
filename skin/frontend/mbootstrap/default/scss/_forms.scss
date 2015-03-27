@@ -32,37 +32,43 @@ form {
 	// set bootstrap .form-group(-control) styles for Magento form elements
 	@extend .form-group;
 
-	input:not(.input-text) {
-		@extend .form-control;
-		@extend textarea.form-control;
+	input[type="text"],
+	input[type="password"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="date"],
+	input[type="month"],
+	input[type="time"],
+	input[type="week"],
+	input[type="number"],
+	input[type="email"],
+	input[type="url"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="color"],
+	select,
+	textarea {
+		&:not(.input-text){
+			@extend .form-control;
+			@extend textarea.form-control;
+		}
 	}
 
-	/*
-	> input[type="text"],
-	> input[type="password"],
-	> input[type="datetime"],
-	> input[type="datetime-local"],
-	> input[type="date"],
-	> input[type="month"],
-	> input[type="time"],
-	> input[type="week"],
-	> input[type="number"],
-	> input[type="email"],
-	> input[type="url"],
-	> input[type="search"],
-	> input[type="tel"],
-	> input[type="color"],
-	> select,
-	> textarea {
-		.form-control;
+	// fix when input.radio(.checkbox)
+	input.radio,
+	input.checkbox {
+		display: inline-block;
 	}
-	*/
 }
 
 .input-text {
 	@extend .form-control;
 	@extend textarea.form-control;
 }
+
+
+// Checkbox and Radio
+// -------------------------
 
 
 // Required info
