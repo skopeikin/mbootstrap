@@ -17,7 +17,9 @@
 
     list-style: none;
 
-    @include make-row();
+    &:not(table) {
+        @include make-row();
+    }
 
     > .item {
         font-size: $font-size-base;
@@ -115,4 +117,32 @@
             .availability {}
             .actions {}
     }
+}
+
+
+// Mini products list
+// -------------------------
+.mini-products-list {
+    @extend .list-unstyled;
+
+    .item {
+        @include clearfix();
+    }
+    .item + .item {
+        margin-top: ($line-height-computed / 2);
+
+        border-top: 1px solid $gray-lighter;
+    }
+
+        .product-details {
+            @include clearfix();
+
+            .btn-remove,
+            .link-cart {
+                float: right;
+            }
+            .price-box {
+                @extend p;
+            }
+        }
 }

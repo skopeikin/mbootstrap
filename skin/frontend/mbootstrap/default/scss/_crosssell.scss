@@ -2,19 +2,54 @@
 // Crosssel
 // --------------------------------------------------
 .crosssell {
-    margin: $line-height-computed 0;
-    
-    > h2 {
-        font-size: $font-size-base;
-        
-    }
-
-    .products-grid {
-        > .item {
-            // @include make-xs-column(12);
-            @include make-sm-column(4);
-            @include make-md-column(3);
-            @include make-lg-column(2);
+    .product-details {}
+        .add-to-links {
+            display: inline-block;
         }
-    }
 }
+    #crosssell-products-list {
+        @extend .list-unstyled;
+
+        padding: ($line-height-computed / 2) ($grid-gutter-width / 2);
+
+        border: 1px solid $gray-lighter;
+
+        .item {
+            display: table;
+        }
+
+        .item + .item {
+            margin-top: $line-height-computed;
+            padding-top: $line-height-computed;
+
+            border-top: 1px solid $gray-lighter;
+        }
+            .product-image,
+            .product-details {
+                display: table-cell;
+
+                vertical-align: top;
+            }
+
+            .product-details {
+                padding-left: ($grid-gutter-width / 2);
+            }
+
+                .price-box {
+                    margin-bottom: ($line-height-computed / 2);
+                }
+
+                .btn-cart {}
+                .add-to-links {
+                    margin-top: ($line-height-computed / 2);
+
+                    > li {
+                        display: inline-block;
+                    }
+                }
+
+                    .link-wishlist,
+                    .link-compare {
+                        @extend .btn-xs;
+                    }
+    }
