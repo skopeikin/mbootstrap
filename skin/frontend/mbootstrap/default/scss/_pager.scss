@@ -1,15 +1,12 @@
 //
-// Pager
+// Pager/Paginstion
 // --------------------------------------------------
-.pager-wrapper {
-    > .amount {}
-    > .pagination {}
-    > .limiter {
+.paging {}
+	.amount,
+	.limiter,
+	.pagination {
+		display: inline-block;
+		margin: 0;
 
-        display: inline-block;
-
-        > label {
-            display: inline-block;
-        }
-    }
-}
+		vertical-align: middle;
+	}

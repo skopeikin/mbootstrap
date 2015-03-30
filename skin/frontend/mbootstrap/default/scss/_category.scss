@@ -3,6 +3,8 @@
 // --------------------------------------------------
 .category-products {}
     .category-image {
+        margin-bottom: $line-height-computed;
+
         img {
             @extend .img-responsive;
         }
@@ -15,13 +17,14 @@
     @extend .list-unstyled;
     @include make-row();
 
-    margin-top: $line-height-computed;
+    margin-bottom: $line-height-computed;
 
     > li {
         @include make-sm-column(3);
     }
         a {
             @extend .thumbnail;
+            margin: 0;
 
             color: $block-title-color;
         }
