@@ -129,7 +129,7 @@
         <?php $_columnCount = $this->getColumnCount(); ?>
         <?php $i=0; foreach ($_productCollection as $_product): ?>
             <?php if ($i++%$_columnCount==0): ?>
-            <ul class="products-grid row">
+            <ul class="products-grid">
             <?php endif ?>
                 <li class="item<?php if(($i-1)%$_columnCount==0): ?> first<?php elseif($i%$_columnCount==0): ?> last<?php endif; ?>">
                     <div class="thumbnail">
