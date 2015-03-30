@@ -36,6 +36,21 @@
             @extend .img-responsive;
         }
     }
+
+    .promos {
+        @extend .list-unstyled;
+        @include make-row();
+
+        margin-top: $line-height-computed;
+
+        > li {
+            @include make-sm-column(4);
+        }
+
+            img {
+                @extend .img-responsive;
+            }
+    }
 }
 
     // Best selling
