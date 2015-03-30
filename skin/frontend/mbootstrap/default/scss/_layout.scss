@@ -141,14 +141,20 @@
             // @include make-xs-column(12);
             @include make-sm-column(4);
             @include make-md-column(3);
-            float: left !important;
+
+            @media (min-width: $screen-sm-min) {
+                float: left !important;
+            }
         }
 
         .col-main {
             // @include make-xs-column(12);
             @include make-sm-column(8);
             @include make-md-column(9);
-            float: right !important;
+
+            @media (min-width: $screen-sm-min) {
+                float: right !important;
+            }
         }
     }
 
