@@ -9,6 +9,31 @@
     }
 
 
+// Category bloks
+// -------------------------
+.catblocks {
+    @extend .list-unstyled;
+    @include make-row();
+
+    margin-top: $line-height-computed;
+
+    > li {
+        @include make-sm-column(3);
+    }
+        a {
+            @extend .thumbnail;
+
+            color: $block-title-color;
+        }
+            span {
+                display: block;
+                padding: $thumbnail-caption-padding;
+
+                background: $block-title-bg;
+            }
+}
+
+
 // Products grid
 // -------------------------
 .products-grid {
@@ -33,33 +58,31 @@
         // @include make-xs-column(12);
         @include make-sm-column(6);
         @include make-md-column(4);
+    }
 
-        > .thumbnail {
-            margin: 0;
+        .thumbnail {
+            margin-bottom: 0;
         }
 
             .product-name,
-            .ratings,
-            .price-box,
-            .availability {
-                margin-bottom: ($line-height-computed / 2);
-            }
+                .ratings,
+                .price-box,
+                .availability {
+                    margin-bottom: ($line-height-computed / 2);
+                }
 
-            .product-image {
-                display: block;
-            }
+                .product-image {
+                    // display: block;
+                }
 
-            .product-name {
-                font-size: $font-size-base;
-            }
+                .product-name {
+                    // font-size: $font-size-base;
+                }
 
-            .ratings {}
-            .price-box {
-                // min-height: ($line-height-computed * 2);
-            }
-            .availability {}
-            .actions {}
-    }
+                .ratings {}
+                .price-box {}
+                .availability {}
+                .actions {}
 }
 
 

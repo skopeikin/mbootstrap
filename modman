@@ -23,7 +23,6 @@ app/design/frontend/mbootstrap/default      app/design/frontend/mbootstrap/defau
 #
 skin/frontend/mbootstrap/default            skin/frontend/mbootstrap/default
 
-
 # Build/Javascript
 #
 js/build                                    js/build
