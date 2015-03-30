@@ -34,3 +34,6 @@
     font-size: $font-size-large;
     font-weight: normal;
 }
+.subtitle {
+    @extend .page-header;
+}
