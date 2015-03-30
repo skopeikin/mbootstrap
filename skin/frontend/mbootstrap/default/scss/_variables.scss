@@ -32,3 +32,7 @@ $toolbar-padidng:						$padding-small-vertical $padding-small-horizontal !defaul
 
 // Form
 $form-required-color: 					$brand-danger;
+
+// Footer
+$footer-text-color:						lighten($gray-light, 20%);
+$footer-link-color:						$gray-light;

@@ -75,7 +75,7 @@ class EcomDev_Cms_Model_Resource_Setup extends Mage_Core_Model_Resource_Setup
         $select = $this->getConnection()->select()
                 ->from(array("page" => $pageTable), array('identifier', 'page_id'))
                 ->where('identifier in (?)', array_keys($pages));
-        $storeId = is_numeric($storeId) ? (int) $storeId : 0;
+        $storeId = is_numeric($storeId) ? (int) $storeId : $this->getDefaultStoreId();
         $select->join(array("store" => $this->getTable("cms/page_store")), "store.page_id = page.page_id")
                 ->where("store.store_id = ?", $storeId);
         $installedPages = $this->getConnection()->fetchPairs($select);
@@ -114,6 +114,11 @@ class EcomDev_Cms_Model_Resource_Setup extends Mage_Core_Model_Resource_Setup
         }
 
         return $this;
+    }
+
+    public function getDefaultStoreId()
+    {
+        return Mage::app()->getDefaultStoreView()->getId();
     }
 
 }
