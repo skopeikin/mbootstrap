@@ -24,15 +24,15 @@ var config = cfg = {
     path:       {},
     theme:      {}
 };
-config.path = require('./gulp_config.js')(config.root);
+config.path = require('./gulp/gulp_config.js')(config.root);
 
 
 // Import themes settings and task list
 // --------------------------------------------------
 // Base Theme
 // -------------------------
-config.theme.base = require('./skin/frontend/base/default/gulp/base.js')(config);
-gulp.task('build-base-scripts', require('./skin/frontend/base/default/gulp/tasks/scripts.js')(gulp, plugins, config));
+config.theme.base = require('./gulp/theme/base/base.js')(config);
+gulp.task('build-base-scripts', require('./gulp/theme/base/tasks/scripts.js')(gulp, plugins, config));
 
 // Magento-Bootstrap Theme
 // -------------------------
@@ -45,8 +45,9 @@ gulp.task('build-mbootstrap-images', require('./skin/frontend/mbootstrap/default
 
 // Tasks
 // --------------------------------------------------
+gulp.task('build-base', ['build-base-scripts']);
 gulp.task('build-mbootstrap', [
-    'build-base-scripts',
+    'build-base',
     'build-mbootstrap-scripts', 'build-mbootstrap-styles',
     'build-mbootstrap-images'
 ]);

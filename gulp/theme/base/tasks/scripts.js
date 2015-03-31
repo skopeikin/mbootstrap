@@ -4,8 +4,8 @@ module.exports = function (gulp, plugins, config) {
         var theme = config.theme.base;
 
         // global
-        gulp.src( theme.source.js.global.files )
-//            .pipe(plugins.debug())
+        gulp.src( theme.source.js.global.files, {base: config.root})
+            .pipe(plugins.debug())
             .pipe(plugins.concat( config.path.build.js.global.concat ))
             .pipe(gulp.dest( theme.build.js.dir ))
             .pipe(plugins.rename( config.path.build.js.global.min ))

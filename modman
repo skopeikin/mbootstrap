@@ -13,7 +13,7 @@ gulp_config.js                              gulp_config.js
 #
 gulpfile.js                                 gulpfile.js
 package.json                                package.json
-skin/frontend/base/default/gulp             skin/frontend/base/default/gulp
+gulp                                        gulp
 
 # Theme
 #
