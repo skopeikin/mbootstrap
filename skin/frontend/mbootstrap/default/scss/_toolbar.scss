@@ -3,60 +3,119 @@
 // --------------------------------------------------
 .toolbar {
     margin-bottom: $line-height-computed;
-    padding: $toolbar-padidng;
+    padding: $padding-base-vertical $padding-base-horizontal;
 
+    background: $toolbar-background;
     border: $toolbar-border;
-    border-radius: $toolbar-border-radius;
+    border-width: 1px 0;
 
-    > .pager-wrapper {
-        @include make-row();
+    @media (min-width: $screen-sm-min) {
+        @extend .clearfix;
     }
 
-        .amount,
-        .limiter,
-        .view-mode {
-            @media (max-width: $screen-xs-max) {
-                margin-bottom: ($line-height-computed / 2);
-            }
+    .paging {
+        @media (min-width: $screen-sm-min) {
+            float: right;
+        }
+    }
+        .pagination {
+            margin-left: ($grid-gutter-width / 2);
         }
 
         .amount {
-            // @include make-xs-column(12);
-            @include make-sm-column(4);
+            display: none;
         }
 
-        .limiter {
-            // @include make-xs-column(12);
-            @include make-sm-column(4);
+        label {
+            margin: 0;
+        }
+
+        .form-control {
+            display: inline-block;
+        }
+}
+    .sorter {
+        @media (min-width: $screen-sm-min) {
+            float: left;
+        }
+    }
+        .view-mode,
+        .sort-by {
+            display: inline-block;
+            margin: 0 ($grid-gutter-width / 2) 0 0;
+
+            vertical-align: middle;
+        }
+
+        .view-mode {
+            label {
+                display: none;
+            }
         }
 
         .sort-by {
-            white-space: nowrap;
-
-            // @include make-xs-column(12);
-            @include make-sm-column(4);
-        }
-
-    > .sorter {
-        margin-top: ($line-height-computed / 2);
-
-        @include make-row();
-    }
-        .view-mode {
-            // @include make-xs-column(12);
-            @include make-sm-column(4);
-        }
-
-        .pager-list {
-            // @include make-xs-column(12);
-            @include make-sm-column(8);
-
-            .pagination {
-                margin-top: 0;
-                margin-bottom: 0;
+            .form-control {
+                width: 100px;
             }
         }
-}
+
+
+// .toolbar {
+//     margin-bottom: $line-height-computed;
+//     padding: $toolbar-padidng;
+
+//     border: $toolbar-border;
+//     border-radius: $toolbar-border-radius;
+
+//     > .pager-wrapper {
+//         @include make-row();
+//     }
+
+//         .amount,
+//         .limiter,
+//         .view-mode {
+//             @media (max-width: $screen-xs-max) {
+//                 margin-bottom: ($line-height-computed / 2);
+//             }
+//         }
+
+//         .amount {
+//             // @include make-xs-column(12);
+//             @include make-sm-column(4);
+//         }
+
+//         .limiter {
+//             // @include make-xs-column(12);
+//             @include make-sm-column(4);
+//         }
+
+//         .sort-by {
+//             white-space: nowrap;
+
+//             // @include make-xs-column(12);
+//             @include make-sm-column(4);
+//         }
+
+//     > .sorter {
+//         margin-top: ($line-height-computed / 2);
+
+//         @include make-row();
+//     }
+//         .view-mode {
+//             // @include make-xs-column(12);
+//             @include make-sm-column(4);
+//         }
+
+//         .pager-list {
+//             // @include make-xs-column(12);
+//             @include make-sm-column(8);
+
+//             .pagination {
+//                 margin-top: 0;
+//                 margin-bottom: 0;
+//             }
+//         }
+// }
 
 
 // Tolbar at bottom

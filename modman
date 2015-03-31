@@ -1,18 +1,19 @@
 # Modules
 #
-app/code/local/EcomDev/Cms                   app/code/local/EcomDev/Cms
-app/code/local/EcomDev/Mbootstrap            app/code/local/EcomDev/Mbootstrap
+app/code/local/EcomDev/Cms                  app/code/local/EcomDev/Cms
+app/code/local/EcomDev/Mbootstrap           app/code/local/EcomDev/Mbootstrap
 
 # Config
 #
-app/etc/modules/EcomDev_Cms.xml              app/etc/modules/EcomDev_Cms.xml
-app/etc/modules/EcomDev_MBootstrap.xml       app/etc/modules/EcomDev_MBootstrap.xml
+app/etc/modules/EcomDev_Cms.xml             app/etc/modules/EcomDev_Cms.xml
+app/etc/modules/EcomDev_MBootstrap.xml      app/etc/modules/EcomDev_MBootstrap.xml
+gulp_config.js                              gulp_config.js
 
 # Gulp
 #
-gulp/                                       gulp/
 gulpfile.js                                 gulpfile.js
 package.json                                package.json
+skin/frontend/base/default/gulp             skin/frontend/base/default/gulp
 
 # Theme
 #
@@ -22,6 +23,9 @@ app/design/frontend/mbootstrap/default      app/design/frontend/mbootstrap/defau
 #
 skin/frontend/mbootstrap/default            skin/frontend/mbootstrap/default
 
+# Build/Javascript
+#
+js/build                                    js/build
 
 # Themes examples
 #

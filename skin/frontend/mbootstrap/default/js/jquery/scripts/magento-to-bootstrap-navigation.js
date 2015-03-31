@@ -10,12 +10,16 @@
 
             nav.find(".parent")
                 .addClass("dropdown")
-                .children("a").addClass("dropdown-toggle").attr("data-toggle", "dropdown").append( ' <b class="caret"></b>')
+                .hover(
+                    function() { $( this ).addClass("open") },
+                    function() { $( this ).removeClass("open") }
+                )
+//                .children("a").addClass("dropdown-toggle").attr("data-toggle", "dropdown")
+                .children("a").addClass("dropdown-toggle")
+                .append( ' <b class="caret"></b>')
                 .next().addClass("dropdown-menu");
         };
 
         return this.each(menu);
-
-    };
-
+    }
 }( jQuery ));

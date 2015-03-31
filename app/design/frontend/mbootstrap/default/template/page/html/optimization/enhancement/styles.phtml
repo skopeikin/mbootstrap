@@ -1,0 +1,19 @@
+<?php
+$root           = Mage::getBaseDir();
+$cssCore        = $root.'/skin/frontend/mbootstrap/default/build/css/mbootstrap.core.min.css';
+$cssFull        = $this->getSkinUrl('build/css/mbootstrap.css');
+$helper         = Mage::helper('ecomdev_visitor');
+$_isCookieExist = $helper->isVisited();
+?>
+
+<?php // Show Core(Critical) Css ?>
+<?php if(!$_isCookieExist && file_exists($cssCore)): ?>
+    <style type="text/css"><?php include_once($cssCore); ?></style>
+<?php endif; ?>
+
+<?php // Show Full Css ?>
+<?php if(!$_isCookieExist): ?>
+    <script>loadCSS("<?php echo $cssFull ?>");</script>
+<?php else: ?>
+    <link rel="stylesheet" href="<?php echo $cssFull; ?>"/>
+<?php endif; ?>

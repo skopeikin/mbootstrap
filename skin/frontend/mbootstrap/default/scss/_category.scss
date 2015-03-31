@@ -3,10 +3,38 @@
 // --------------------------------------------------
 .category-products {}
     .category-image {
+        margin-bottom: $line-height-computed;
+
         img {
             @extend .img-responsive;
         }
     }
+
+
+// Category bloks
+// -------------------------
+.catblocks {
+    @extend .list-unstyled;
+    @include make-row();
+
+    margin-bottom: $line-height-computed;
+
+    > li {
+        @include make-sm-column(3);
+    }
+        a {
+            @extend .thumbnail;
+            margin: 0;
+
+            color: $block-title-color;
+        }
+            span {
+                display: block;
+                padding: $thumbnail-caption-padding;
+
+                background: $block-title-bg;
+            }
+}
 
 
 // Products grid
@@ -18,48 +46,51 @@
     list-style: none;
 
     &:not(table) {
-        @include make-row();
+        @media (min-width: $screen-sm-min) {
+            @include make-row();
+        }
     }
 
     > .item {
         font-size: $font-size-base;
 
-        display: inline-block;
-        float: none !important;
         margin-bottom: $line-height-computed;
 
-        vertical-align: top;
+        @media (min-width: $screen-sm-min) {
+            display: inline-block;
+            float: none !important;
 
-        // @include make-xs-column(12);
-        @include make-sm-column(6);
-        @include make-md-column(4);
+            vertical-align: top;
 
-        > .thumbnail {
-            margin: 0;
+            // @include make-xs-column(12);
+            @include make-sm-column(6);
+            @include make-md-column(4);
+        }
+    }
+
+        .thumbnail {
+            margin-bottom: 0;
         }
 
             .product-name,
-            .ratings,
-            .price-box,
-            .availability {
-                margin-bottom: ($line-height-computed / 2);
-            }
+                .ratings,
+                .price-box,
+                .availability {
+                    margin-bottom: ($line-height-computed / 2);
+                }
 
-            .product-image {
-                display: block;
-            }
+                .product-image {
+                    // display: block;
+                }
 
-            .product-name {
-                font-size: $font-size-base;
-            }
+                .product-name {
+                    // font-size: $font-size-base;
+                }
 
-            .ratings {}
-            .price-box {
-                // min-height: ($line-height-computed * 2);
-            }
-            .availability {}
-            .actions {}
-    }
+                .ratings {}
+                .price-box {}
+                .availability {}
+                .actions {}
 }
 
 

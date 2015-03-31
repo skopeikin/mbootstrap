@@ -37,8 +37,32 @@
 	@extend .table;
 }
 
-//
-//
+// Clear Fix
+// -------------------------
 .clearer {
 	@include clearfix();
+}
+
+// Links
+// -------------------------
+.links {
+	margin-bottom: 0;
+	@extend .list-unstyled;
+
+	> li {
+		display: inline-block;
+		padding: 0 $padding-small-vertical;
+
+		border-left: 1px solid #aaa;
+
+		&:first-child {
+			padding-left: 0;
+
+			border: none;
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
 }

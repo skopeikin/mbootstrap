@@ -32,7 +32,9 @@
 // $line-height-computed
 // ($line-height-computed / 2)
 // ($line-height-computed / 2) ($grid-gutter-width / 2);
-
+//
+// @extend .list-unstyled;
+//
 //
 // Magento-Bootstrap theme by MavenEcommerce
 // --------------------------------------------------
@@ -90,3 +92,6 @@
 @import "returns";
 @import "notices";
 @import "captcha";
+@import "slideshow";
+
+@import "std";
