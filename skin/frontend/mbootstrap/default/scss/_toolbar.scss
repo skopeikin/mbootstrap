@@ -18,10 +18,21 @@
             float: right;
         }
     }
+        .pagination {
+            margin-left: ($grid-gutter-width / 2);
+        }
 
-    label {
-        margin: 0;
-    }
+        .amount {
+            display: none;
+        }
+
+        label {
+            margin: 0;
+        }
+
+        .form-control {
+            display: inline-block;
+        }
 }
     .sorter {
         @media (min-width: $screen-sm-min) {
@@ -31,9 +42,21 @@
         .view-mode,
         .sort-by {
             display: inline-block;
-            margin: 0;
+            margin: 0 ($grid-gutter-width / 2) 0 0;
 
             vertical-align: middle;
+        }
+
+        .view-mode {
+            label {
+                display: none;
+            }
+        }
+
+        .sort-by {
+            .form-control {
+                width: 100px;
+            }
         }
 
 

@@ -10,3 +10,11 @@
 
 		vertical-align: middle;
 	}
+
+	.limiter {
+		white-space: nowrap;
+
+		.form-control {
+			width: 75px;
+		}
+	}

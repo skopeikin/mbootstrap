@@ -35,7 +35,7 @@ $form-required-color: 					$brand-danger;
 
 // Toolbar
 $toolbar-background:					$gray-lighter;
-$toolbar-border:						1px solid $gray-light;
+$toolbar-border:						1px solid darken($gray-lighter, 10%);
 
 // Footer
 $footer-text-color:						lighten($gray-light, 20%);
