@@ -172,14 +172,17 @@
                 }
 
                 .price-box {
-                    padding-left: ($grid-gutter-width / 2);
-                    padding-right: ($grid-gutter-width / 2);
+                    display: none;
+                    // padding-left: ($grid-gutter-width / 2);
+                    // padding-right: ($grid-gutter-width / 2);
 
-                    text-align: right;
+                    // text-align: right;
                 }
 
                 .add-to-cart {
                     margin-right: 5px;
+                    padding-left: ($grid-gutter-width / 2);
+                    padding-right: ($grid-gutter-width / 2);
 
                     text-align: left;
                 }
