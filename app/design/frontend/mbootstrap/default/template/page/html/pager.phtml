@@ -73,7 +73,7 @@
 
         <?php foreach ($this->getFramePages() as $_page): ?>
             <?php if ($this->isPageCurrent($_page)): ?>
-                <li class="active"><a href="#"><?php echo $_page ?></a></li>
+                <li class="active"><span><?php echo $_page ?> <span class="sr-only">(<?php echo $this->__("current"); ?>)</span></span></li>
             <?php else: ?>
                 <li><a href="<?php echo $this->getPageUrl($_page) ?>"><?php echo $_page ?></a></li>
             <?php endif;?>
