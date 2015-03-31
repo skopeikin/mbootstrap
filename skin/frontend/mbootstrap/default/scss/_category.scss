@@ -66,6 +66,12 @@
             @include make-sm-column(6);
             @include make-md-column(4);
         }
+
+        .col3-layout & {
+            @media (min-width: $screen-sm-min) {
+                @include make-md-column(6);
+            }
+        }
     }
 
         .thumbnail {
