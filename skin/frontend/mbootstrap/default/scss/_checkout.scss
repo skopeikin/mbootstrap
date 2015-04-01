@@ -85,27 +85,11 @@
 
 				> .please-wait {
 					float: right;
-					margin-right: $line-height-computed;
+					margin-right: ($grid-gutter-width / 2)
 				}
 			}
 
-			.sp-methods {
-				margin: 0;
-
-				> dt {}
-				> dd {
-					> ul {
-						padding: 0;
-						margin-left: $line-height-computed;
-
-						list-style: none;
-					}
-				}
-
-				.price {
-					font-size: inherit;
-				}
-			}
+			// .sp-methods {}
 
 			form {
 				margin-bottom: 0;
@@ -158,6 +142,111 @@
 			}
 		}
 	}
+}
+
+// Shipping Methods
+.sp-methods {
+	ul,
+	& {
+		@extend .list-unstyled;
+	}
+
+	> dt {
+		margin-bottom: ($line-height-computed / 2);
+		padding: $padding-small-vertical $padding-small-horizontal;
+
+		background: $gray-lighter;
+
+		&:not(:first-child) {
+			margin-top: ($line-height-computed / 2);
+		}
+
+		label {
+			margin: 0;
+		}
+	}
+	> dd {
+		ul {}
+			li {
+				position: relative;
+			}
+				.radio {
+					position: absolute;
+				}
+
+				label {
+					font-weight: normal;
+
+					padding-left: 20px;
+				}
+	}
+}
+
+// Gift Message
+.gift-messages {
+	.control {
+		.checkbox {
+			position: absolute;
+		}
+
+		label {
+			font-weight: normal;
+
+			padding-left: 20px;
+		}
+	}
+}
+
+.gift-messages-form {
+	p {
+		position: relative;
+
+		.checkbox {
+			position: absolute;
+		}
+
+		label {
+			font-weight: normal;
+
+			padding-left: 20px;
+		}
+	}
+
+	ol {
+		@extend .list-unstyled;
+	}
+		.item {
+			@include make-row();
+
+			&:not(:first-child) {
+				border-top: $block-content-border;
+			}
+
+			+ .item {
+				padding-top: $line-height-computed;
+			}
+		}
+			.product-img-box {
+				@include make-sm-column(4);
+			}
+				.product-image {
+					@extend .thumbnail;
+
+					margin: 0 0 ($line-height-computed / 2);
+				}
+
+				.number {
+					padding: $padding-small-vertical 0;
+
+					text-align: center;
+
+					background: $gray-lighter;
+					border-radius: $border-radius-base;
+				}
+
+			.details {
+				@include make-sm-column(8);
+			}
 }
 
 
