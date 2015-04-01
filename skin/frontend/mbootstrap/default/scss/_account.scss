@@ -281,13 +281,59 @@
         .price-box {
             margin-bottom: 5px;
 
-            white-space: nowrap;
+            &:not(.map-info) {
+                white-space: nowrap;
+            }
+        }
+        .map-info {
+            .msrp-price-hide-message,
+            a {
+                font-size: $font-size-base;
+
+                display: block;
+            }
         }
 
-        .add-to-cart-alt {}
-        .btn-cart,
-        .link-edit {
-            margin-top: ($line-height-computed / 2);
-            @extend .btn-block;
+        .add-to-cart-alt {
+            .btn + .btn {
+                margin-top: ($line-height-computed / 2);
+            }
         }
 }
+
+    #wishlist-table {
+        .cell_image {
+            width: 1px;
+        }
+        .cell_desc {}
+        .cell_cart {
+            width: 25%;
+        }
+        .cell_remove {
+            width: 1px;
+        }
+    }
+
+// Map Popup
+//
+.map-popup { background:#fff; border:1px solid #aaa; margin:12px 0 0; position:absolute; -moz-box-shadow:0 0 6px #ccc; -webkit-box-shadow:0 0 6px #ccc; box-shadow:0 0 6px #ccc; text-align:left; width:300px; z-index:100; }
+
+    .map-popup-heading { background:#d9e5ee; border-bottom:1px solid #ccc; padding:5px 30px 5px 10px; width:260px; }
+        .map-popup-heading h2 { font-size:16px; margin:0; text-shadow:0 1px 0 #f6f6f6; overflow:hidden; white-space:nowrap; word-wrap:break-word; text-align:left; text-overflow:ellipsis; }
+
+    .map-popup-arrow { background:url(../../images/map_popup_arrow.gif) no-repeat; position:absolute; left:50%; top:-10px; height:10px; width:19px; }
+    .map-popup-close { background:url(../../images/btn_window_close.gif) no-repeat; display:block; position:absolute; top:8px; right:10px; height:15px; width:15px; text-indent:-9999em; -moz-box-shadow:0 0 3px #999; -webkit-box-shadow:0 0 3px #999; box-shadow:0 0 3px #999; -moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px; }
+    .map-popup-content { border-top:1px solid #eee; padding:10px; overflow:hidden; text-align:left; width:280px; }
+    .map-popup-checkout { display:inline; float:right; text-align:right; }
+
+        .map-popup-checkout span { display:block; }
+        .map-popup-checkout .paypal-or { clear:both; display:block; }
+        .map-popup-checkout .paypal-logo { margin:0 0 5px; }
+        .map-popup-checkout li { list-style: none; }
+        .map-popup-checkout { text-align: center; }
+
+    .map-popup-price .price-box,
+    .map-popup-price .price-box .special-price { margin:0; padding:0; }
+    .map-popup-price { margin:5px 0 0; }
+    .map-popup-text { clear:right; margin:0 10px; padding:10px 0; text-align:left; word-wrap:break-word; }
+    .map-popup-only-text { border-top:1px solid #ddd; }
