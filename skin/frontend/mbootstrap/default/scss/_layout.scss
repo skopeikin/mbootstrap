@@ -121,6 +121,7 @@
     }
 
     .col-main {
+        padding: ($grid-gutter-width / 2);
         // @include make-xs-column(12); // because of bug (float) on catalog
     }
 

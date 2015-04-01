@@ -151,6 +151,7 @@ label.required {
 		// radio, checkbox styles
 		&.control {
 			position: relative;
+			margin-bottom: 0;	// rule based on OPC
 
 			> input.checkbox,
 			.input-box {
@@ -160,6 +161,11 @@ label.required {
 
 			label {
 				padding-left: 20px;
+			}
+
+			> .radio,
+			> .checkbox {
+				position: absolute;
 			}
 		}
 		.controls {
@@ -172,6 +178,11 @@ label.required {
 		&.wide {}
 
 		&.additional-row {}
+	}
+
+	li.last,
+	> li:last-child {
+		margin-bottom: 0;
 	}
 
 	ul {

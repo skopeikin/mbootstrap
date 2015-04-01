@@ -15,6 +15,22 @@
 		white-space: nowrap;
 
 		.form-control {
+			display: inline-block;
 			width: 75px;
 		}
 	}
+
+// Pager on Review page
+// -------------------------
+.pager-wrapper {
+	margin-bottom: $line-height-computed;
+    padding: $padding-base-vertical $padding-base-horizontal;
+
+    background: $toolbar-bg;
+    border: $toolbar-border;
+    border-width: 1px 0;
+
+    .amount {
+    	margin-right: ($grid-gutter-width / 2);
+    }
+}

@@ -12,6 +12,7 @@ gulp_config.js                              gulp_config.js
 # Gulp
 #
 gulpfile.js                                 gulpfile.js
+gulpconfig.js                               gulpconfig.js
 package.json                                package.json
 skin/frontend/base/default/gulp             skin/frontend/base/default/gulp
 

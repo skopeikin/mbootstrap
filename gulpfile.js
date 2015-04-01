@@ -24,7 +24,7 @@ var config = cfg = {
     path:       {},
     theme:      {}
 };
-config.path = require('./gulp_config.js')(config.root);
+config.path = require('./gulpconfig.js')(config.root);
 
 
 // Import themes settings and task list
@@ -45,8 +45,9 @@ gulp.task('build-mbootstrap-images', require('./skin/frontend/mbootstrap/default
 
 // Tasks
 // --------------------------------------------------
+gulp.task('build-base', ['build-base-scripts']);
 gulp.task('build-mbootstrap', [
-    'build-base-scripts',
+    'build-base',
     'build-mbootstrap-scripts', 'build-mbootstrap-styles',
     'build-mbootstrap-images'
 ]);

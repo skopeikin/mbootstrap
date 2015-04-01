@@ -28,6 +28,8 @@
     }
 }
 
+// Ratings Table (for example on Product Review page)
+// -------------------------
 .ratings-table {
-    width: auto;
+    @extend .table-condensed;
 }

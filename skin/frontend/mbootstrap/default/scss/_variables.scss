@@ -17,9 +17,9 @@ $block-content-border:					1px solid $gray-lighter !default;
 $search-mini-input-color:				#fff !default;
 $search-mini-input-bg:					transparent !default;
 $search-mini-input-border-color:		$gray !default;
-$search-mini-input-box-shadow:			inset 1px 1px 2px 0 rgba(0,0,0,0.25);
-$search-mini-input-min-width:			200px;
-$search-mini-btn-color:					#fff;
+$search-mini-input-box-shadow:			inset 1px 1px 2px 0 rgba(0,0,0,0.25) !default;
+$search-mini-input-min-width:			200px !default;
+$search-mini-btn-color:					#fff !default;
 
 // Product
 $product-name-rows:						2 !default;
@@ -31,12 +31,16 @@ $toolbar-border-radius:					$border-radius-base !default;
 $toolbar-padidng:						$padding-small-vertical $padding-small-horizontal !default;
 
 // Form
-$form-required-color: 					$brand-danger;
+$form-required-color: 					$brand-danger !default;
 
 // Toolbar
-$toolbar-background:					$gray-lighter;
+$toolbar-bg:							$gray-lighter;
 $toolbar-border:						1px solid darken($gray-lighter, 10%);
 
+// Box
+$box-reviews-border:					$block-content-border !default;
+$box-reviews-title-bg:					lighten($gray-lighter, 2%);
+
 // Footer
-$footer-text-color:						lighten($gray-light, 20%);
-$footer-link-color:						$gray-light;
+$footer-text-color:						lighten($gray-light, 20%) !default;
+$footer-link-color:						$gray-light !default;
