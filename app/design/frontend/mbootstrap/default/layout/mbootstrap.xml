@@ -145,7 +145,7 @@
 
                     <action method="addLink" translate="label title" module="customer">
                         <label>Log In</label><url helper="customer/getLoginUrl"/><title>Log In</title>
-                        <prepare/><urlParams/><position>1000</position><liParams>btn-log-in</liParams>
+                        <prepare/><urlParams/><position>1000</position><liParams>btn-log-in js-btn-log-in</liParams>
                         <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-log-in"></i>]]></beforeText>
                     </action>
 
