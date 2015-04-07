@@ -1,5 +1,5 @@
 module.exports = function (gulp, plugins, config) {
-    return function () {
+    return function (callback) {
 
         var theme = config.theme.mbootstrap;
 
@@ -9,8 +9,9 @@ module.exports = function (gulp, plugins, config) {
             theme.source.js.jquery.scripts.files
         ], ['build-mbootstrap-scripts']);
 
+        gulp.watch(theme.source.js.dir + '**/*.js', ['build-mbootstrap-scripts']);
         gulp.watch(theme.source.scss.dir + '/**/*.scss', ['build-mbootstrap-styles']);
 
-        // gulp.watch(theme.source.images.files, ['build-mbootstrap-images']);
+        callback();
     };
 };

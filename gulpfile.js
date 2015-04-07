@@ -32,15 +32,18 @@ config.path = require('./gulpconfig.js')(config.root);
 // Base Theme
 // -------------------------
 config.theme.base = require('./skin/frontend/base/default/gulp/base.js')(config);
+
 gulp.task('build-base-scripts', require('./skin/frontend/base/default/gulp/tasks/scripts.js')(gulp, plugins, config));
+
 
 // Magento-Bootstrap Theme
 // -------------------------
 config.theme.mbootstrap = require('./skin/frontend/mbootstrap/default/gulp/mbootstrap.js')(config);
-gulp.task('watch-mbootstrap', require('./skin/frontend/mbootstrap/default/gulp/tasks/watch')(gulp, plugins, config));
-gulp.task('build-mbootstrap-scripts', require('./skin/frontend/mbootstrap/default/gulp/tasks/scripts')(gulp, plugins, config));
-gulp.task('build-mbootstrap-styles', require('./skin/frontend/mbootstrap/default/gulp/tasks/sass')(gulp, plugins, config));
-gulp.task('build-mbootstrap-images', require('./skin/frontend/mbootstrap/default/gulp/tasks/imagemin')(gulp, plugins, config));
+
+gulp.task('watch-mbootstrap',               require('./skin/frontend/mbootstrap/default/gulp/tasks/watch')(gulp, plugins, config));
+gulp.task('build-mbootstrap-scripts',       require('./skin/frontend/mbootstrap/default/gulp/tasks/scripts')(gulp, plugins, config));
+gulp.task('build-mbootstrap-styles',        require('./skin/frontend/mbootstrap/default/gulp/tasks/sass')(gulp, plugins, config));
+gulp.task('build-mbootstrap-images',        require('./skin/frontend/mbootstrap/default/gulp/tasks/imagemin')(gulp, plugins, config));
 
 
 // Tasks
@@ -55,5 +58,6 @@ gulp.task('build-mbootstrap', [
 //
 // Default Task
 // -------------------------
-gulp.task('build', ['build-mbootstrap']);
-gulp.task('default', ['build']);
+gulp.task('watch',      ['watch-mbootstrap']);
+gulp.task('build',      ['build-mbootstrap']);
+gulp.task('default',    ['build']);

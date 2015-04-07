@@ -9,7 +9,7 @@ module.exports = function(config) {
             js: {
                 global: {
                     files: [
-                        config.path.js.dir + 'prototype/prototype.js'
+                        config.path.js.dir + 'prototype/prototype.amd.js'
                         ,config.path.js.dir + 'lib/ccard.js'
                         ,config.path.js.dir + 'prototype/validation.js'
                         ,config.path.js.dir + 'scriptaculous/builder.js'
@@ -35,6 +35,7 @@ module.exports = function(config) {
                         ,config.path.js.dir + 'scriptaculous/scriptaculous.js'
                         ,config.path.js.dir + 'calendar/calendar.js'
                         ,config.path.js.dir + 'calendar/calendar-setup.js'
+                        ,config.path.skin.dir + 'base/default/js/msrp.js'
                     ]
                 },
 
@@ -73,7 +74,11 @@ module.exports = function(config) {
 
                 checkout: {
                     opc: {
-                        files: []
+                        files: [
+                            config.path.js.dir + 'scriptaculous/scriptaculous.js'
+                            ,config.path.js.dir + 'varien/accordion.js'
+                            ,config.path.skin.dir + 'base/default/js/opcheckout.js'
+                        ]
                     },
                     msc: {
                         files: []
