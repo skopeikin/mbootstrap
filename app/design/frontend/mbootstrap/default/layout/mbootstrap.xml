@@ -35,13 +35,14 @@
 
 
                 <!-- General styles -->
-                <action method="addItem"><type>skin_css</type><name>build/css/mbootstrap.min.css</name><params/></action>
+                <action method="addItem"><type>skin_css</type><name>build/css/mbootstrap.css</name><params/></action>
 
                 <!-- jQuery, frameworks and scripts -->
                 <action method="addJs"><script>build/mbootstrap/default/jquery.min.js</script></action>
                 <action method="addJs"><script>build/base/default/magento.js</script></action>
-                <action method="addJs"><script>build/mbootstrap/default/jquery.scripts.min.js</script></action>
                 <action method="addJs"><script>build/mbootstrap/default/bootstrap.min.js</script></action>
+                <action method="addJs"><script>build/mbootstrap/default/jquery.plugins.min.js</script></action>
+                <action method="addJs"><script>build/mbootstrap/default/jquery.scripts.min.js</script></action>
 
 
                 <!-- Google Web Fonts -->

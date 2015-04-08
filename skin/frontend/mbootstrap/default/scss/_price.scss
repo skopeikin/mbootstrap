@@ -24,6 +24,10 @@
 // Old price
 // -------------------------
 .old-price {
+    text-decoration: line-through;
+
+    color: lighten($text-color, 50%);
+
     .price-label {}
     .price {}
 }
@@ -40,8 +44,6 @@
 // From-To price
 // -------------------------
 .price-box {
-    font-size: $font-size-large;
-
     .price-from {}
     .price-from,
     .price-to {

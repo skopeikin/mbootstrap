@@ -46,6 +46,20 @@ module.exports = function(root){
                         concat: 'product_bundle.js',
                         min:    'product_bundle.min.js'
                     }
+                },
+                cart: {
+                    concat: 'cart.js',
+                    min:    'cart.min.js'
+                },
+                checkout: {
+                    opc: {
+                        concat: 'checkout_opc.js',
+                        min:    'checkout_opc.min.js'
+                    },
+                    msc: {
+                        concat: 'checkout_msc.js',
+                        min:    'checkout_msc.min.js'
+                    }
                 }
             }
         }

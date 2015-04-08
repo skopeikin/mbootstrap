@@ -17,6 +17,10 @@
         @media (min-width: $screen-sm-min) {
             min-width: $search-mini-input-min-width;
         }
+
+        &:focus {
+            @include placeholder(transparent);
+        }
     }
 
     .btn-search {

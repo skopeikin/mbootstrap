@@ -34,7 +34,7 @@ p.back-link {
     @extend .glyphicon;
     @extend .glyphicon-remove;
 
-    font-size: 0;
+    font-size: 0 !important;
 
     &:before {
         font-size: $font-size-base;
@@ -63,11 +63,4 @@ p.back-link {
 // -------------------------
 .buttons-set {
     > .required {}
-}
-
-
-// Inline block buttons set
-// -------------------------
-.iblock {
-    display: inline-block;
 }

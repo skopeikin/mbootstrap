@@ -13,7 +13,11 @@ module.exports = function(config) {
         path:       {},
         source:     {},
         build:      {},
-        plugins:    {}
+        plugins:    {},
+        url:        {
+            live:   'http://mbo.magentolive.nl',
+            dev:    'http://mbootstrap.dev'
+        }
     }
 
     // Path
@@ -40,12 +44,15 @@ module.exports = function(config) {
             ]
         },
         scss: {
-            dir:    theme.path.skin.dir,
+            dir:    theme.path.skin.dir + 'scss/',
             concat: 'mbootstrap.css',
             min:    'mbootstrap.min.css',
+            core:   'mbootstrap.core.css',
+            coreMin:'mbootstrap.core.min.css',
             files:  theme.path.skin.dir + 'scss/mbootstrap.scss'
         },
         js: {
+            dir: theme.path.skin.dir + 'js/',
             bootstrap: {
                 concat: 'bootstrap.js',
                 min:    'bootstrap.min.js',
@@ -73,7 +80,12 @@ module.exports = function(config) {
                 ],
 
                 plugins: {
-                    files: []
+                    concat: 'jquery.plugins.js',
+                    min:    'jquery.plugins.min.js',
+                    files: [
+                        theme.path.skin.dir + 'js/jquery/plugins/jquery.cycle2.min.js'
+                        ,theme.path.skin.dir + 'js/jquery/plugins/jquery.cycle2.swipe.min.js'
+                    ]
                 },
                 scripts: {
                     concat: 'jquery.scripts.js',
@@ -81,6 +93,7 @@ module.exports = function(config) {
                     files: [
                         theme.path.skin.dir + 'js/jquery/scripts/magento-to-bootstrap-navigation.js'
                         ,theme.path.skin.dir + 'js/jquery/scripts/prototype-bootstrap-fix.js'
+                        ,theme.path.skin.dir + 'js/jquery/scripts/slideshow.js'
                     ]
                 }
             }
@@ -89,11 +102,12 @@ module.exports = function(config) {
 
     // Build
     theme.build = {
+        dir: theme.path.skin.dir + 'build/',
         images: {
-            dir: theme.path.skin.dir + '/' + 'images/'
+            dir: theme.path.skin.dir + 'images/'
         },
         css: {
-            dir: theme.path.skin.dir + '/' + 'build/css/'
+            dir: theme.path.skin.dir + 'build/css/'
         },
         js: {
             dir: config.path.build.js.dir + theme.options.package + '/' + theme.options.theme + '/'
@@ -103,10 +117,12 @@ module.exports = function(config) {
     // Plugins
     theme.plugins = {
         autoprefixer: {
-            cascade: false
+            browsers:   ['last 2 versions'],
+            cascade:    false
         },
         sass: {
-            errLogToConsole: true
+            errLogToConsole:    true,
+            style:              'expanded'
         }
     }
 

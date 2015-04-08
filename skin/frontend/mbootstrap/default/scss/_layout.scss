@@ -116,12 +116,15 @@
 // Main Container
 // -------------------------
 .main-container {
+    position: relative;
+    z-index: 1;
+
     .main {
         @include make-row();
     }
 
     .col-main {
-        padding: ($grid-gutter-width / 2);
+        padding: 0 ($grid-gutter-width / 2);
         // @include make-xs-column(12); // because of bug (float) on catalog
     }
 
@@ -133,6 +136,12 @@
         .col-left,
         .col-right {
             margin: $line-height-computed 0;
+        }
+    }
+
+    &.col1-layout {
+        .col-main {
+            clear: both;
         }
     }
 

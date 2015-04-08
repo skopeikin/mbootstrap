@@ -1,5 +1,5 @@
 module.exports = function (gulp, plugins, config) {
-    return function () {
+    return function (callback) {
 
         var theme = config.theme.base;
 
@@ -39,7 +39,6 @@ module.exports = function (gulp, plugins, config) {
             .pipe(plugins.uglify())
             .pipe(gulp.dest( theme.build.js.dir ));
 
-
         // product bundle
         gulp.src( theme.source.js.product.bundle.files )
 //            .pipe(plugins.debug())
@@ -48,5 +47,16 @@ module.exports = function (gulp, plugins, config) {
             .pipe(plugins.rename( config.path.build.js.product.bundle.min ))
             .pipe(plugins.uglify())
             .pipe(gulp.dest( theme.build.js.dir ));
+
+        // product bundle
+        gulp.src( theme.source.js.checkout.opc.files )
+//            .pipe(plugins.debug())
+            .pipe(plugins.concat( config.path.build.js.checkout.opc.concat ))
+            .pipe(gulp.dest( theme.build.js.dir ))
+            .pipe(plugins.rename( config.path.build.js.checkout.opc.min ))
+            .pipe(plugins.uglify())
+            .pipe(gulp.dest( theme.build.js.dir ));
+
+        callback();
     };
 };

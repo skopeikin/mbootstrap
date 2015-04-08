@@ -315,7 +315,7 @@
     }
 
 // Map Popup
-//
+// -------------------------
 .map-popup { background:#fff; border:1px solid #aaa; margin:12px 0 0; position:absolute; -moz-box-shadow:0 0 6px #ccc; -webkit-box-shadow:0 0 6px #ccc; box-shadow:0 0 6px #ccc; text-align:left; width:300px; z-index:100; }
 
     .map-popup-heading { background:#d9e5ee; border-bottom:1px solid #ccc; padding:5px 30px 5px 10px; width:260px; }
@@ -337,3 +337,18 @@
     .map-popup-price { margin:5px 0 0; }
     .map-popup-text { clear:right; margin:0 10px; padding:10px 0; text-align:left; word-wrap:break-word; }
     .map-popup-only-text { border-top:1px solid #ddd; }
+
+
+// Truncated
+// -------------------------
+.truncated {
+    margin: ($line-height-computed / 2) 0;
+
+    cursor:help;
+}
+    .truncated a.dots { cursor:help; }
+    .truncated a.details { cursor:help; }
+    .truncated .truncated_full_value { position:relative; z-index:999; }
+    .truncated .truncated_full_value .item-options { position:absolute; top:-99999em; left:-99999em; z-index:999; width:250px; padding:8px; border:1px solid #ddd; background-color:#f6f6f6; }
+    .truncated .truncated_full_value .item-options > p { font-weight:bold; text-transform:uppercase; }
+    .truncated .show .item-options { top:-20px; left:50%; }
