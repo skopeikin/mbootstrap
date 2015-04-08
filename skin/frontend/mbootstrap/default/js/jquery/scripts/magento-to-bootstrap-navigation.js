@@ -32,3 +32,8 @@
         return this.each(menu);
     }
 }( jQuery ));
+
+jQuery(document).ready(function ($) {
+    // run menu script
+    $("#nav").magentoBootstrapNavigation();
+});

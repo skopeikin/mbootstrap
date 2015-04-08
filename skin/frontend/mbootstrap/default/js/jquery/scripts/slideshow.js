@@ -1,4 +1,4 @@
-require(['jquery', 'domReady!'], function( $ ){
+jQuery(document).ready(function ($) {
     // ==============================================
     // UI Pattern - Slideshow
     // ==============================================
@@ -17,5 +17,4 @@ require(['jquery', 'domReady!'], function( $ ){
                 log: false
             })
     }
-})
-
+});

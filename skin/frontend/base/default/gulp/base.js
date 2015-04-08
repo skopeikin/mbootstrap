@@ -9,7 +9,7 @@ module.exports = function(config) {
             js: {
                 global: {
                     files: [
-                        config.path.js.dir + 'prototype/prototype.amd.js'
+                        config.path.js.dir + 'prototype/prototype.js'
                         ,config.path.js.dir + 'lib/ccard.js'
                         ,config.path.js.dir + 'prototype/validation.js'
                         ,config.path.js.dir + 'scriptaculous/builder.js'
