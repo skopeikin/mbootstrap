@@ -42,6 +42,7 @@ config.theme.mbootstrap = require('./skin/frontend/mbootstrap/default/gulp/mboot
 
 gulp.task('watch-mbootstrap',               require('./skin/frontend/mbootstrap/default/gulp/tasks/watch')(gulp, plugins, config));
 gulp.task('build-mbootstrap-scripts',       require('./skin/frontend/mbootstrap/default/gulp/tasks/scripts')(gulp, plugins, config));
+gulp.task('build-mbootstrap-styles-clean',  require('./skin/frontend/mbootstrap/default/gulp/tasks/clean')(gulp, plugins, config));
 gulp.task('build-mbootstrap-styles',        require('./skin/frontend/mbootstrap/default/gulp/tasks/sass')(gulp, plugins, config));
 gulp.task('build-mbootstrap-images',        require('./skin/frontend/mbootstrap/default/gulp/tasks/imagemin')(gulp, plugins, config));
 
@@ -51,7 +52,7 @@ gulp.task('build-mbootstrap-images',        require('./skin/frontend/mbootstrap/
 gulp.task('build-base', ['build-base-scripts']);
 gulp.task('build-mbootstrap', [
     'build-base',
-    'build-mbootstrap-scripts', 'build-mbootstrap-styles',
+    'build-mbootstrap-scripts', 'build-mbootstrap-styles-clean', 'build-mbootstrap-styles',
     'build-mbootstrap-images'
 ]);
 
