@@ -105,6 +105,10 @@
                     padding: ($line-height-computed / 2) ($grid-gutter-width / 2);
 
                     border: 1px solid $gray-lighter;
+
+                    .sp-methods {
+                        margin-top: $line-height-computed;
+                    }
                 }
 
             .discount {}
@@ -149,3 +153,22 @@
                 }
             }
         }
+
+
+// Item Options
+// -------------------------
+.item-options {
+    margin: 0;
+
+    dt {
+        float: left;
+
+        &:after {
+            margin-right: 0.25em;
+            content: ":"
+        }
+    }
+    dd {
+        float: none;
+    }
+}

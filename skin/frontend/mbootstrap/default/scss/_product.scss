@@ -157,10 +157,16 @@
                         // options list
                         .options-list {
                             @include list-unstyled;
+
+                            > li {
+                                @include checkbox-wrapper;
+                            }
                         }
                             .label {
                                 font-size: $font-size-base;
                                 font-weight: normal;
+
+                                padding: 0;
 
                                 color: $text-color;
                             }
@@ -231,74 +237,79 @@
                         }
             }
 
-    //
-    // Collateral
-    .product-collateral {}
-        .box-collateral {
-            h2 {
-                @extend .page-header;
-            }
-        }
-        .box-collateral + .box-collateral {
-            margin-top: $line-height-computed;
 
-            border-top: 1px solid $gray-light;
-        }
+// Collateral box
+// -------------------------
+.product-collateral {}
+    .box-collateral {
+        h2 {
+            @extend .page-header;
 
-        // Additional
-        .box-additional {
-            .data-table {}
-                .data {
+            margin-bottom: 0;
+
+            border-bottom: none;
+        }
+    }
+    .box-collateral + .box-collateral {
+        margin-top: $line-height-computed;
+
+        border-top: 1px solid $gray-light;
+    }
+
+    // Additional
+    .box-additional {
+        .data-table {}
+            .data {
+                > ul {
+                    @extend .list-unstyled;
+
                     > ul {
-                        @extend .list-unstyled;
-
-                        > ul {
-                            padding-left: 0;
-                        }
+                        padding-left: 0;
                     }
                 }
-        }
-
-        // Up Sell
-        .box-up-sell {
-            .product-image {
-                @extend .thumbnail;
             }
+    }
+
+    // Up Sell
+    .box-up-sell {
+        .product-image {
+            @extend .thumbnail;
         }
+    }
 
-        // Review
-        .box-reviews {
-            dl {}
-                dt,
-                dd {
-                    padding: $padding-small-vertical $padding-small-horizontal;
+    // Review
+    .box-reviews {
+        dl {}
+            dt,
+            dd {
+                padding: $padding-small-vertical $padding-small-horizontal;
 
-                    border: $box-reviews-border;
-                }
-                dt {
-                    background: $box-reviews-title-bg;
-                    border-width: 1px 1px 0;
-
-                    &:not(:first-child) {
-                        margin-top: ($line-height-computed / 2);
-                    }
-                }
-                dd {
-                    border-width: 0 1px 1px;
-
-                    @extend .clearfix;
-                }
-
-                    .ratings-table {
-                        float: left;
-                        margin-right: ($line-height-computed / 2);
-                    }
-
-            #product-review-table {
-                width: auto;
-                @extend .table-condensed;
+                border: $box-reviews-border;
             }
+            dt {
+                background: $box-reviews-title-bg;
+                border-width: 1px 1px 0;
+
+                &:not(:first-child) {
+                    margin-top: ($line-height-computed / 2);
+                }
+            }
+            dd {
+                border-width: 0 1px 1px;
+
+                @extend .clearfix;
+            }
+
+                .ratings-table {
+                    float: left;
+                    margin-right: ($line-height-computed / 2);
+                }
+
+        #product-review-table {
+            width: auto;
+            @extend .table-condensed;
         }
+    }
 
 
 // Product Image Popup

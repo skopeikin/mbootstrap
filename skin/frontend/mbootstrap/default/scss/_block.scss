@@ -172,15 +172,18 @@
 
 // Block - Reorder
 // -------------------------
-.block-reorder {
-    .reorder-list {
+.block-reorder {}
+    #cart-sidebar-reorder {
+        @extend .list-unstyled;
+
         margin-bottom: $line-height-computed;
 
-        > .item {
+        .item {
             margin-bottom: ($line-height-computed / 2);
+
+            @include checkbox-wrapper;
         }
     }
-}
 
 
 // Block - List
@@ -214,13 +217,38 @@
 
 // Block - Compare
 // -------------------------
-.block-compare {}
+.block-compare {
+    .actions {
+        a {
+            @extend .btn;
+            @extend .btn-link;
+        }
+    }
+}
+    #compare-items {
+        @extend .list-unstyled;
+
+        .btn-remove {
+            @extend .btn-xs;
+        }
+    }
 
 
 // Block - Wishlist
 // -------------------------
 .block-wishlist {
     @extend .block-cart;
+
+    .btn-remove {
+        @extend .btn-xs;
+    }
+
+    .actions {
+        a {
+            @extend .btn;
+            @extend .btn-link;
+        }
+    }
 }
 
 // Block - Cart sidebar

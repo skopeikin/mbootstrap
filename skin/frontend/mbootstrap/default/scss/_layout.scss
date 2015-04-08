@@ -110,14 +110,6 @@
 // -------------------------
 .i-breadcrumb {
     @include make-sm-column(12);
-
-    &:after {
-        height: 0;
-        clear: both;
-        overflow: hidden;
-
-        content: '';
-    }
 }
 
 
@@ -144,6 +136,12 @@
         .col-left,
         .col-right {
             margin: $line-height-computed 0;
+        }
+    }
+
+    &.col1-layout {
+        .col-main {
+            clear: both;
         }
     }
 

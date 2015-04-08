@@ -24,26 +24,27 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<div class="dashboard">
-    <div class="page-title">
-        <h1><?php echo $this->__('My Dashboard') ?></h1>
+<?php if(isset($poll)) : ?>
+<section class="block block-poll">
+    <div class="block-title">
+        <strong><span><?php echo $this->__('Community Poll') ?></span></strong>
     </div>
+    <div class="block-content">
 
-    <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
-    <?php echo $this->getChildHtml('hello') ?>
-    <?php echo $this->getChildHtml('top') ?>
+        <p class="block-subtitle"><?php echo $this->htmlEscape($poll->getPollTitle()); ?></p>
 
-    <div class="box-account box-info">
-        <div class="box-head">
-            <h2><?php echo $this->__('Account Information') ?></h2>
-        </div>
+        <?php if( $poll_answers ): ?>
+        <ol id="poll-answers" class="poll-answers">
+            <?php foreach( $poll_answers as $answer ): ?>
+                <li class="item">
+                    <span class="votes"><?php echo $answer->getVotesCount() ?> (<?php echo $answer->getPercent() ?>%)</span>
+                    <span class="answer"><?php echo $this->htmlEscape($answer->getAnswerTitle()) ?>:</span>
+                </li>
+            <?php endforeach; ?>
+        </ol>
+        <script type="text/javascript">decorateList('poll-answers');</script>
+        <?php endif; ?>
 
-        <?php /* Extensions placeholder */ ?>
-        <?php echo $this->getChildHtml('customer.account.dashboard.extra') ?>
-        <?php echo $this->getChildHtml('info') ?>
-        <?php echo $this->getChildHtml('address') ?>
     </div>
-
-    <?php echo $this->getChildHtml('info1') ?>
-    <?php echo $this->getChildHtml('info2') ?>
-</div>
+</section>
+<?php endif; ?>
