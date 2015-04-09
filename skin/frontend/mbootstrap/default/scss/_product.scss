@@ -305,6 +305,12 @@
             width: auto;
             @extend .table-condensed;
         }
+
+        .form-list {
+            @media (min-width: $screen-sm-min) {
+                max-width: 50%;
+            }
+        }
     }
 
 
