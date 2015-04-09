@@ -50,10 +50,14 @@
             }
 
                 td {}
+                    .product-image {
+                        display: block;
+                        min-width: 75px; // chrome bug td collapse fix
+                    }
+
                     .product-name {
                         line-height: $line-height-computed;
                     }
-
 
                     .qty {
                         margin: 0;
