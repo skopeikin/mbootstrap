@@ -67,12 +67,14 @@
 			border-radius: 1px;
 			background-color: #FFFFFF;
 			position: relative;
+			border: 1px solid #297aa3;
 		}
 		.slideshow-pager span:hover:before {
 			background-color: #2e8ab8;
 		}
 		.slideshow-pager span.cycle-pager-active:before {
 			background-color: #297aa3;
+			border-color: #fff;
 		}
 
 	.slideshow-pager > * {
