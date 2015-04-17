@@ -146,9 +146,14 @@
 // -------------------------
 .block-subscribe {
     .block-title {}
-    .block-content {
-
-    }
+    .block-content {}
+        .input-box {
+            position: relative;
+        }
+            .validation-advice {
+                position: absolute;
+                top: 100%;
+            }
 }
 
 
