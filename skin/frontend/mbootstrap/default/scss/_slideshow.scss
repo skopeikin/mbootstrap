@@ -29,8 +29,7 @@
 			z-index: 100;
 		}
 			.slideshow-container .slideshow > li img {
-				max-width: 100%;
-				width: 100%;
+				@include img-responsive;
 			}
 
 	.slideshow-pager {
