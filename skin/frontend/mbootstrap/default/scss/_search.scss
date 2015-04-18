@@ -10,7 +10,7 @@
 
     .form-group {}
 
-        .form-control {
+        .input-text {
             background: $search-mini-input-bg;
             border-color: $search-mini-input-border-color;
             box-shadow: $search-mini-input-box-shadow;
@@ -107,16 +107,18 @@
     margin-right: 0 !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
-    // margin: 0;
 
     .form-group {
-        // position: absolute;
-        // right: 60px;
+        display: block;
     }
+        .input-text {
+            min-width: 100%;
 
-    .form-control,
+            color: $text-color;
+        }
+
     .btn {
-        color: $text-color;
+        display: none;
     }
 }
 

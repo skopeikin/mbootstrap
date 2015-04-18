@@ -44,7 +44,7 @@
 
         <div class="limiter">
             <label><?php echo $this->__('Show') ?></label>
-            <select class="form-control" onchange="setLocation(this.value)">
+            <select class="input-text" onchange="setLocation(this.value)">
             <?php foreach ($this->getAvailableLimit() as  $_key=>$_limit): ?>
                 <option value="<?php echo $this->getLimitUrl($_key) ?>"<?php if($this->isLimitCurrent($_key)): ?> selected="selected"<?php endif ?>>
                     <?php echo $_limit ?>
@@ -79,7 +79,7 @@
 
         <div class="sort-by">
             <label><?php echo $this->__('Sort By') ?></label>
-            <select class="form-control" onchange="setLocation(this.value)">
+            <select class="input-text" onchange="setLocation(this.value)">
             <?php foreach($this->getAvailableOrders() as $_key=>$_order): ?>
                 <option value="<?php echo $this->getOrderUrl($_key, 'asc') ?>"<?php if($this->isOrderCurrent($_key)): ?> selected="selected"<?php endif; ?>>
                     <?php echo $this->__($_order) ?>

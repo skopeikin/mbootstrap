@@ -2,14 +2,32 @@
  * Responsive Mini Search form
  * */
 jQuery(document).ready(function ($) {
-    var tablet = {
-        landscape: {
-            query:      'screen and (min-width: 768px) and (max-width: 992px)',
-            className:  'search-mini_tablet-landscape'
+
+    var options = {
+        tablet: {
+            landscape: {
+                query:      'screen and (min-width: 768px) and (max-width: 992px)',
+                className:  'search-mini_tablet-landscape'
+            },
+            bufferId:           'search-mini_tablet-landscape-buffer',
+            navbarId:           '#i-navbar',
+            searchFormHoveDiv:  '.js-navbar-main-collapse'
         }
     };
+
+//    var tablet = {
+//        landscape: {
+//            query:      'screen and (min-width: 768px) and (max-width: 992px)',
+//            className:  'search-mini_tablet-landscape'
+//        }
+//    };
+
     var $form = $("#search_mini_form");
 
+    // Programm
+    // ----------
+
+    // Matchmedia func
     var matchmedia = mm = function(query, callback, usePolyfill) {
         var host = {};
         var isMatchMediaSupported = !!(window && window.matchMedia) && !usePolyfill;
@@ -24,34 +42,31 @@ jQuery(document).ready(function ($) {
         }
     };
 
-    // Programm
-    // ----------
+    // Create buffer
     function createSearchBuffer(){
-        var bufferId = 'search-mini_tablet-landscape-buffer';
-
         // check is buffer created
-        if( !$("#" + bufferId).length ) {
-            var $navbar = $("#i-navbar");
-            var $buffer = $("<div/>", {id: bufferId});
+        if( !$("#" + options.tablet.bufferId).length ) {
+            var $navbar = $( options.tablet.navbarId );
+            var $buffer = $("<div/>", {id: options.tablet.bufferId});
 
             $navbar.after( $buffer );
         }
     };
 
+    // Move search form to boofer and back
     function moveSearchToBuffer(){
-        var bufferId = 'search-mini_tablet-landscape-buffer';
-
-        $form.addClass( tablet.landscape.className );
-        $form.appendTo( $("#" + bufferId) );
+        $form.addClass( options.tablet.landscape.className );
+        $form.appendTo( $("#" + options.tablet.bufferId) );
     };
     function moveSearchToDefault(){
-        var defaultDiv = $(".js-navbar-main-collapse");
+        var defaultDiv = $( options.tablet.searchFormHoveDiv );
 
-        $form.removeClass( tablet.landscape.className );
+        $form.removeClass( options.tablet.landscape.className );
         $form.appendTo( defaultDiv );
     };
 
-    mm(tablet.landscape.query, function(match) {
+    // Set matchmedia rules
+    mm(options.tablet.landscape.query, function(match) {
         // match = true or false
 
         if(match) {
