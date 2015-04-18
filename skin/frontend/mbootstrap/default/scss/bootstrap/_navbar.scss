@@ -82,11 +82,15 @@
             }
 
             .dropdown-menu > li > a {
-                &,
+                @media (max-width: $screen-xs-max) {
+                    color: $navbar-main-link-color;
+                }
+
                 &:hover,
                 &:focus {
                     @media (max-width: $screen-xs-max) {
-                        color: #fff;
+                        background-color: $navbar-main-link-hover-bg;
+                        color: $navbar-main-link-hover-color;
                     }
                 }
             }
