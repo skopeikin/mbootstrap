@@ -94,6 +94,7 @@ module.exports = function(config) {
                         theme.path.skin.dir + 'js/jquery/scripts/magento-to-bootstrap-navigation.js'
                         ,theme.path.skin.dir + 'js/jquery/scripts/prototype-bootstrap-fix.js'
                         ,theme.path.skin.dir + 'js/jquery/scripts/slideshow.js'
+                        ,theme.path.skin.dir + 'js/jquery/scripts/mini-search-form.js'
                     ]
                 }
             }
