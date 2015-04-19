@@ -23,7 +23,7 @@
         margin-right: auto;
 
         &:not(.img-responsive){
-            @extend .img-responsive;
+            @include img-responsive;
         }
     }
 }

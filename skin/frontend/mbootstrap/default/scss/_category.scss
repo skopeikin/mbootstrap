@@ -6,7 +6,7 @@
         margin-bottom: $line-height-computed;
 
         img {
-            @extend .img-responsive;
+            @include img-responsive;
         }
     }
 

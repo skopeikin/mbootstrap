@@ -265,6 +265,16 @@
 }
 
 
+// Block - Banner
+// -------------------------
+.block-banner {
+    .block-content {
+        img {
+            @include img-responsive;
+        }
+    }
+}
+
 // Block - Related
 // -------------------------
 .block-related {}
