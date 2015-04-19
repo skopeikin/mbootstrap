@@ -83,6 +83,13 @@
                 .or {
                     display: none;
                 }
+
+                // Tablet view - landscape
+                @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation:portrait) {
+                    .add-to-cart {
+                        margin-bottom: ($line-height-computed / 2);
+                    }
+                }
             }
 
                 .add-to-cart,

@@ -194,28 +194,24 @@
 // Block - List
 // -------------------------
 .block-list {
-    .block-content {
-        > ol {
-            > .item {
-                position: relative;
+    .block-content {}
+        ol {}
+            .item {
+                @extend .clearfix;
 
-                > .btn-remove {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
+                .btn-remove {
+                    float: right;
 
-                    @include opacity(10);
-                    @include transition(opacity 0.25s ease-in-out);
+                    opacity: 0.25;
+                    transition: opacity 0.25s ease-in-out;
                 }
 
                 &:hover {
-                    > .btn-remove {
-                        @include opacity(100);
+                    .btn-remove {
+                        opacity: 1;
                     }
                 }
             }
-        }
-    }
 }
 
 
