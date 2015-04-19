@@ -49,7 +49,7 @@ form {
 	select,
 	textarea {
 		&:not(.input-text){
-			@extend .form-control;
+			@include form-control;
 			@extend textarea.form-control;
 		}
 	}
@@ -62,7 +62,7 @@ form {
 }
 
 .input-text {
-	@extend .form-control;
+	@include form-control;
 	@extend textarea.form-control;
 }
 

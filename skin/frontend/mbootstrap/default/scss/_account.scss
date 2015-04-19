@@ -273,7 +273,7 @@
         }
 
     textarea {
-        @extend .form-control;
+        @include form-control;
         @extend textarea.form-control;
     }
 
