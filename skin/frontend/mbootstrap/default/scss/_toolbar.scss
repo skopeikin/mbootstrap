@@ -17,6 +17,21 @@
         @media (min-width: $screen-sm-min) {
             float: right;
         }
+
+        // Tablet view - landscape
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation:portrait) {
+            float: none;
+            margin-bottom: ($line-height-computed / 2);
+
+            @extend .clearfix;
+
+            .amount {
+                float: left;
+            }
+            .pagination {
+                float: right;
+            }
+        }
     }
         .pagination {
             margin-left: ($grid-gutter-width / 2);
@@ -37,6 +52,20 @@
     .sorter {
         @media (min-width: $screen-sm-min) {
             float: left;
+        }
+
+        // Tablet view - landscape
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation:portrait) {
+            float: none;
+
+            @extend .clearfix;
+
+            .view-mode {
+                float: left;
+            }
+            .sort-by {
+                float: right;
+            }
         }
     }
         .view-mode,
