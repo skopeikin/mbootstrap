@@ -96,7 +96,14 @@
                 .ratings {}
                 .price-box {}
                 .availability {}
-                .actions {}
+                .actions {
+                    // Tablet view - landscape
+                    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation:portrait) {
+                        .btn {
+                            @extend .btn-xs;
+                        }
+                    }
+                }
 }
 
 
