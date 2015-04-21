@@ -65,11 +65,15 @@
                     }
 
                     .btn {
-                        @include opacity(0.1);
-                        @include transition(opacity 0.25s ease-in-out);
+                        opacity: 0.1;
+                        transition: opacity 0.25s ease-in-out;
 
-                        &.visible-xs {
-                            @include opacity(1);
+                        // &.visible-xs {
+                        //     @include opacity(1);
+                        // }
+
+                        @media (max-width: $screen-sm-max) {
+                            opacity: 1;
                         }
                     }
 
