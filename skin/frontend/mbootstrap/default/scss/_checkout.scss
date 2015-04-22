@@ -2,316 +2,322 @@
 // One Page Checkout
 // --------------------------------------------------
 .opc {
-	padding: 0;
+    padding: 0;
 
-	list-style: none;
+    list-style: none;
 
-	> li {
-		> .step-title {
-			margin: 0 0 $line-height-computed;
-		    position: relative;
+    > li {}
 
-			border-bottom: 2px solid $gray-lighter;
+        .step-title {
+            margin: 0 0 $line-height-computed;
+            position: relative;
 
-	        @include clearfix();
+            border-bottom: 2px solid $gray-lighter;
 
-			> h2 {
-				font-size: $font-size-large * 1.25;
-		        font-weight: normal;
+            @extend .clearfix;
 
-				float: left;
-		        margin: 0 0 0 (($line-height-computed * 1.5) + 10);
+            > h2 {
+                font-size: $font-size-large * 1.25;
+                font-weight: normal;
 
-		        line-height: normal;
+                float: left;
+                margin: 0 0 0 (($line-height-computed * 1.5) + 10);
 
-		        color: $gray-light;
-			}
+                line-height: normal;
 
-			> a {
-				float: right;
-				display: none;
+                color: $gray-light;
+            }
 
-				@include opacity(10);
-                @include transition(opacity 0.25s ease-in-out);
-			}
+            > a {
+                float: right;
+                display: none;
 
-			> .number {
-				font-size: $font-size-large * 1.25;
-		        font-weight: bold;
+                opacity: 0.1;
+                transition: opacity 0.25s ease-in-out;
+            }
 
-				position: absolute;
-				left: 0;
-				bottom: 0;
-				width: ($line-height-computed * 1.5);
-				height: ($line-height-computed * 1.5);
+            > .number {
+                font-size: $font-size-large * 1.25;
+                font-weight: bold;
 
-		        line-height: ($line-height-computed * 1.5);
-		        text-align: center;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: ($line-height-computed * 1.5);
+                height: ($line-height-computed * 1.5);
 
-		        background: $gray-lighter;
-		        color: $gray-light;
+                line-height: ($line-height-computed * 1.5);
+                text-align: center;
 
-		        border-radius: 2px 2px 0 0;
-			}
+                background: $gray-lighter;
+                color: $gray-light;
 
-			&:hover {
-				> a {
-					@include opacity(100);
-				}
-			}
-		}
+                border-radius: 2px 2px 0 0;
+            }
 
-		> .step {
-			margin: $line-height-computed 0;
+            &:hover {
+                > a {
+                    opacity: 1;
+                }
+            }
+        }
 
-			.form-list {}
+        .step {
+            margin: $line-height-computed 0;
 
-			.buttons-set {
-				line-height: 34px;
+            form {
+                margin-bottom: 0;
+            }
 
-				@include clearfix();
+            .ccsave {
+                @include make-row();
 
-				> p.required {
-					float: left;
-					margin: 0;
+                > .ccsave__i {
+                    // @include make-xs-column(12);
+                    @include make-sm-column(6);
+                }
+            }
 
-					line-height: inherit;
-				}
+            // Tablet portair view
+            @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation:portrait) {
+                &#checkout-step-login {
+                    .btn-link {
+                        font-size: $font-size-small;
+                    }
+                }
+            }
+        }
 
-				> .btn,
-				> .btn-group {
-					float: right;
-				}
+        .section {
+            &:not([id="opc-login"]) {
+                .buttons-set {
+                    text-align: right;
+                    line-height: $input-height-base;
 
-				> .please-wait {
-					float: right;
-					margin-right: ($grid-gutter-width / 2)
-				}
-			}
+                    @extend .clearfix;
 
-			// .sp-methods {}
+                    .required {
+                        float: left;
+                    }
 
-			form {
-				margin-bottom: 0;
-			}
+                    .button {
+                        float: right;
+                        margin-left: ($line-height-computed / 2);
+                    }
+                }
+            }
+        }
 
-			.ccsave {
-				@include make-row();
+        .allow {
+            > .step-title {
+                > h2 {
+                    color: $text-color;
+                    cursor: pointer;
+                }
 
-		        > .ccsave__i {
-		        	// @include make-xs-column(12);
-			        @include make-sm-column(6);
-		        }
-			}
-		}
+                > .number {
+                    text-shadow: none;
 
-		&.sections {}
+                    color: $black;
+                }
 
-		&.allow {
-			> .step-title {
-				> h2 {
-					color: $text-color;
-					cursor: pointer;
-				}
+                > a {
+                    display: inline;
+                }
+            }
+        }
 
-				> .number {
-					text-shadow: none;
+        .active {
+            > .step-title {
+                > .number {
+                    text-shadow: none;
 
-					color: $black;
-				}
-
-				> a {
-					display: inline;
-				}
-			}
-		}
-
-		&.active {
-			> .step-title {
-				> .number {
-					text-shadow: none;
-
-					color: $black;
-				}
-				> h2 {
-					cursor: default;
-				}
-				> a {
-					display: none;
-				}
-			}
-		}
-	}
+                    color: $black;
+                }
+                > h2 {
+                    cursor: default;
+                }
+                > a {
+                    display: none;
+                }
+            }
+        }
 }
 
 // Shipping Methods
 .sp-methods {
-	ul,
-	& {
-		@extend .list-unstyled;
-	}
+    ul,
+    & {
+        @extend .list-unstyled;
+    }
 
-	> dt {
-		margin-bottom: ($line-height-computed / 2);
-		padding: $padding-small-vertical $padding-small-horizontal;
+    > dt {
+        margin-bottom: ($line-height-computed / 2);
+        padding: $padding-small-vertical $padding-small-horizontal;
 
-		background: $gray-lighter;
+        background: $gray-lighter;
 
-		&:not(:first-child) {
-			margin-top: ($line-height-computed / 2);
-		}
+        &:not(:first-child) {
+            margin-top: ($line-height-computed / 2);
+        }
 
-		label {
-			margin: 0;
-		}
-	}
-	> dd {
-		ul {}
-			li {
-				position: relative;
-			}
-				.radio {
-					position: absolute;
-				}
+        label {
+            margin: 0;
+        }
+    }
+    > dd {
+        margin-left: ($grid-gutter-width / 2);
 
-				label {
-					font-weight: normal;
+        ul {}
+            li {
+                position: relative;
+            }
+                .radio {
+                    position: absolute;
+                }
 
-					padding-left: 20px;
-				}
-	}
+                label {
+                    font-weight: normal;
+
+                    padding-left: 20px;
+                }
+    }
 }
 
 // Gift Message
 .gift-messages {
-	.control {
-		.checkbox {
-			position: absolute;
-		}
+    .control {
+        .checkbox {
+            position: absolute;
+        }
 
-		label {
-			font-weight: normal;
+        label {
+            font-weight: normal;
 
-			padding-left: 20px;
-		}
-	}
+            padding-left: 20px;
+        }
+    }
 }
 
 .gift-messages-form {
-	p {
-		position: relative;
+    padding: ($line-height-computed / 2) ($grid-gutter-width / 2);
 
-		.checkbox {
-			position: absolute;
-		}
+    border: 1px solid $block-content-border;
 
-		label {
-			font-weight: normal;
+    p {
+        position: relative;
 
-			padding-left: 20px;
-		}
-	}
+        .checkbox {
+            position: absolute;
+        }
 
-	ol {
-		@extend .list-unstyled;
-	}
-		.item {
-			@include make-row();
+        label {
+            font-weight: normal;
 
-			&:not(:first-child) {
-				border-top: $block-content-border;
-			}
+            padding-left: 20px;
+        }
+    }
 
-			+ .item {
-				padding-top: $line-height-computed;
-			}
-		}
-			.product-img-box {
-				@include make-sm-column(4);
-			}
-				.product-image {
-					@extend .thumbnail;
+    ol {
+        @extend .list-unstyled;
+    }
+        .item {
+            @include make-row();
 
-					margin: 0 0 ($line-height-computed / 2);
-				}
+            &:not(:first-child) {
+                border-top: $block-content-border;
+            }
 
-				.number {
-					padding: $padding-small-vertical 0;
+            + .item {
+                padding-top: $line-height-computed;
+            }
+        }
+            .product-img-box {
+                @include make-sm-column(4);
+            }
+                .product-image {
+                    @extend .thumbnail;
 
-					text-align: center;
+                    margin: 0 0 ($line-height-computed / 2);
+                }
 
-					background: $gray-lighter;
-					border-radius: $border-radius-base;
-				}
+                .number {
+                    padding: $padding-small-vertical 0;
 
-			.details {
-				@include make-sm-column(8);
-			}
+                    text-align: center;
+
+                    background: $gray-lighter;
+                    border-radius: $border-radius-base;
+                }
+
+            .details {
+                @include make-sm-column(8);
+            }
 }
 
 
 // Block - Progress
 // -------------------------
 .opc-block-progress {
-	.block-content {
-		> dl {
-			margin: 0;
+    .block-content {
+        > dl {
+            margin: 0;
 
-			> dt {
-				font-weight: normal;
+            > dt {
+                font-weight: normal;
 
-				margin-bottom: ($line-height-computed / 2);
+                margin-bottom: ($line-height-computed / 2);
 
-				color: $gray-light;
+                color: $gray-light;
 
-				@include clearfix();
+                @include clearfix();
 
-				> a {
-					font-weight: normal;
+                > a {
+                    font-weight: normal;
 
-					float: right;
-				}
+                    float: right;
+                }
 
-				> .separator {
-					display: none;
-				}
+                > .separator {
+                    display: none;
+                }
 
-				&.complete {
-					font-weight: bold;
+                &.complete {
+                    font-weight: bold;
 
-					background: $gray-lighter;
+                    background: $gray-lighter;
 
-					color: $text-color;
+                    color: $text-color;
 
-					border-radius: $border-radius-small;
-				}
-			}
+                    border-radius: $border-radius-small;
+                }
+            }
 
-			> dd {
-				> address {
-					margin-bottom: 0;
-				}
+            > dd {
+                > address {
+                    margin-bottom: 0;
+                }
 
-				&.complete {
-					margin-bottom: ($line-height-computed / 2);
-					padding-bottom: ($line-height-computed / 2);
+                &.complete {
+                    margin-bottom: ($line-height-computed / 2);
+                    padding-bottom: ($line-height-computed / 2);
 
-					border-bottom: 1px solid  #fff;
+                    border-bottom: 1px solid  #fff;
 
-					&:last-child {
-						margin-bottom: 0;
-						padding-bottom: 0;
+                    &:last-child {
+                        margin-bottom: 0;
+                        padding-bottom: 0;
 
-						border-bottom: 0;
-					}
+                        border-bottom: 0;
+                    }
 
-					.price {
-						font-size: $font-size-base;
-					}
-				}
-			}
-		}
-	}
+                    .price {
+                        font-size: $font-size-base;
+                    }
+                }
+            }
+        }
+    }
 }
 
 
@@ -320,20 +326,20 @@
 // Multiple Progress
 // -------------------------
 .checkout-progress {
-	> li {
-		> span {}
-		&.first {}
-		&.last {}
-		&.active {}
-	}
+    > li {
+        > span {}
+        &.first {}
+        &.last {}
+        &.active {}
+    }
 }
 
 
 // Multiple Checkout
 // -------------------------
 .multiple-checkout {
-	.page-title {}
-	h2 {}
+    .page-title {}
+    h2 {}
 }
 
 

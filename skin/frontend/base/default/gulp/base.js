@@ -92,6 +92,12 @@ module.exports = function(config) {
             js: {
                 dir: config.path.build.js.dir + 'base/default/'
             }
+        },
+
+        plugins: {
+            uglify: {
+                mangle: false
+            }
         }
     }
 };

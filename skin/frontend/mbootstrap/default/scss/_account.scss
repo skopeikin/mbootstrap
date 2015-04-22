@@ -15,6 +15,13 @@
             min-height: ($line-height-computed * 3);
         }
     }
+
+    .buttons-set {
+        .f-left {
+            @extend .btn;
+            @extend .btn-link;
+        }
+    }
 }
 
 
