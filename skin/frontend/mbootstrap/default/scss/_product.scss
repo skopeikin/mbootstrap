@@ -218,6 +218,7 @@
                     white-space: nowrap;
                 }
 
+                // Tablet portair view
                 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation:portrait) {
                     display: block;
 

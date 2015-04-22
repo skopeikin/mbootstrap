@@ -128,6 +128,7 @@
 
         .totals {
             @include make-sm-column(5);
+            float: right !important;
 
             table {
                 @extend .table;
@@ -137,6 +138,14 @@
                 > tbody > tr > td {
                     border-top: none;
                 }
+            }
+        }
+
+        // Tablet portair view
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation:portrait) {
+            .totals,
+            .col2-set {
+                @include make-sm-column(12);
             }
         }
     }
