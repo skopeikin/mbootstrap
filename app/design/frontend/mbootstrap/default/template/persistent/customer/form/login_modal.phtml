@@ -35,19 +35,16 @@
 
 <div class="modal modal-form-login fade" id="customer-form-login-modal" tabindex="-1" role="dialog" aria-labelledby="<?php echo $this->__("Log In"); ?>" aria-hidden="true">
     <div class="modal-dialog">
-
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title"><?php echo $this->__("Log In"); ?></h4>
             </div>
 
-
             <form action="<?php echo $this->getPostActionUrl() ?>" method="post" id="login-form-modal" role="form">
 
                 <div class="modal-body">
                     <div class="content">
-
                         <p><?php echo $this->__('If you have an account with us, please log in.') ?></p>
 
                         <ul class="form-list">
@@ -63,25 +60,22 @@
                                     <input type="password" name="login[password]" class="input-text required-entry validate-password form-control" id="pass" title="<?php echo $this->__('Password') ?>" />
                                 </div>
                             </li>
-
                             <?php echo $this->getChildHtml('form.additional.info'); ?>
                             <?php echo $this->getChildHtml('persistent.remember.me'); ?>
-
                         </ul>
 
                         <?php echo $this->getChildHtml('persistent.remember.me.tooltip'); ?>
-
                         <p class="required"><?php echo $this->__('* Required Fields') ?></p>
                     </div>
 
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal"><?php echo $this->__("Close"); ?></button>
-                    <button type="button" class="btn btn-info pull-left" title="<?php echo $this->__('Create an Account') ?>" onclick="window.location='<?php echo Mage::helper('persistent')->getCreateAccountUrl($this->getCreateAccountUrl()) ?>';"><?php echo $this->__('Create an Account') ?></button>
+                    <button type="submit" class="btn btn-primary pull-left" title="<?php echo $this->__('Login') ?>" name="send" id="send2"><?php echo $this->__('Login') ?></button>
+                    <a class="btn btn-link pull-left" href="<?php echo $this->getForgotPasswordUrl() ?>"><?php echo $this->__('Forgot Your Password?') ?></a>
 
-                    <a class="btn btn-link" href="<?php echo $this->getForgotPasswordUrl() ?>"><?php echo $this->__('Forgot Your Password?') ?></a>
-                    <button type="submit" class="btn btn-primary" title="<?php echo $this->__('Login') ?>" name="send" id="send2"><?php echo $this->__('Login') ?></button>
+                    <button type="button" class="btn btn-default" title="<?php echo $this->__('Create an Account') ?>" onclick="window.location='<?php echo Mage::helper('persistent')->getCreateAccountUrl($this->getCreateAccountUrl()) ?>';"><?php echo $this->__('Create an Account') ?></button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo $this->__("Close"); ?></button>
                 </div>
 
                 <?php if (Mage::helper('checkout')->isContextCheckout()): ?>
@@ -92,13 +86,11 @@
 
             <script type="text/javascript">
                 //<![CDATA[
-                var dataForm = new VarienForm('login-form-modal', true);
+                var loginModalDataForm = new VarienForm('login-form-modal', true);
                 //]]>
             </script>
 
-
         </div>
-
     </div>
 </div>
 

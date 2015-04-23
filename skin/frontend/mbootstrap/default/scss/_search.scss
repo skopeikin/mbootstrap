@@ -8,20 +8,27 @@
 .search-mini {
     position: relative;
 
-    .form-control {
-        background: $search-mini-input-bg;
-        border-color: $search-mini-input-border-color;
-        box-shadow: $search-mini-input-box-shadow;
-        color: $search-mini-input-color;
-
-        @media (min-width: $screen-sm-min) {
-            min-width: $search-mini-input-min-width;
-        }
-
-        &:focus {
-            @include placeholder(transparent);
-        }
+    @media (max-width: $screen-xs-max) {
+        margin-top: 0;
+        margin-bottom: 0;
     }
+
+    .form-group {}
+
+        .input-text {
+            background: $search-mini-input-bg;
+            border-color: $search-mini-input-border-color;
+            box-shadow: $search-mini-input-box-shadow;
+            color: $search-mini-input-color;
+
+            @media (min-width: $screen-sm-min) {
+                min-width: $search-mini-input-min-width;
+            }
+
+            &:focus {
+                @include placeholder(transparent);
+            }
+        }
 
     .btn-search {
         color: $search-mini-btn-color;
@@ -96,6 +103,28 @@
             }
         }
     }
+
+// Search mini for Tablet Landscape view
+//
+.search-mini_tablet-landscape {
+    float: none !important;
+    margin: 0 0 ($line-height-computed / 2) !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    .form-group {
+        display: block;
+    }
+        .input-text {
+            min-width: 100%;
+
+            color: $text-color;
+        }
+
+    .btn {
+        display: none;
+    }
+}
 
 
 // Search result

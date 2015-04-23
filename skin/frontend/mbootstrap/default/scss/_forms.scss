@@ -49,7 +49,7 @@ form {
 	select,
 	textarea {
 		&:not(.input-text){
-			@extend .form-control;
+			@include form-control;
 			@extend textarea.form-control;
 		}
 	}
@@ -62,7 +62,7 @@ form {
 }
 
 .input-text {
-	@extend .form-control;
+	@include form-control;
 	@extend textarea.form-control;
 }
 
@@ -134,7 +134,7 @@ label.required {
 				margin-bottom: $line-height-computed;
 
 				// @include make-xs-column(12);
-	            @include make-md-column(6);
+	            @include make-sm-column(6);
 			}
 
 			&.address {
@@ -406,28 +406,3 @@ label.required {
 		.fieldset .form-list { }
 
 /* @end */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

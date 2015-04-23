@@ -7,9 +7,14 @@
 
 // Main Menu navbar
 .navbar-main {
+    margin-bottom: ($line-height-computed / 2);
+
     background-color: $navbar-main-bg;
-    background: linear-gradient(to bottom, #7b7b7b 0%,#7d7d7d 1%,#878787 3%,#898989 4%,#888888 11%,#838383 21%,#737373 48%,#707070 49%,#616161 51%,#5e5e5e 52%,#5f5f5f 62%,#6a6a6a 89%,#6e6e6e 90%,#757575 96%,#727272 97%,#5e5e5e 99%,#5b5b5b 100%);
     border: none;
+
+    @media (min-width: $screen-sm-min) {
+        background: linear-gradient(to bottom, #7b7b7b 0%,#7d7d7d 1%,#878787 3%,#898989 4%,#888888 11%,#838383 21%,#737373 48%,#707070 49%,#616161 51%,#5e5e5e 52%,#5f5f5f 62%,#6a6a6a 89%,#6e6e6e 90%,#757575 96%,#727272 97%,#5e5e5e 99%,#5b5b5b 100%);
+    }
 
     .navbar-brand {
         color: $navbar-main-brand-color;
@@ -73,6 +78,20 @@
                     border-top: $caret-width-base solid transparent;
                     border-right: none;
                     border-bottom: $caret-width-base solid transparent;
+                }
+            }
+
+            .dropdown-menu > li > a {
+                @media (max-width: $screen-xs-max) {
+                    color: $navbar-main-link-color;
+                }
+
+                &:hover,
+                &:focus {
+                    @media (max-width: $screen-xs-max) {
+                        background-color: $navbar-main-link-hover-bg;
+                        color: $navbar-main-link-hover-color;
+                    }
                 }
             }
         }

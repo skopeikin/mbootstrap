@@ -9,7 +9,7 @@ module.exports = function (gulp, plugins, config) {
             .pipe(plugins.concat( config.path.build.js.global.concat ))
             .pipe(gulp.dest( theme.build.js.dir ))
             .pipe(plugins.rename( config.path.build.js.global.min ))
-            .pipe(plugins.uglify())
+            .pipe(plugins.uglify( theme.plugins.uglify ))
             .pipe(gulp.dest( theme.build.js.dir ));
 
         // catalog
@@ -18,7 +18,7 @@ module.exports = function (gulp, plugins, config) {
             .pipe(plugins.concat( config.path.build.js.catalog.concat ))
             .pipe(gulp.dest( theme.build.js.dir ))
             .pipe(plugins.rename( config.path.build.js.catalog.min ))
-            .pipe(plugins.uglify())
+            .pipe(plugins.uglify( theme.plugins.uglify ))
             .pipe(gulp.dest( theme.build.js.dir ));
 
         // product simple
@@ -27,7 +27,7 @@ module.exports = function (gulp, plugins, config) {
             .pipe(plugins.concat( config.path.build.js.product.simple.concat ))
             .pipe(gulp.dest( theme.build.js.dir ))
             .pipe(plugins.rename( config.path.build.js.product.simple.min ))
-            .pipe(plugins.uglify())
+            .pipe(plugins.uglify( theme.plugins.uglify ))
             .pipe(gulp.dest( theme.build.js.dir ));
 
         // product configurable
@@ -36,7 +36,7 @@ module.exports = function (gulp, plugins, config) {
             .pipe(plugins.concat( config.path.build.js.product.configurable.concat ))
             .pipe(gulp.dest( theme.build.js.dir ))
             .pipe(plugins.rename( config.path.build.js.product.configurable.min ))
-            .pipe(plugins.uglify())
+            .pipe(plugins.uglify( theme.plugins.uglify ))
             .pipe(gulp.dest( theme.build.js.dir ));
 
         // product bundle
@@ -45,7 +45,7 @@ module.exports = function (gulp, plugins, config) {
             .pipe(plugins.concat( config.path.build.js.product.bundle.concat ))
             .pipe(gulp.dest( theme.build.js.dir ))
             .pipe(plugins.rename( config.path.build.js.product.bundle.min ))
-            .pipe(plugins.uglify())
+            .pipe(plugins.uglify( theme.plugins.uglify ))
             .pipe(gulp.dest( theme.build.js.dir ));
 
         // product bundle
@@ -54,7 +54,7 @@ module.exports = function (gulp, plugins, config) {
             .pipe(plugins.concat( config.path.build.js.checkout.opc.concat ))
             .pipe(gulp.dest( theme.build.js.dir ))
             .pipe(plugins.rename( config.path.build.js.checkout.opc.min ))
-            .pipe(plugins.uglify())
+            .pipe(plugins.uglify( theme.plugins.uglify ))
             .pipe(gulp.dest( theme.build.js.dir ));
 
         callback();

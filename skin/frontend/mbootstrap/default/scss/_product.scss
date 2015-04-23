@@ -23,7 +23,7 @@
         margin-right: auto;
 
         &:not(.img-responsive){
-            @extend .img-responsive;
+            @include img-responsive;
         }
     }
 }
@@ -82,6 +82,13 @@
 
                 .or {
                     display: none;
+                }
+
+                // Tablet view - landscape
+                @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation:portrait) {
+                    .add-to-cart {
+                        margin-bottom: ($line-height-computed / 2);
+                    }
                 }
             }
 
@@ -209,6 +216,19 @@
                     padding-right: ($grid-gutter-width / 2);
 
                     white-space: nowrap;
+                }
+
+                // Tablet portair view
+                @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation:portrait) {
+                    display: block;
+
+                    .add-to-cart {
+                        display: block;
+                    }
+                    .add-to-links {
+                        display: block;
+                        padding: 0 ($grid-gutter-width / 2) ($grid-gutter-width / 2);
+                    }
                 }
             }
 

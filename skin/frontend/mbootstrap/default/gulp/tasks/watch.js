@@ -10,7 +10,7 @@ module.exports = function (gulp, plugins, config) {
         ], ['build-mbootstrap-scripts']);
 
         gulp.watch(theme.source.js.dir + '**/*.js', ['build-mbootstrap-scripts']);
-        gulp.watch(theme.source.scss.dir + '/**/*.scss', ['build-mbootstrap-styles']);
+        gulp.watch(theme.source.scss.dir + '**/*.scss', ['build-mbootstrap-styles']);
 
         callback();
     };

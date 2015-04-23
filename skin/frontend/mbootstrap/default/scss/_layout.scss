@@ -219,7 +219,24 @@
         }
     }
 
-        .footer-links {}
+        .footer-links {
+            .links-left {
+                margin-bottom: ($line-height-computed / 2);
+            }
+            .links-right {}
+
+            @media (min-width: $screen-md-min) {
+                @extend .clearfix;
+
+                .links-left {
+                    float: left;
+                    margin: 0;
+                }
+                .links-right {
+                    float: right;
+                }
+            }
+        }
 
         .organization {
             margin: ($line-height-computed / 2) 0;

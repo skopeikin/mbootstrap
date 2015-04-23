@@ -65,11 +65,15 @@
                     }
 
                     .btn {
-                        @include opacity(0.1);
-                        @include transition(opacity 0.25s ease-in-out);
+                        opacity: 0.1;
+                        transition: opacity 0.25s ease-in-out;
 
-                        &.visible-xs {
-                            @include opacity(1);
+                        // &.visible-xs {
+                        //     @include opacity(1);
+                        // }
+
+                        @media (max-width: $screen-sm-max) {
+                            opacity: 1;
                         }
                     }
 
@@ -124,6 +128,7 @@
 
         .totals {
             @include make-sm-column(5);
+            float: right !important;
 
             table {
                 @extend .table;
@@ -133,6 +138,14 @@
                 > tbody > tr > td {
                     border-top: none;
                 }
+            }
+        }
+
+        // Tablet portair view
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation:portrait) {
+            .totals,
+            .col2-set {
+                @include make-sm-column(12);
             }
         }
     }
