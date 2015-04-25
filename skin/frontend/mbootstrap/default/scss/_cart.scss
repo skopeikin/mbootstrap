@@ -47,15 +47,20 @@
                     @include opacity(1);
                 }
             }
-        }
-                td {
-                    &.cell_image {
-                        min-width: 100px;
+
+                    .btn {
+                        opacity: 0.1;
+                        transition: opacity 0.25s ease-in-out;
+
+                        @media (max-width: $screen-sm-max) {
+                            opacity: 1;
+                        }
                     }
-                }
+        }
+                td {}
                     .product-image {
                         display: block;
-                        min-width: 75px; // chrome bug td collapse fix
+                        min-width: $cart-image-width; // chrome bug td collapse fix
                     }
 
                     .product-name {
@@ -65,15 +70,6 @@
                     .qty {
                         margin: 0;
                         width: 50px;
-                    }
-
-                    .btn {
-                        opacity: 0.1;
-                        transition: opacity 0.25s ease-in-out;
-
-                        @media (max-width: $screen-sm-max) {
-                            opacity: 1;
-                        }
                     }
 
                     .price {}

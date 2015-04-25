@@ -12,7 +12,6 @@ $block-title-bg:						$gray-light !default;
 $block-title-color:						#fff !default;
 $block-content-border:					1px solid $gray-lighter !default;
 
-
 // Search
 $search-mini-input-color:				#fff !default;
 $search-mini-input-bg:					transparent !default;
@@ -24,18 +23,18 @@ $search-mini-btn-color:					#fff !default;
 // Product
 $product-name-rows:						2 !default;
 
-
 // Toolbar
 $toolbar-border:						$block-content-border !default;
 $toolbar-border-radius:					$border-radius-base !default;
 $toolbar-padidng:						$padding-small-vertical $padding-small-horizontal !default;
+$toolbar-bg:							$gray-lighter;
+$toolbar-border:						1px solid darken($gray-lighter, 10%);
+
+// Cart
+$cart-image-width:						75px !default;
 
 // Form
 $form-required-color: 					$brand-danger !default;
-
-// Toolbar
-$toolbar-bg:							$gray-lighter;
-$toolbar-border:						1px solid darken($gray-lighter, 10%);
 
 // Box
 $box-reviews-border:					$block-content-border !default;

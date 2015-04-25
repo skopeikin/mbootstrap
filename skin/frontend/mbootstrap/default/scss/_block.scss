@@ -195,7 +195,9 @@
 // -------------------------
 .block-list {
     .block-content {}
-        ol {}
+        ol {
+            @extend .list-unstyled;
+        }
             .item {
                 @extend .clearfix;
 
@@ -214,6 +216,10 @@
             }
 }
 
+
+// Block - Recently Vieved
+// -------------------------
+.block-viewed {}
 
 
 // Block - Compare
