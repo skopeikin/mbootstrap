@@ -48,7 +48,11 @@
                 }
             }
         }
-                td {}
+                td {
+                    &.cell_image {
+                        min-width: 100px;
+                    }
+                }
                     .product-image {
                         display: block;
                         min-width: 75px; // chrome bug td collapse fix
