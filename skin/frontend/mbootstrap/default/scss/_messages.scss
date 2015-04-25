@@ -4,28 +4,15 @@
 .messages {
     margin: 0 0 $line-height-base;
 
-    list-style: none;
+    border-radius: $border-radius-base;
 
-    border: 1px solid red;
-    border-radius: 3px;
-
-    > li {
-        > ul {
-            > li {
-                > span {}
-            }
-        }
+    &,
+    ul {
+        @extend .list-unstyled;
     }
 
-        ul {
-            margin: 0;
-            padding: 0;
-
-            list-style: none;
-        }
-
-    > .error-msg {}
-    > .success-msg {}
-    > .note-msg {}
-    > .notice-msg {}
+    .error-msg {}
+    .success-msg {}
+    .note-msg {}
+    .notice-msg {}
 }

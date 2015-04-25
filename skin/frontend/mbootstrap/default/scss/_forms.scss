@@ -106,21 +106,17 @@ label.required {
 .form-list {
 	margin-bottom: ($line-height-computed * 0.75);	// default bootstrap is 15px
 
-	padding: 0;
-
-	list-style: none;
+	@extend .list-unstyled;
 
 	li {
 		margin-bottom: $line-height-computed;
+	}
 
 		label {
 			cursor: pointer;
 		}
 
-		.form-group {
-			margin-bottom: 0;
-		}
-
+		.form-group,
 		.input-box {
 			margin-bottom: 0;
 		}
@@ -138,12 +134,8 @@ label.required {
 			}
 
 			&.address {
-				.field {
-					+ .field {
-						+ .field {
-							margin-top: 0;
-						}
-					}
+				.field + .field + .field {
+					margin-top: 0;
 				}
 			}
 		}
@@ -153,7 +145,7 @@ label.required {
 			position: relative;
 			margin-bottom: 0;	// rule based on OPC
 
-			> input.checkbox,
+			input.checkbox,
 			.input-box {
 				position: absolute;
 				margin-top: 4px \9;
@@ -163,8 +155,8 @@ label.required {
 				padding-left: 20px;
 			}
 
-			> .radio,
-			> .checkbox {
+			.radio,
+			.checkbox {
 				position: absolute;
 			}
 		}
@@ -178,18 +170,15 @@ label.required {
 		&.wide {}
 
 		&.additional-row {}
-	}
 
 	li.last,
 	> li:last-child {
 		margin-bottom: 0;
 	}
 
-	ul {
-		padding: 0;
-
-		list-style: none;
-	}
+		ul {
+			@extend .list-unstyled;
+		}
 }
 
 // Customer - Date of Birth
@@ -388,21 +377,4 @@ label.required {
 		.form-list .customer-dob .dob-month input.input-text { }
 		.form-list .customer-dob .dob-year { }
 		.form-list .customer-dob .dob-year input.input-text { }
-
-	/* validation */
-	.validation-advice {}
-
-	/* required note */
-	p.required { }
-		p.required > em { }
-
-	/* form elements */
-	.fieldset { }
-		.fieldset .legend { }
-
-		/*
-		.form-list
-		*/
-		.fieldset .form-list { }
-
 /* @end */

@@ -13,19 +13,18 @@
 
     .cart-table {
         tr {
-            th {}
-            td {
-                vertical-align: middle;
-
-                &.last {}
-            }
-
             &.first {}
             &.last {}
 
             &.odd {}
             &.even {}
         }
+            th {}
+            td {
+                vertical-align: middle;
+
+                &.last {}
+            }
 
         thead {
             th {}
@@ -48,7 +47,7 @@
                     @include opacity(1);
                 }
             }
-
+        }
                 td {}
                     .product-image {
                         display: block;
@@ -68,10 +67,6 @@
                         opacity: 0.1;
                         transition: opacity 0.25s ease-in-out;
 
-                        // &.visible-xs {
-                        //     @include opacity(1);
-                        // }
-
                         @media (max-width: $screen-sm-max) {
                             opacity: 1;
                         }
@@ -82,7 +77,6 @@
                     .btn-remove {
                         margin-bottom: ($line-height-computed / 2);
                     }
-        }
     }
 
     .cart-table-totals {}
@@ -157,9 +151,9 @@
             text-align: right;
             direction: rtl;
 
-            > li {
+            li {
                 display: inline-block;
-
+            }
                 a {
                     @extend .btn;
                     @extend .btn-link;
@@ -168,7 +162,6 @@
                 .button {
                     @extend .btn-lg;
                 }
-            }
         }
 
 

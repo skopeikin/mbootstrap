@@ -81,7 +81,7 @@
                         > li {
                             margin-bottom: ($line-height-computed / 4);
 
-                            @include clearfix();
+                            @extend .clearfix;
 
                             > .title {}
                             > .value {}

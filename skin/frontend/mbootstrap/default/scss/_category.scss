@@ -41,9 +41,8 @@
 // -------------------------
 .products-grid {
     font-size: 0;
-    padding: 0;
 
-    list-style: none;
+    @extend .list-unstyled;
 
     &:not(table) {
         @media (min-width: $screen-sm-min) {
@@ -51,7 +50,7 @@
         }
     }
 
-    > .item {
+    .item {
         font-size: $font-size-base;
 
         margin-bottom: $line-height-computed;
@@ -79,53 +78,44 @@
         }
 
             .product-name,
-                .ratings,
-                .price-box,
-                .availability {
-                    margin-bottom: ($line-height-computed / 2);
-                }
+            .ratings,
+            .price-box,
+            .availability {
+                margin-bottom: ($line-height-computed / 2);
+            }
 
-                .product-image {
-                    // display: block;
-                }
+            .product-image {}
+            .product-name {}
+            .ratings {}
+            .price-box {}
+            .availability {}
 
-                .product-name {
-                    // font-size: $font-size-base;
-                }
-
-                .ratings {}
-                .price-box {}
-                .availability {}
-                .actions {
-                    // Tablet view - landscape
-                    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation:portrait) {
-                        .btn {
-                            @extend .btn-xs;
-                        }
+            .actions {
+                // Tablet view - landscape
+                @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation:portrait) {
+                    .btn {
+                        @extend .btn-xs;
                     }
                 }
+            }
 }
 
 
 // Products list
 // -------------------------
 .products-list {
-    margin: 0;
-    padding: 0;
+    @extend .list-unstyled;
 
-    list-style: none;
-
-    > .item {
+    .item {
         padding: 0;
         margin: 0 0 $line-height-computed;
-
-        > .thumbnail {
+    }
+        .thumbnail {
             margin-bottom: 0;
-
-            > .thumbnail__i {
+        }
+            .thumbnail__i {
                 @include make-row();
             }
-        }
 
             .product-name,
             .ratings,
@@ -160,7 +150,6 @@
             .desc {}
             .availability {}
             .actions {}
-    }
 }
 
 
@@ -170,7 +159,7 @@
     @extend .list-unstyled;
 
     .item {
-        @include clearfix();
+        @extend .clearfix;
     }
     .item + .item {
         margin-top: ($line-height-computed / 2);
@@ -179,14 +168,14 @@
     }
 
         .product-details {
-            @include clearfix();
+            @extend .clearfix;
 
             .btn-remove,
             .link-cart {
                 float: right;
             }
             .price-box {
-                @extend p;
+                margin-bottom: ($line-height-computed / 2);
             }
         }
 }
