@@ -105,3 +105,11 @@
             @extend .panel-body;
         }
     }
+
+
+// Send Friend
+// -------------------------
+.send-friend {}
+    #add_recipient_button {
+        display: inline-block;
+    }
