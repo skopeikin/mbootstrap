@@ -33,9 +33,9 @@
         <div class="header__i">
             <div class="i-logo">
                 <?php if ($this->getIsHomePage()):?>
-                    <h1 class="logo"><strong itemprop="name"><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo" itemprop="url"><img class="img-responsive" src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" itemprop="image" /></a></h1>
+                    <h1 class="logo"><strong itemprop="name"><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo" itemprop="url"><img class="img-responsive" src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" width="128" height="70" itemprop="image" /></a></h1>
                 <?php else:?>
-                    <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo" itemprop="url"><strong itemprop="name"><?php echo $this->getLogoAlt() ?></strong><img class="img-responsive" src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" itemprop="image" /></a>
+                    <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo" itemprop="url"><strong itemprop="name"><?php echo $this->getLogoAlt() ?></strong><img class="img-responsive" src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" width="128" height="70" itemprop="image" /></a>
                 <?php endif?>
             </div>
 
