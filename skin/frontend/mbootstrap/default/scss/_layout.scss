@@ -73,7 +73,13 @@
                 }
             }
 
-            .links {}
+            .links {
+                .btn {
+                    @media (max-width: $screen-xs-max) {
+                        margin-top: ($line-height-computed / 2);
+                    }
+                }
+            }
     }
 
         .quick-access__i {

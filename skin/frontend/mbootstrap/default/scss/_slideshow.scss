@@ -79,6 +79,11 @@
 	.slideshow-pager > * {
 		cursor: pointer;
 	}
+		.slideshow-pager .pager-box + .pager-box {
+			@media (max-width: $screen-xs-max) {
+				margin-left: ($grid-gutter-width / 2);
+			}
+		}
 
 	.slideshow-prev,
 	.slideshow-next {
