@@ -14,8 +14,11 @@
     }
 
     .paging {
+        margin-bottom: ($line-height-computed / 2);
+
         @media (min-width: $screen-sm-min) {
             float: right;
+            margin-bottom: 0;
         }
 
         // Tablet view - landscape
@@ -71,12 +74,17 @@
         .view-mode,
         .sort-by {
             display: inline-block;
-            margin: 0 ($grid-gutter-width / 2) 0 0;
 
             vertical-align: middle;
+
+            @media (min-width: $screen-sm-min) {
+                margin: 0 ($grid-gutter-width / 2) 0 0;
+            }
         }
 
         .view-mode {
+            margin-bottom: ($line-height-computed / 2);
+
             label {
                 display: none;
             }
