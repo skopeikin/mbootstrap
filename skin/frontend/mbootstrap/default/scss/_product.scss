@@ -227,10 +227,6 @@
         //
         // Product image box
         .product-img-box {
-            @media (max-width: $screen-xs-max) {
-                margin-top: $line-height-computed;
-            }
-
             @media (min-width: $screen-sm-min) {
                 @include make-sm-column(6);
             }
