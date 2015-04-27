@@ -270,7 +270,7 @@
 
                 color: $gray-light;
 
-                @include clearfix();
+                @extend .clearfix;
 
                 > a {
                     font-weight: normal;

@@ -4,28 +4,29 @@
 .cart {
     .page-title {
         .checkout-types {
-            position: absolute;
-            top: 0;
-            right: 0;
+            @media (min-width: $screen-sm-min) {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
         }
     }
 }
 
     .cart-table {
         tr {
-            th {}
-            td {
-                vertical-align: middle;
-
-                &.last {}
-            }
-
             &.first {}
             &.last {}
 
             &.odd {}
             &.even {}
         }
+            th {}
+            td {
+                vertical-align: middle;
+
+                &.last {}
+            }
 
         thead {
             th {}
@@ -49,10 +50,19 @@
                 }
             }
 
+                    .btn {
+                        opacity: 0.1;
+                        transition: opacity 0.25s ease-in-out;
+
+                        @media (max-width: $screen-sm-max) {
+                            opacity: 1;
+                        }
+                    }
+        }
                 td {}
                     .product-image {
                         display: block;
-                        min-width: 75px; // chrome bug td collapse fix
+                        min-width: $cart-image-width; // chrome bug td collapse fix
                     }
 
                     .product-name {
@@ -64,25 +74,11 @@
                         width: 50px;
                     }
 
-                    .btn {
-                        opacity: 0.1;
-                        transition: opacity 0.25s ease-in-out;
-
-                        // &.visible-xs {
-                        //     @include opacity(1);
-                        // }
-
-                        @media (max-width: $screen-sm-max) {
-                            opacity: 1;
-                        }
-                    }
-
                     .price {}
 
                     .btn-remove {
                         margin-bottom: ($line-height-computed / 2);
                     }
-        }
     }
 
     .cart-table-totals {}
@@ -154,12 +150,16 @@
             @extend .list-unstyled;
             padding-right: 0;
 
-            text-align: right;
-            direction: rtl;
+            text-align: center;
 
-            > li {
+            @media (min-width: $screen-sm-min) {
+                text-align: right;
+                direction: rtl;
+            }
+
+            li {
                 display: inline-block;
-
+            }
                 a {
                     @extend .btn;
                     @extend .btn-link;
@@ -168,7 +168,6 @@
                 .button {
                     @extend .btn-lg;
                 }
-            }
         }
 
 

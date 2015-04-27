@@ -57,20 +57,18 @@
         padding: $padding-small-horizontal 0;
     }
 
-    .nav {
-        > li {
-            > a,
-            > strong {
-                display: block;
-                padding: $padding-small-vertical $padding-small-horizontal;
-            }
+        .nav {}
+            li {
+                strong {
+                    display: block;
+                    padding: $nav-link-padding
+                }
 
-            &.active {
-                border-right: 1px solid #563d7c;
-                color: #563d7c;
+                &.active {
+                    border-right: 2px solid $brand-primary;
+                    color: $brand-primary;
+                }
             }
-        }
-    }
 }
 
 
@@ -99,7 +97,7 @@
 // -------------------------
 .box-head {
 
-    @include clearfix();
+    @extend .clearfix;
 
     > h2 {
         font-weight: normal;
@@ -117,7 +115,7 @@
     .box-title {
         border-bottom: 2px solid $gray-lighter;
 
-        @include clearfix();
+        @extend .clearfix;
 
         > h3 {
             font-weight: normal;
@@ -181,29 +179,36 @@
 }
 
 
+// Box - Reviews
+// -------------------------
+.box-reviews {
+    ul {}
+        .item {}
+            .number {}
+            .details {}
+                .product-name {}
+                .ratings {}
+}
+    #my_recent_reviews {
+        @extend .list-unstyled;
+    }
+
+
 // Addresses list
 // -------------------------
 .addresses-list {
     .addresses-primary {}
     .addresses-additional {}
 
-    h2 {
-        //border-bottom: 2px solid $gray-lighter;
-    }
+    h2 {}
 
     ol {
-        margin: 0;
-        padding: 0;
-
-        list-style: none;
-
+        @extend .list-unstyled;
+    }
         h3 {
             font-weight: normal;
             font-size: $font-size-large;
-
-            //border-bottom: 1px solid $gray-lighter;
         }
-    }
 }
 
 
@@ -217,11 +222,10 @@
         td {
             vertical-align: middle;
         }
-
-        .actions {
-            white-space: nowrap;
-        }
     }
+            .actions {
+                white-space: nowrap;
+            }
 
     .pager-wrapper {
         margin-bottom: $line-height-computed;
@@ -245,8 +249,8 @@
 }
 
 .order-items {
-    .table {
-        tfoot {
+    .table {}
+        tfoot {}
             tr {
                 font-weight: bold;
 
@@ -260,8 +264,6 @@
                     }
                 }
             }
-        }
-    }
 }
 
 

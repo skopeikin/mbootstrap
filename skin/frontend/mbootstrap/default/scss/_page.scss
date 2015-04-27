@@ -81,4 +81,35 @@
             top: 0;
         }
     }
+
+    .links {
+        margin: ($line-height-computed / 2) 0;
+    }
+
+    .pager-wrapper {}
 }
+
+    #sitemap_top_links {}
+    .sitemap {
+        @extend .list-unstyled;
+
+        // margin: ($line-height-computed / 2) 0;
+
+        @extend .panel;
+        @extend .panel-default;
+
+        .level-0 {
+            @extend .panel-heading;
+        }
+        .level-1 {
+            @extend .panel-body;
+        }
+    }
+
+
+// Send Friend
+// -------------------------
+.send-friend {}
+    #add_recipient_button {
+        display: inline-block;
+    }

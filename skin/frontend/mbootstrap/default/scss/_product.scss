@@ -182,26 +182,27 @@
             //
             // Product options bottom
             .product-options-bottom {
-                display: table;
-                min-width: 100%;
+                padding: ($line-height-computed / 2) 0;
 
                 background: $gray-lighter;
+
+                @media (min-width: $screen-lg-min) {
+                    display: table;
+                    min-width: 100%;
+                }
 
                 .price-box,
                 .add-to-cart,
                 .add-to-links {
-                    display: table-cell;
-                    padding: ($line-height-computed / 2) 0;
+                    @media (min-width: $screen-lg-min) {
+                        display: table-cell;
 
-                    vertical-align: middle;
+                        vertical-align: middle;
+                    }
                 }
 
                 .price-box {
                     display: none;
-                    // padding-left: ($grid-gutter-width / 2);
-                    // padding-right: ($grid-gutter-width / 2);
-
-                    // text-align: right;
                 }
 
                 .add-to-cart {
@@ -213,21 +214,11 @@
                 }
 
                 .add-to-links {
+                    padding-left: ($grid-gutter-width / 2);
                     padding-right: ($grid-gutter-width / 2);
 
-                    white-space: nowrap;
-                }
-
-                // Tablet portair view
-                @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation:portrait) {
-                    display: block;
-
-                    .add-to-cart {
-                        display: block;
-                    }
-                    .add-to-links {
-                        display: block;
-                        padding: 0 ($grid-gutter-width / 2) ($grid-gutter-width / 2);
+                    @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+                        padding-top: ($line-height-computed / 2);
                     }
                 }
             }
@@ -236,10 +227,6 @@
         //
         // Product image box
         .product-img-box {
-            @media (max-width: $screen-xs-max) {
-                margin-top: $line-height-computed;
-            }
-
             @media (min-width: $screen-sm-min) {
                 @include make-sm-column(6);
             }

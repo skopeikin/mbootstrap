@@ -46,6 +46,11 @@
                 <input type="hidden" name="related_product" id="related-products-field" value=""/>
             </div>
 
+            <div class="product-img-box">
+                <?php echo $this->getChildHtml('media') ?>
+                <?php echo $this->getChildHtml('after_media_end') ?>
+            </div>
+
             <div class="product-shop">
                 <div class="product-name">
                     <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
@@ -94,11 +99,6 @@
                     <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
                 <?php endif; ?>
 
-            </div>
-
-            <div class="product-img-box">
-                <?php echo $this->getChildHtml('media') ?>
-                <?php echo $this->getChildHtml('after_media_end') ?>
             </div>
 
             <div class="clearer"></div>

@@ -12,11 +12,10 @@
 
     padding: ($line-height-computed / 2) 0;
 
-    .header {
-        > .header__i {
+    .header {}
+        .header__i {
             @include make-row();
         }
-    }
 
     .i-logo {
         text-align: center;
@@ -66,44 +65,47 @@
         @include make-sm-column(9);
         @include make-md-column(8);
 
+            .form-language {
+                text-align: left;
+
+                @media (min-width: $screen-sm){
+                    float: right;
+                }
+            }
+
+            .links {
+                .btn {
+                    @media (max-width: $screen-xs-max) {
+                        margin-top: ($line-height-computed / 2);
+                    }
+                }
+            }
+    }
+
         .quick-access__i {
             display: inline-block;
         }
 
             .welcome-bar {
-                margin-top: ($line-height-computed / 2);
-                padding: 0 $padding-small-horizontal;
+                @media (min-width: $screen-sm){
+                    margin-top: ($line-height-computed / 2);
+                    padding: 0 $padding-small-horizontal;
 
-                @include clearfix();
+                    @extend .clearfix;
+                }
             }
 
                 .welcome-msg {
                     font-size: $font-size-small;
 
-                    float: left;
                     padding: ($padding-small-vertical + 1) 0 $padding-small-vertical;
 
-                    text-align: right;
+                    @media (min-width: $screen-sm){
+                        float: left;
+
+                        text-align: right;
+                    }
                 }
-
-            .form-language {
-                float: right;
-
-                text-align: left;
-            }
-
-            .links {
-                // float: right;
-
-                > li {
-                    > a {}
-                }
-
-                > .first {}
-
-                > .last {}
-            }
-    }
 
 
 // Breadcrumbs
@@ -135,7 +137,7 @@
         .col-main,
         .col-left,
         .col-right {
-            margin: $line-height-computed 0;
+            margin-top: ($line-height-computed / 2);
         }
     }
 
