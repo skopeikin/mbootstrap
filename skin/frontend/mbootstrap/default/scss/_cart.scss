@@ -21,7 +21,11 @@
             &.odd {}
             &.even {}
         }
-            th {}
+            th {
+                @media (max-width: $screen-xs-max) {
+                    display: none;
+                }
+            }
             td {
                 vertical-align: middle;
 
@@ -79,6 +83,36 @@
                     .btn-remove {
                         margin-bottom: ($line-height-computed / 2);
                     }
+
+                .cell_image {}
+                .cell_desc {}
+                .cell_wishlist {}
+                .cell_price {}
+                .cell_qty {}
+                .cell_subtotal {}
+                .cell_actions {}
+
+        // Mobile view
+        @media (max-width: $screen-xs-max) {
+            tbody tr {
+                @include clearfix;
+            }
+
+                tbody td {
+                    display: inline-block;
+
+                    border: none !important;
+                }
+
+                .cell_image {
+                    display: block;
+                    float: left;
+                }
+                .cell_desc {
+                    display: block;
+                    float: none;
+                }
+        }
     }
 
     .cart-table-totals {}
