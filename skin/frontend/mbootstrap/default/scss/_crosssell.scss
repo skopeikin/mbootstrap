@@ -45,7 +45,14 @@
 
                     > li {
                         display: inline-block;
+
+                        @media (max-width: $screen-xs-max) {
+                            &:first-child {
+                                margin-bottom: ($line-height-computed / 2);
+                            }
+                        }
                     }
+
                 }
 
                     .link-wishlist,
