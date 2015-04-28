@@ -85,6 +85,10 @@
         .view-mode {
             margin-bottom: ($line-height-computed / 2);
 
+            @media (min-width: $screen-sm-min) {
+                margin-bottom: 0;
+            }
+
             label {
                 display: none;
             }

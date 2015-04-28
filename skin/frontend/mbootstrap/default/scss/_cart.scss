@@ -21,7 +21,11 @@
             &.odd {}
             &.even {}
         }
-            th {}
+            th {
+                @media (max-width: $screen-xs-max) {
+                    display: none;
+                }
+            }
             td {
                 vertical-align: middle;
 
@@ -37,8 +41,10 @@
                 vertical-align: bottom;
             }
 
-                .btn-continue {
-                    float: left;
+                @media (min-width: $screen-sm-min) {
+                    .btn-continue {
+                        float: left;
+                    }
                 }
         }
 
@@ -77,8 +83,80 @@
                     .price {}
 
                     .btn-remove {
-                        margin-bottom: ($line-height-computed / 2);
+                        @media (min-width: $screen-sm-min) {
+                            margin-bottom: ($line-height-computed / 2);
+                        }
                     }
+
+                .cell_image {}
+                .cell_desc {}
+                .cell_wishlist {}
+                .cell_price {}
+                .cell_qty {}
+                .cell_subtotal {}
+                .cell_actions {}
+
+        // Mobile view
+        @media (max-width: $screen-xs-max) {
+            tbody tr {
+                display: block;
+                @include clearfix;
+
+                + tr {
+                    border-top: 1px solid $table-border-color;
+                }
+            }
+
+                tbody td {
+                    display: inline-block;
+
+                    border: none !important;
+                }
+
+                .clearfix {
+                    display: block !important;
+                    padding: 0 !important;
+                }
+
+                .cell_image {
+                    display: block;
+                    float: left;
+                }
+                .cell_desc {
+                    display: block;
+                    margin-left: ($cart-image-width + ($table-cell-padding * 2));
+                }
+                .cell_wishlist {
+                    display: none;
+                }
+                .cell_price,
+                .cell_subtotal {
+                    line-height: $input-height-base;
+                }
+                .cell_qty {
+                    position: relative;
+                    z-index: 1;
+
+                    .cross {
+                        position: absolute;
+                        z-index: 1;
+                        top: $table-cell-padding;
+                        left: -$table-cell-padding;
+
+                        line-height: $input-height-base;
+                    }
+                }
+
+                .cell_actions {}
+
+            tfoot td {
+                text-align: center !important;
+
+                .button + .button {
+                    margin-top: ($line-height-computed / 2);
+                }
+            }
+        }
     }
 
     .cart-table-totals {}
@@ -87,6 +165,7 @@
         @include make-row();
 
         .col2-set {
+            @include make-xs-column(12);
             @include make-sm-column(7);
 
             margin: 0;
@@ -123,6 +202,7 @@
             }
 
         .totals {
+            @include make-xs-column(12);
             @include make-sm-column(5);
             float: right !important;
 

@@ -12,15 +12,17 @@
     &.title-buttons {
         position: relative;
 
-        > .btn {
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
+        @media (min-width: $screen-sm-min) {
+            > .btn {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
 
-        > .btn-group {
-            position: absolute;
-            top: $line-height-computed / 2;
+            > .btn-group {
+                position: absolute;
+                top: $line-height-computed / 2;
+            }
         }
     }
 
