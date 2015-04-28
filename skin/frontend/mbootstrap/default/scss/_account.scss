@@ -355,6 +355,7 @@
                 width: 1px;
             }
             .cell_desc {}
+
             .cell_cart {
                 width: 25%;
             }
@@ -362,6 +363,11 @@
                 width: 1px;
             }
         }
+
+        tbody {}
+            textarea {
+                height: auto !important;
+            }
 
         @media (max-width: $screen-xs-max) {
             thead {
@@ -390,17 +396,27 @@
                     .product-image {
                         margin: auto;
                     }
-
-                .cell_desc {}
-                    textarea {
-                        height: auto !important;
-                    }
         }
     }
 
 // Map Popup
 // -------------------------
-.map-popup { background:#fff; border:1px solid #aaa; margin:12px 0 0; position:absolute; -moz-box-shadow:0 0 6px #ccc; -webkit-box-shadow:0 0 6px #ccc; box-shadow:0 0 6px #ccc; text-align:left; width:300px; z-index:100; }
+.map-popup {
+    background: #fff;
+    border: 1px solid #aaa;
+    margin: 12px 0 0;
+    position: absolute;
+    -moz-box-shadow: 0 0 6px #ccc;
+    -webkit-box-shadow: 0 0 6px #ccc;
+    box-shadow: 0 0 6px #ccc;
+    text-align: left;
+    width: 300px;
+    z-index: 100;
+
+    @media (max-width: $screen-xs-max) {
+        left: 9px !important;
+    }
+}
 
     .map-popup-heading { background:#d9e5ee; border-bottom:1px solid #ccc; padding:5px 30px 5px 10px; width:260px; }
         .map-popup-heading h2 { font-size:16px; margin:0; text-shadow:0 1px 0 #f6f6f6; overflow:hidden; white-space:nowrap; word-wrap:break-word; text-align:left; text-overflow:ellipsis; }
