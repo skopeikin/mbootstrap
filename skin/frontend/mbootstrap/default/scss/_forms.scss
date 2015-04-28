@@ -59,6 +59,10 @@ form {
 	input.checkbox {
 		display: inline-block;
 	}
+
+	input + input {
+		margin-top: $line-height-computed; // for multiple input (example: change password)
+	}
 }
 
 .input-text {
@@ -121,7 +125,7 @@ label.required {
 			margin-bottom: 0;
 		}
 
-		&.fields {
+		.fields {
 			margin-bottom: 0;
 
 			@include make-row();
@@ -141,7 +145,7 @@ label.required {
 		}
 
 		// radio, checkbox styles
-		&.control {
+		.control {
 			position: relative;
 			margin-bottom: 0;	// rule based on OPC
 
@@ -167,9 +171,9 @@ label.required {
 			}
 		}
 
-		&.wide {}
+		.wide {}
 
-		&.additional-row {}
+		.additional-row {}
 
 	li.last,
 	> li:last-child {
