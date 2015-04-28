@@ -54,7 +54,20 @@
             <?php foreach ($this->getItems() as $item): ?>
                 <tr id="item_<?php echo $item->getId();?>">
                     <?php foreach ($columns as $column): ?>
-                        <td><?php $column->setItem($item); echo $column->toHtml($item);?></td>
+                        <?php
+                            $cellClassName = "cell_";
+
+                            if ($column instanceof Mage_Wishlist_Block_Customer_Wishlist_Item_Column_Image) {
+                                $cellClassName .= 'image';
+                            } elseif ($column instanceof Mage_Wishlist_Block_Customer_Wishlist_Item_Column_Comment) {
+                                $cellClassName .= 'desc';
+                            } elseif ($column instanceof Mage_Wishlist_Block_Customer_Wishlist_Item_Column_Cart) {
+                                $cellClassName .= 'cart';
+                            } elseif ($column instanceof Mage_Wishlist_Block_Customer_Wishlist_Item_Column_Remove) {
+                                $cellClassName .= 'remove';
+                            }
+                        ?>
+                        <td class="<?php echo $cellClassName; ?>"><?php $column->setItem($item); echo $column->toHtml($item);?></td>
                     <?php endforeach; ?>
                 </tr>
             <?php endforeach ?>
