@@ -96,18 +96,19 @@
 // Box
 // -------------------------
 .box-head {
+    @media (min-width: $screen-sm-min) {
+        @extend .clearfix;
 
-    @extend .clearfix;
+        > h2 {
+            font-weight: normal;
 
-    > h2 {
-        font-weight: normal;
+            float: left;
+        }
 
-        float: left;
-    }
-
-    > a {
-        float: right;
-        margin-top: ($line-height-computed + 14);
+        > a {
+            float: right;
+            margin-top: ($line-height-computed + 14);
+        }
     }
 }
 
@@ -119,6 +120,8 @@
 
         > h3 {
             font-weight: normal;
+
+            float: left;
         }
 
         > a {
@@ -183,14 +186,50 @@
 // -------------------------
 .box-reviews {
     ul {}
-        .item {}
-            .number {}
-            .details {}
-                .product-name {}
-                .ratings {}
+        .item {
+            padding-top: ($line-height-computed / 2);
+            position: relative;
+            z-index: 1;
+
+            border-top: $block-content-border;
+        }
+        .item + .item {
+            margin-top: ($line-height-computed / 2);
+        }
+            .number {
+                font-weight: bold;
+
+                min-width: $line-height-computed;
+                position: absolute;
+                z-index: 1;
+                left: 0;
+                top: ($line-height-computed / 2);
+
+                text-align: center;
+
+                background: $block-title-bg;
+                color: #fff;
+            }
+            .details {
+                padding-left: ($line-height-computed * 1.5);
+            }
+                .product-name,
+                .ratings {
+                    display: inline-block;
+                    margin: 0;
+                }
+                .ratings {
+                    @media (min-width: $screen-sm-min) {
+                        margin-left: ($line-height-computed / 2);
+                    }
+                }
 }
     #my_recent_reviews {
         @extend .list-unstyled;
+
+        @media (max-width: $screen-xs-max) {
+            margin-top: ($line-height-computed / 2);
+        }
     }
 
 
