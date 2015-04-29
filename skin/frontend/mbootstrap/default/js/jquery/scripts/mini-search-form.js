@@ -15,13 +15,6 @@ jQuery(document).ready(function ($) {
         }
     };
 
-//    var tablet = {
-//        landscape: {
-//            query:      'screen and (min-width: 768px) and (max-width: 992px)',
-//            className:  'search-mini_tablet-landscape'
-//        }
-//    };
-
     var $form = $("#search_mini_form");
 
     // Programm
