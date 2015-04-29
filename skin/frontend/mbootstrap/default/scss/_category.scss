@@ -93,11 +93,18 @@
             .actions {
                 // Tablet view - landscape
                 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation:portrait) {
-                    .btn {
-                        @extend .btn-xs;
+                    .btn-group {
+                        .btn {
+                            @extend .btn-xs;
+                        }
                     }
                 }
             }
+                .buttons-set {
+                    .btn + .btn {
+                        margin-left: 10px;
+                    }
+                }
 }
 
 
