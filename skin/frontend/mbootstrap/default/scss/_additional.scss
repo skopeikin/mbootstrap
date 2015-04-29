@@ -70,7 +70,9 @@
 
 // Loader
 // -------------------------
-.please-wait {}
+.please-wait {
+	white-space: nowrap;
+}
 
 
 // Map link
