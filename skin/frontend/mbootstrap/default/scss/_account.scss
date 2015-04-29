@@ -351,6 +351,15 @@
                 margin-top: ($line-height-computed / 2);
             }
         }
+
+
+    .buttons-set {
+        @media (max-width: $screen-xs-max) {
+            .btn {
+                margin-bottom: ($line-height-computed / 2);
+            }
+        }
+    }
 }
 
     #wishlist-table {
