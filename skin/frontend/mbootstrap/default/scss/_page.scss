@@ -45,6 +45,12 @@
 
         > li {
             @include make-sm-column(4);
+
+            @media (max-width: $screen-xs-max) {
+                + li {
+                    margin-top: ($line-height-computed / 2);
+                }
+            }
         }
 
             img {
