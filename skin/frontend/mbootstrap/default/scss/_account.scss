@@ -21,6 +21,10 @@
             @extend .btn;
             @extend .btn-link;
         }
+
+        @media (max-width: $screen-xs-max) {
+            margin-bottom: ($line-height-computed / 2);
+        }
     }
 }
 
