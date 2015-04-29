@@ -18,6 +18,17 @@
 		position: relative;
 		margin: 0;
 		border: 10px solid #FFFFFF;
+
+		&.cycle-loading:before {
+			display: block;
+			margin: auto;
+			width: 32px;
+			height: 20px;
+
+			content: '';
+
+			background: url(../../images/opc-ajax-loader.gif) 50% 50% no-repeat;
+		}
 	}
 		.slideshow-container .slideshow > li {
 			position: absolute;

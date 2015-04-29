@@ -14,7 +14,8 @@ jQuery(document).ready(function ($) {
                 prev: '.slideshow-prev',
                 next: '.slideshow-next',
                 fx: 'scrollHorz',
-                log: false
+                log: false,
+                'auto-height': 'calc'
             })
     }
 });
