@@ -222,10 +222,15 @@
     }
 
         .footer-links {
-            .links-left {
-                margin-bottom: ($line-height-computed / 2);
-            }
+            .links-left {}
             .links-right {}
+                .links {
+                    li {
+                        @media (max-width: $screen-xs-max) {
+                            margin-bottom: ($line-height-computed / 2);
+                        }
+                    }
+                }
 
             @media (min-width: $screen-md-min) {
                 @extend .clearfix;

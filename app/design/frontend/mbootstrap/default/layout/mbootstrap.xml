@@ -146,7 +146,8 @@
 
                     <action method="addLink" translate="label title" module="customer">
                         <label>Log In</label><url helper="customer/getLoginUrl"/><title>Log In</title>
-                        <prepare/><urlParams/><position>1000</position><liParams>btn-log-in js-btn-log-in</liParams>
+                        <!--<prepare/><urlParams/><position>1000</position><liParams>btn-log-in js-btn-log-in</liParams>-->
+                        <prepare/><urlParams/><position>1000</position><liParams>btn-log-in</liParams>
                         <aParams/><beforeText><![CDATA[<i class="glyphicon glyphicon-log-in"></i>]]></beforeText>
                     </action>
 
@@ -154,7 +155,7 @@
             </reference>
 
             <reference name="before_document_end">
-                <block type="ecomdev_mbootstrap/customer_form_login" name="customer_form_login_modal" template="persistent/customer/form/login_modal.phtml" />
+                <!--<block type="ecomdev_mbootstrap/customer_form_login" name="customer_form_login_modal" template="persistent/customer/form/login_modal.phtml" />-->
             </reference>
 
         </reference>

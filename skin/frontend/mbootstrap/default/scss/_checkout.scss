@@ -32,8 +32,10 @@
                 float: right;
                 display: none;
 
-                opacity: 0.1;
-                transition: opacity 0.25s ease-in-out;
+                @media (min-width: $screen-sm-min) {
+                    opacity: 0.1;
+                    transition: opacity 0.25s ease-in-out;
+                }
             }
 
             > .number {
@@ -122,7 +124,8 @@
                 }
 
                 > a {
-                    display: inline;
+                    display: inline-block;
+                    margin-top: 7px;
                 }
             }
         }
@@ -260,10 +263,12 @@
 // -------------------------
 .opc-block-progress {
     .block-content {
-        > dl {
+        padding-bottom: 0;
+    }
+        dl {
             margin: 0;
-
-            > dt {
+        }
+            dt {
                 font-weight: normal;
 
                 margin-bottom: ($line-height-computed / 2);
@@ -272,31 +277,29 @@
 
                 @extend .clearfix;
 
-                > a {
-                    font-weight: normal;
-
-                    float: right;
-                }
-
-                > .separator {
-                    display: none;
-                }
-
                 &.complete {
                     font-weight: bold;
 
+                    padding: ($line-height-computed / 2) ($grid-gutter-width / 2);
+
                     background: $gray-lighter;
-
-                    color: $text-color;
-
                     border-radius: $border-radius-small;
+                    color: $text-color;
                 }
             }
 
-            > dd {
-                > address {
-                    margin-bottom: 0;
-                }
+                .changelink {}
+                    .separator {
+                        display: none;
+                    }
+                        a {
+                                font-weight: normal;
+
+                                float: right;
+                            }
+
+            dd {
+                padding: ($line-height-computed / 2) ($grid-gutter-width / 2);
 
                 &.complete {
                     margin-bottom: ($line-height-computed / 2);
@@ -304,20 +307,18 @@
 
                     border-bottom: 1px solid  #fff;
 
-                    &:last-child {
-                        margin-bottom: 0;
-                        padding-bottom: 0;
-
-                        border-bottom: 0;
-                    }
-
-                    .price {
-                        font-size: $font-size-base;
+                    strong {
+                        font-weight: normal;
                     }
                 }
             }
-        }
-    }
+
+                address {
+                    margin-bottom: 0;
+                }
+                .price {
+                    font-size: $font-size-base;
+                }
 }
 
 
