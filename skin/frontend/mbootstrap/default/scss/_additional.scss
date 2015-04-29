@@ -51,18 +51,17 @@
 
 	> li {
 		display: inline-block;
-		padding: 0 $padding-small-vertical;
+		margin-right: $padding-small-vertical;
+		padding-right: $padding-small-vertical;
 
-		border-left: 1px solid #aaa;
+		border-right: 1px solid #aaa;
 
 		&:first-child {
 			padding-left: 0;
-
-			border: none;
 		}
 
 		&:last-child {
-			padding-right: 0;
+			border: none;
 		}
 	}
 }
