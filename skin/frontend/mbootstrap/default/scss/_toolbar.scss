@@ -18,13 +18,11 @@
 
         @media (min-width: $screen-sm-min) {
             float: right;
-            margin-bottom: 0;
         }
 
         // Tablet view - landscape
         @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation:portrait) {
             float: none;
-            margin-bottom: ($line-height-computed / 2);
 
             @extend .clearfix;
 
@@ -34,6 +32,10 @@
             .pagination {
                 float: right;
             }
+        }
+
+        @media (min-width: $screen-lg-min) {
+            margin-bottom: 0;
         }
     }
         .pagination {
@@ -74,20 +76,13 @@
         .view-mode,
         .sort-by {
             display: inline-block;
+            margin: 0;
 
             vertical-align: middle;
-
-            @media (min-width: $screen-sm-min) {
-                margin: 0 ($grid-gutter-width / 2) 0 0;
-            }
         }
 
         .view-mode {
-            margin-bottom: ($line-height-computed / 2);
-
-            @media (min-width: $screen-sm-min) {
-                margin-bottom: 0;
-            }
+            margin-right: ($grid-gutter-width / 2);
 
             label {
                 display: none;
