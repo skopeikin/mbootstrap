@@ -91,10 +91,9 @@
             .availability {}
 
             .actions {
-                // Tablet view - landscape
                 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
                     .btn {
-                        margin-bottom: 10px;
+                        margin-bottom: ($line-height-computed / 2);
                     }
                 }
             }
@@ -154,7 +153,13 @@
             .price-box {}
             .desc {}
             .availability {}
-            .actions {}
+            .actions {
+                @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+                    .btn {
+                        margin-bottom: ($line-height-computed / 2);
+                    }
+                }
+            }
 }
 
 
