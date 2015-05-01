@@ -1,10 +1,11 @@
 //
-// Pager/Paginstion
+// Paging
 // --------------------------------------------------
 .paging {}
 	.amount,
 	.limiter,
-	.pagination {
+	.pagination,
+	.pages {
 		display: inline-block;
 		margin: 0;
 
@@ -20,6 +21,7 @@
 		}
 	}
 
+
 // Pager on Review page
 // -------------------------
 .pager-wrapper {
@@ -34,3 +36,28 @@
     	margin-right: ($grid-gutter-width / 2);
     }
 }
+
+// Pages/Pagination
+// -------------------------
+.pages {
+	.pagination {
+		@media (max-width: $screen-xs-max) {
+			display: none;
+		}
+	}
+}
+	.pages-list {
+		@extend .list-unstyled;
+		margin-bottom: 0;
+
+		> li {
+			@media (min-width: $screen-sm-min) {
+				@extend .btn;
+				@extend .btn-default;
+			}
+		}
+
+		@media (min-width: $screen-sm-min) {
+			display: none;
+		}
+	}
