@@ -18,8 +18,9 @@
 
     .buttons-set {
         .f-left {
-            @extend .btn;
-            @extend .btn-link;
+            // don`t used yeat maybe?!
+            // @extend .btn;
+            // @extend .btn-link;
         }
 
         @media (max-width: $screen-xs-max) {
@@ -101,7 +102,7 @@
 // -------------------------
 .box-head {
     @media (min-width: $screen-sm-min) {
-        @extend .clearfix;
+        @include clearfix;
 
         > h2 {
             font-weight: normal;
@@ -120,7 +121,7 @@
     .box-title {
         border-bottom: 2px solid $gray-lighter;
 
-        @extend .clearfix;
+        @include clearfix;
 
         > h3 {
             font-weight: normal;

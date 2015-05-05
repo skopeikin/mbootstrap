@@ -3,8 +3,8 @@
 // --------------------------------------------------
 .button {
     // set bootstrap form-control styles for Magento button element
-    @extend .btn;
-    @extend .btn-default;
+    // @extend .btn;
+    // @extend .btn-default;
 }
 p.back-link {
     display: inline-block;
@@ -12,24 +12,24 @@ p.back-link {
     p.back-link > a,
     a.back-link {
         // set bootstrap form-control styles for Magento button element
-        @extend .btn;
-        @extend .btn-link;
+        // @extend .btn;
+        // @extend .btn-link;
     }
 
 .btn {}
 .btn-cart {
-    @extend .btn-primary;
+    // @extend .btn-primary;
 }
 .btn-compare {}
 .btn-wishlist {}
 .btn-proceed-checkout {
-    @extend .btn-primary;
+    // @extend .btn-primary;
 }
 .btn-checkout {}
 .btn-remove,
 .btn-remove2 {
-    @extend .btn;
-    @extend .btn-default;
+    // @extend .btn;
+    // @extend .btn-default;
 
     @extend .glyphicon;
     @extend .glyphicon-remove;
@@ -43,7 +43,7 @@ p.back-link {
 .btn-update {}
 .btn-empty {}
 .btn-continue {
-    @extend .btn-link;
+    // @extend .btn-link;
 }
 
 .btn-remove {
@@ -55,8 +55,8 @@ p.back-link {
 .link-cart,
 .link-wishlist,
 .link-compare {
-    @extend .btn;
-    @extend .btn-default;
+    // @extend .btn;
+    // @extend .btn-default;
 }
 
 // Buttons set

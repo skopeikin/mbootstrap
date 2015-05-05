@@ -169,16 +169,17 @@
     @extend .list-unstyled;
 
     .item {
-        @extend .clearfix;
+        @include clearfix;
     }
     .item + .item {
         margin-top: ($line-height-computed / 2);
+        padding-top: ($line-height-computed / 2);
 
         border-top: 1px solid $gray-lighter;
     }
 
         .product-details {
-            @extend .clearfix;
+            @include clearfix;
 
             .btn-remove,
             .link-cart {

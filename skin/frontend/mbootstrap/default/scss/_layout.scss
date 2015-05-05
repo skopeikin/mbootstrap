@@ -91,7 +91,7 @@
                     margin-top: ($line-height-computed / 2);
                     padding: 0 $padding-small-horizontal;
 
-                    @extend .clearfix;
+                    @include clearfix;
                 }
             }
 
@@ -233,7 +233,7 @@
                 }
 
             @media (min-width: $screen-md-min) {
-                @extend .clearfix;
+                @include clearfix;
 
                 .links-left {
                     float: left;

@@ -10,7 +10,7 @@
     border-width: 1px 0;
 
     @media (min-width: $screen-sm-min) {
-        @extend .clearfix;
+        @include clearfix;
     }
 
     .paging {
@@ -24,7 +24,7 @@
         @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation:portrait) {
             float: none;
 
-            @extend .clearfix;
+            @include clearfix;
 
             .amount {
                 float: left;
@@ -63,7 +63,7 @@
         @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation:portrait) {
             float: none;
 
-            @extend .clearfix;
+            @include clearfix;
 
             .view-mode {
                 float: left;
