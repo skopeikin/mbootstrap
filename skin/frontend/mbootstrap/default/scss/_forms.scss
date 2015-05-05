@@ -54,6 +54,10 @@ form {
 		}
 	}
 
+	textarea {
+		height: auto !important;
+	}
+
 	// fix when input.radio(.checkbox)
 	input.radio,
 	input.checkbox {
