@@ -88,7 +88,6 @@
     .dashboard-address {}
 }
 
-
 // My account
 // -------------------------
 .my-account {
@@ -100,49 +99,52 @@
 
 // Box
 // -------------------------
-.box-head {
-    @media (min-width: $screen-sm-min) {
-        @include clearfix;
+.box-account {}
+.box-recent {}
+.box-info {}
+    .box-head {
+        @media (min-width: $screen-sm-min) {
+            @include clearfix;
 
-        > h2 {
-            font-weight: normal;
+            > h2 {
+                font-weight: normal;
 
-            float: left;
-        }
+                float: left;
+            }
 
-        > a {
-            float: right;
-            margin-top: ($line-height-computed + 14);
-        }
-    }
-}
-
-.box {
-    .box-title {
-        border-bottom: 2px solid $gray-lighter;
-
-        @include clearfix;
-
-        > h3 {
-            font-weight: normal;
-
-            float: left;
-        }
-
-        > a {
-            float: right;
-            margin-top: ($line-height-computed + 7);
+            > a {
+                float: right;
+                margin-top: ($line-height-computed + 14);
+            }
         }
     }
 
-    .box-content {
-        margin-top: $line-height-computed;
+    .box {
+        .box-title {
+            border-bottom: 2px solid $gray-lighter;
 
-        h4 {
-            font-weight: normal;
+            @include clearfix;
+
+            > h3 {
+                font-weight: normal;
+
+                float: left;
+            }
+
+            > a {
+                float: right;
+                margin-top: ($line-height-computed + 7);
+            }
+        }
+
+        .box-content {
+            margin-top: $line-height-computed;
+
+            h4 {
+                font-weight: normal;
+            }
         }
     }
-}
 
 
 // Edit account info
