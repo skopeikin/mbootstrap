@@ -5,7 +5,11 @@
 // Customer login modal
 // -------------------------
 .modal-form-login {
-    > .modal-dialog {
-        width: 550px;
+    .modal-footer {
+        .btn + .btn {
+        	@media (max-width: $screen-xs-max) {
+        		margin-top: ($line-height-computed / 2);
+        	}
+        }
     }
 }

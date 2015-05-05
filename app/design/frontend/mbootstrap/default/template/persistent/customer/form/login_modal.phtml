@@ -76,11 +76,19 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-link pull-left" title="<?php echo $this->__('Create an Account') ?>" onclick="window.location='<?php echo Mage::helper('persistent')->getCreateAccountUrl($this->getCreateAccountUrl()) ?>';"><?php echo $this->__('Create an Account') ?></button>
+                    <div class="visible-xs">
+                        <button type="submit" class="btn btn-primary btn-block" title="<?php echo $this->__('Login') ?>" name="send" id="send2"><?php echo $this->__('Login') ?></button>
+                        <a class="btn btn-link btn-block" href="<?php echo $this->getForgotPasswordUrl() ?>"><?php echo $this->__('Forgot Your Password?') ?></a>
+                        <button type="button" class="btn btn-link btn-block" title="<?php echo $this->__('Create an Account') ?>" onclick="window.location='<?php echo Mage::helper('persistent')->getCreateAccountUrl($this->getCreateAccountUrl()) ?>';"><?php echo $this->__('Create an Account') ?></button>
+                        <button type="button" class="btn btn-default btn-block" data-dismiss="modal"><?php echo $this->__("Close"); ?></button>
+                    </div>
+                    <div class="hidden-xs">
+                        <button type="button" class="btn btn-link pull-left" title="<?php echo $this->__('Create an Account') ?>" onclick="window.location='<?php echo Mage::helper('persistent')->getCreateAccountUrl($this->getCreateAccountUrl()) ?>';"><?php echo $this->__('Create an Account') ?></button>
 
-                    <a class="btn btn-link" href="<?php echo $this->getForgotPasswordUrl() ?>"><?php echo $this->__('Forgot Your Password?') ?></a>
-                    <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo $this->__("Close"); ?></button>
-                    <button type="submit" class="btn btn-primary" title="<?php echo $this->__('Login') ?>" name="send" id="send2"><?php echo $this->__('Login') ?></button>
+                        <a class="btn btn-link" href="<?php echo $this->getForgotPasswordUrl() ?>"><?php echo $this->__('Forgot Your Password?') ?></a>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo $this->__("Close"); ?></button>
+                        <button type="submit" class="btn btn-primary" title="<?php echo $this->__('Login') ?>" name="send" id="send2"><?php echo $this->__('Login') ?></button>
+                    </div>
                 </div>
             </form>
 
