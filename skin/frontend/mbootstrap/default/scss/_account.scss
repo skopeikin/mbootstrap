@@ -18,8 +18,9 @@
 
     .buttons-set {
         .f-left {
-            @extend .btn;
-            @extend .btn-link;
+            // don`t used yeat maybe?!
+            // @extend .btn;
+            // @extend .btn-link;
         }
 
         @media (max-width: $screen-xs-max) {
@@ -87,7 +88,6 @@
     .dashboard-address {}
 }
 
-
 // My account
 // -------------------------
 .my-account {
@@ -99,49 +99,52 @@
 
 // Box
 // -------------------------
-.box-head {
-    @media (min-width: $screen-sm-min) {
-        @extend .clearfix;
+.box-account {}
+.box-recent {}
+.box-info {}
+    .box-head {
+        @media (min-width: $screen-sm-min) {
+            @include clearfix;
 
-        > h2 {
-            font-weight: normal;
+            > h2 {
+                font-weight: normal;
 
-            float: left;
-        }
+                float: left;
+            }
 
-        > a {
-            float: right;
-            margin-top: ($line-height-computed + 14);
-        }
-    }
-}
-
-.box {
-    .box-title {
-        border-bottom: 2px solid $gray-lighter;
-
-        @extend .clearfix;
-
-        > h3 {
-            font-weight: normal;
-
-            float: left;
-        }
-
-        > a {
-            float: right;
-            margin-top: ($line-height-computed + 7);
+            > a {
+                float: right;
+                margin-top: ($line-height-computed + 14);
+            }
         }
     }
 
-    .box-content {
-        margin-top: $line-height-computed;
+    .box {
+        .box-title {
+            border-bottom: 2px solid $gray-lighter;
 
-        h4 {
-            font-weight: normal;
+            @include clearfix;
+
+            > h3 {
+                font-weight: normal;
+
+                float: left;
+            }
+
+            > a {
+                float: right;
+                margin-top: ($line-height-computed + 7);
+            }
+        }
+
+        .box-content {
+            margin-top: $line-height-computed;
+
+            h4 {
+                font-weight: normal;
+            }
         }
     }
-}
 
 
 // Edit account info
@@ -457,28 +460,33 @@
 .truncated {
     margin: ($line-height-computed / 2) 0;
 
-    cursor:help;
+    cursor: help;
+
+        .dots,
+        .details { cursor: help }
 }
-    .truncated a.dots { cursor: help }
-    .truncated a.details { cursor: help }
-    .truncated .truncated_full_value {
+    .truncated_full_value {
         position: relative;
         z-index: 999;
-    }
-        .truncated .truncated_full_value .item-options {
+
+        .item-options {
             position: absolute;
             top: -99999em;
             left: -99999em;
             z-index: 999;
             width: 250px;
             padding: 8px;
+
             border: 1px solid #ddd;
             background-color: #f6f6f6;
         }
-        .truncated .truncated_full_value .item-options > p {
+
+        .item-options > p {
             font-weight: bold;
             text-transform: uppercase;
         }
+    }
+
     .truncated .show .item-options {
         left: 0;
         top: ($line-height-computed * 1.5);

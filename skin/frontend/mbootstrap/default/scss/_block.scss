@@ -81,7 +81,7 @@
                         > li {
                             margin-bottom: ($line-height-computed / 4);
 
-                            @extend .clearfix;
+                            @include clearfix;
 
                             > .title {}
                             > .value {}
@@ -199,7 +199,7 @@
             @extend .list-unstyled;
         }
             .item {
-                @extend .clearfix;
+                @include clearfix;
 
                 .btn-remove {
                     float: right;
@@ -227,8 +227,9 @@
 .block-compare {
     .actions {
         a {
-            @extend .btn;
-            @extend .btn-link;
+            // added via HTML
+            // @extend .btn;
+            // @extend .btn-link;
         }
     }
 }
@@ -244,16 +245,14 @@
 // Block - Wishlist
 // -------------------------
 .block-wishlist {
-    @extend .block-cart;
-
     .btn-remove {
         @extend .btn-xs;
     }
 
     .actions {
         a {
-            @extend .btn;
-            @extend .btn-link;
+            // @extend .btn;
+            // @extend .btn-link;
         }
     }
 }

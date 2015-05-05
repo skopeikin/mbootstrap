@@ -40,7 +40,7 @@
 // Clear Fix
 // -------------------------
 .clearer {
-	@extend .clearfix;
+	@include clearfix;
 }
 
 // Links
