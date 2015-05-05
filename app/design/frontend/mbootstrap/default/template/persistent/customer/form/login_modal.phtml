@@ -98,7 +98,7 @@
 <script type="text/javascript">
     /*<![CDATA[*/
     jQuery(document).ready(function ($) {
-        $(".quick-access .btn-log-in").on("click", function(event){
+        $(document).on("click", ".js-btn-log-in", function(event){
             event.preventDefault();
 
             $("#customer-form-login-modal").modal("show");
