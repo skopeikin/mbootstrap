@@ -273,6 +273,7 @@
     .block-content {
         img {
             @include img-responsive;
+            margin: auto;
         }
     }
 }

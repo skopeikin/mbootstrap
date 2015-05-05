@@ -54,7 +54,6 @@
         </div>
 
         <?php echo $this->getPagerHtml() ?>
-
     </div>
 
     <?php if( $this->isExpanded() ): ?>
@@ -64,7 +63,16 @@
             <?php $_modes = $this->getModes(); ?>
             <?php if($_modes && count($_modes)>1): ?>
                 <label><?php echo $this->__('View as') ?>:</label>
-                <span class="btn-group">
+                <span class="visible-xs visible-sm">
+                    <?php foreach ($this->getModes() as $_code=>$_label): ?>
+                        <?php if($this->isModeActive($_code)): ?>
+                            <strong title="<?php echo $_label ?>" class="btn btn-primary <?php echo strtolower($_code); ?>"><?php echo $_label ?></strong>
+                        <?php else: ?>
+                            <a href="<?php echo $this->getModeUrl($_code) ?>" title="<?php echo $_label ?>" class="btn btn-default <?php echo strtolower($_code); ?>"><?php echo $_label ?></a>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </span>
+                <span class="btn-group hidden-xs hidden-sm">
                     <?php foreach ($this->getModes() as $_code=>$_label): ?>
                         <?php if($this->isModeActive($_code)): ?>
                             <strong title="<?php echo $_label ?>" class="btn btn-primary <?php echo strtolower($_code); ?>"><?php echo $_label ?></strong>
