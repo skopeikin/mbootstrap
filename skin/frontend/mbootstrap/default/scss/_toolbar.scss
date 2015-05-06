@@ -3,97 +3,59 @@
 // --------------------------------------------------
 .toolbar {
     margin-bottom: $line-height-computed;
-    padding: $padding-base-vertical $padding-base-horizontal;
-
+    padding: 0 $padding-base-horizontal ($line-height-computed / 2);
     background: $toolbar-bg;
     border: $toolbar-border;
     border-width: 1px 0;
 
-    @media (min-width: $screen-sm-min) {
-        @include clearfix;
-    }
-
-    .paging {
-        margin-bottom: ($line-height-computed / 2);
-
-        @media (min-width: $screen-sm-min) {
-            float: right;
-        }
-
-        // Tablet view - landscape
-        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation:portrait) {
-            float: none;
-
-            @include clearfix;
-
-            .amount {
-                float: left;
-            }
-            .pagination {
-                float: right;
-            }
-        }
-
-        @media (min-width: $screen-lg-min) {
-            margin-bottom: 0;
-        }
-    }
-        .pagination {
-            margin-left: ($grid-gutter-width / 2);
-        }
-
+    .paging {}
         .amount {
             display: none;
         }
-
-        label {
-            margin: 0;
+        .limiter,
+        .pages {
+            margin-top: ($line-height-computed / 2);
         }
 
-        .input-text {
-            display: inline-block;
-        }
-}
-    .sorter {
-        @media (min-width: $screen-sm-min) {
-            float: left;
-        }
-
-        // Tablet view - landscape
-        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation:portrait) {
-            float: none;
-
-            @include clearfix;
-
-            .view-mode {
-                float: left;
-            }
-            .sort-by {
-                float: right;
-            }
-        }
-    }
-        .view-mode,
-        .sort-by {
-            display: inline-block;
-            margin: 0;
-
-            vertical-align: middle;
-        }
-
+    .sorter {}
         .view-mode {
-            margin-right: ($grid-gutter-width / 2);
+            margin-bottom: 0;
+
+            @media (max-width: $screen-xs-max) {
+                margin-right: ($grid-gutter-width / 2);
+            }
 
             label {
                 display: none;
             }
         }
-
+        .view-mode,
         .sort-by {
+            margin-top: ($line-height-computed / 2);
+            display: inline-block;
+        }
+        .sort-by {
+            label {
+                margin: 0;
+            }
+
             .input-text {
+                display: inline-block;
                 width: 100px;
             }
         }
+
+    @media (min-width: $screen-sm-min) {
+        .paging,
+        .sorter {
+            @include clearfix;
+        }
+            .pages,
+            .sort-by {
+                float: right;
+            }
+    }
+}
 
 
 // Tolbar at bottom
