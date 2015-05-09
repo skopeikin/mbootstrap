@@ -1,5 +1,5 @@
 module.exports = function (gulp, plugins, config) {
-    return function (callback) {
+    return function (cb) {
 
         var theme = config.theme.mbootstrap;
 
@@ -39,6 +39,6 @@ module.exports = function (gulp, plugins, config) {
             .pipe(plugins.uglify())
             .pipe(gulp.dest( theme.build.js.dir ));
 
-        callback();
+        cb();
     };
 };

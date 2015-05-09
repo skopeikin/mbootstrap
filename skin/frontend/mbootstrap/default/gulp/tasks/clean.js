@@ -1,12 +1,11 @@
 module.exports = function (gulp, plugins, config) {
-    return function () {
+    return function (cb) {
 
         var theme = config.theme.mbootstrap;
 
         var stream =
             gulp.src( theme.build.css.dir )
-                // .pipe( plugins.using() )
-                .pipe( plugins.clean() );
+                .pipe( plugins.vinylPaths(plugins.del) );
 
         return stream;
     }

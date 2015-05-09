@@ -15,6 +15,8 @@ var plugins = require("gulp-load-plugins")({
     pattern: ['gulp-*', 'gulp.*'],
     replaceString: /\bgulp[\-.]/
 });
+plugins.del             = require('del');
+plugins.vinylPaths      = require('vinyl-paths');
 
 
 // Settings/Configuration
