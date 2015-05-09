@@ -1,5 +1,5 @@
 module.exports = function (gulp, plugins, config) {
-    return function (callback) {
+    return function (cb) {
 
         var theme = config.theme.mbootstrap;
 
@@ -12,6 +12,6 @@ module.exports = function (gulp, plugins, config) {
 
         gulp.watch(theme.source.scss.dir + '**/*.scss', ['build-mbootstrap-styles']);
 
-        callback();
+        cb();
     };
 };

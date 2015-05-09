@@ -1,11 +1,10 @@
 module.exports = function (gulp, plugins, config) {
-    return function () {
+    return function (cb) {
 
         var theme = config.theme.mbootstrap;
 
         var stream =
             gulp.src( theme.source.scss.files )
-                // .pipe( plugins.using() )
                 .pipe(plugins.sourcemaps.init())
                 .pipe(plugins.sass( theme.plugins.sass ))
                 // Catch any SCSS errors and prevent them from crashing gulp
